@@ -138,7 +138,7 @@
           "conditions": [
             {
               "id": "a1",
-              "leftValue": "={{ ['@chelovek_vs_ai'].includes($json.chat_id) }}",
+              "leftValue": "={{ ['@chelovek_vs_ai', '@ryadom_repetitor'].includes($json.chat_id) }}",
               "rightValue": "",
               "operator": {
                 "type": "boolean",
