@@ -1,0 +1,622 @@
+{
+  "name": "Публикация из GitHub в Telegram v3.1",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 2
+            }
+          ]
+        }
+      },
+      "name": "Каждые 2 минуты",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ 'https://api.github.com/repos/' + $('Настройки').first().json.repo + '/contents/outbox' }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "X-GitHub-Api-Version",
+              "value": "2022-11-28"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Список outbox",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        0
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// === Выбрать пост: какой пост из outbox публиковать сейчас ===\n// Имя файла задаёт время выхода (по Москве):\n//   2026-10-19-0900-slug.json  → 19 октября в 09:00\n//   2026-10-19-slug.json       → 19 октября, время из Настроек (default_hour)\n//   slug.json (без даты)       → сразу\nconst cfg = $('Настройки').first().json;\nconst DEFAULT_HOUR = cfg.default_hour;\nconst MIN_GAP_MINUTES = cfg.min_gap_minutes;\nconst s = $getWorkflowStaticData('global');\ns.lastSentAt = s.lastSentAt || {};\ns.chatByFile = s.chatByFile || {};\ns.doneFiles = s.doneFiles || {};   // защита от повтора, если файл не удалился из outbox\nconst now = Date.now();\n\nif (s.pauseUntil && now < s.pauseUntil) return [];   // пауза после ошибки Telegram\n\nfunction dueAt(name) {\n  const m = name.match(/^(\\d{4})-(\\d{2})-(\\d{2})(?:-(\\d{2})(\\d{2}))?(?=[-_.])/);\n  if (!m) return 0;\n  let hh = DEFAULT_HOUR, mm = 0;\n  if (m[4] !== undefined && +m[4] < 24 && +m[5] < 60) { hh = +m[4]; mm = +m[5]; }\n  return Date.UTC(+m[1], +m[2] - 1, +m[3], hh - 3, mm);   // Москва = UTC+3\n}\n\nconst listed = $input.all().map(i => i.json).filter(f => f.type === 'file' && f.name.endsWith('.json'));\nfor (const k of Object.keys(s.doneFiles)) if (!listed.some(f => f.name === k)) delete s.doneFiles[k];\nconst files = listed\n  .filter(f => s.doneFiles[f.name] !== f.sha)\n  .map(f => ({ ...f, due: dueAt(f.name) }))\n  .filter(f => f.due <= now)\n  .sort((a, b) => a.due - b.due || a.name.localeCompare(b.name));\n\nfor (const f of files) {\n  const chat = s.chatByFile[f.name];\n  const last = chat ? s.lastSentAt[chat] : undefined;\n  if (last && now - last < MIN_GAP_MINUTES * 60000) continue;   // этот канал ещё «отдыхает»\n  return [{ json: { name: f.name, sha: f.sha, url: f.url, due: new Date(f.due).toISOString() } }];\n}\nreturn [];\n"
+      },
+      "name": "Выбрать пост",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $json.url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github.raw+json"
+            },
+            {
+              "name": "X-GitHub-Api-Version",
+              "value": "2022-11-28"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "name": "Скачать пост",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// === Подготовить: проверить канал и собрать сообщение ===\n// Два формата поста:\n//   { chat_id, text_html, image_base64, image_mime }  — картинка внутри файла\n//   { chat_id, text | text_html, img }                — картинка по ссылке: одно сообщение с крупным превью\nconst cfg = $('Настройки').first().json;\nconst ALLOWED = [...cfg.allowed, String(cfg.admin_chat_id || '')].filter(Boolean);\nconst MIN_GAP_MINUTES = cfg.min_gap_minutes;\nconst CAPTION_LIMIT = cfg.caption_limit;\nconst s = $getWorkflowStaticData('global');\ns.lastSentAt = s.lastSentAt || {};\ns.chatByFile = s.chatByFile || {};\nconst file = $('Выбрать пост').first().json;\nconst p = $input.first().json;\nconst chat = String(p.chat_id || '');\ns.chatByFile[file.name] = chat;\n\nconst base = { file: file.name, sha: file.sha, id: p.id || file.name.replace(/\\.json$/, ''), channel: p.channel || '', chat_id: chat, text_html: p.text_html || p.text || '', due: file.due, preview: false };\n\nif (!ALLOWED.includes(chat)) {\n  return [{ json: { ...base, action: 'reject', reason: 'Канал ' + chat + ' не в белом списке' } }];\n}\nconst last = s.lastSentAt[chat];\nif (last && Date.now() - last < MIN_GAP_MINUTES * 60000) return [];   // ждём следующего окна\nif (!base.text_html && !p.image_base64 && !p.img) {\n  return [{ json: { ...base, action: 'reject', reason: 'В посте нет ни текста, ни картинки' } }];\n}\n\nconst plain = base.text_html.replace(/<[^>]+>/g, '')\n  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '\"').replace(/&amp;/g, '&');\n\nif (p.img && !p.image_base64) {\n  const html = '<a href=\"' + String(p.img).replace(/\"/g, '%22') + '\">&#8203;</a>' + base.text_html;\n  return [{ json: { ...base, text_html: html, preview: true, action: 'text', needText: true } }];\n}\nif (p.image_base64) {\n  const short = plain.length <= CAPTION_LIMIT;\n  return [{\n    json: { ...base, action: 'photo', caption: short ? base.text_html : '', needText: !short && plain.length > 0 },\n    binary: { photo: { data: p.image_base64, mimeType: p.image_mime || 'image/jpeg', fileName: base.id + '.jpg' } }\n  }];\n}\nreturn [{ json: { ...base, action: 'text', needText: true } }];\n"
+      },
+      "name": "Подготовить",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "photo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Фото"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "text",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Только текст"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "reject",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Отклонить"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Что отправить",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        1100,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $json.chat_id }}",
+        "binaryData": true,
+        "binaryPropertyName": "photo",
+        "additionalFields": {
+          "caption": "={{ $json.caption }}",
+          "parse_mode": "HTML"
+        }
+      },
+      "name": "Отправить картинку",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1340,
+        -160
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $('Подготовить').first().json.needText }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "name": "Нужен отдельный текст?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1580,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Подготовить').first().json.chat_id }}",
+        "text": "={{ $('Подготовить').first().json.text_html }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML",
+          "disable_web_page_preview": "={{ !$('Подготовить').first().json.preview }}"
+        }
+      },
+      "name": "Отправить текст",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1820,
+        -60
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === Итог: записать результат в sent/ ===\nconst s = $getWorkflowStaticData('global');\ns.lastSentAt = s.lastSentAt || {};\ns.chatByFile = s.chatByFile || {};\nconst p = $('Подготовить').first().json;\nfunction mid(node) { try { return $(node).first().json.result.message_id; } catch (e) { return null; } }\nconst photoId = mid('Отправить картинку');\nconst textId = mid('Отправить текст');\nconst lastId = textId || photoId;\ns.lastSentAt[p.chat_id] = Date.now();\ndelete s.chatByFile[p.file];\nconst record = {\n  id: p.id, channel: p.channel, chat_id: p.chat_id,\n  photo_message_id: photoId, text_message_id: textId,\n  link: 'https://t.me/' + String(p.chat_id).replace('@', '') + '/' + lastId,\n  file: p.file, due_at: p.due || null, published_at: new Date().toISOString(),\n  published_by: 'n8n-server', workflow: 'v3.1'\n};\ns.doneFiles = s.doneFiles || {};\ns.doneFiles[p.file] = p.sha;\nreturn [{ json: {\n  path: 'sent/' + p.id + '.json',\n  message: 'sent ' + p.id + ' (n8n)',\n  content: Buffer.from(JSON.stringify(record, null, 2)).toString('base64'),\n  file: p.file, sha: p.sha\n} }];\n"
+      },
+      "name": "Итог",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2060,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// === Ошибка: перенести пост в failed/ и сделать паузу ===\n// Пост не теряется: файл целиком копируется в failed/ с описанием ошибки.\nconst PAUSE_MINUTES = $('Настройки').first().json.pause_minutes;\nconst s = $getWorkflowStaticData('global');\nconst p = $('Подготовить').first().json;\nconst original = $('Скачать пост').first().json;\nfunction mid(node) { try { return $(node).first().json.result.message_id; } catch (e) { return null; } }\nconst inErr = $input.first().json.error;\nconst err = inErr ? (inErr.message || JSON.stringify(inErr)) : (p.reason || 'неизвестная ошибка');\nconst isTelegramError = p.action !== 'reject';\nif (isTelegramError) s.pauseUntil = Date.now() + PAUSE_MINUTES * 60000;\nconst record = { ...original, failed: {\n  at: new Date().toISOString(), error: String(err).slice(0, 500), by: 'n8n-server v3.1',\n  photo_already_sent_message_id: mid('Отправить картинку'),\n  hint: 'Исправьте причину и верните файл в outbox/. Если фото уже ушло, уберите image_base64.'\n} };\nconst stamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 13);\ns.doneFiles = s.doneFiles || {};\ns.doneFiles[p.file] = p.sha;\nreturn [{ json: {\n  path: 'failed/' + p.file.replace(/\\.json$/, '') + '-' + stamp + '.json',\n  message: 'failed ' + p.file + ' (n8n)',\n  content: Buffer.from(JSON.stringify(record, null, 2)).toString('base64'),\n  file: p.file, sha: p.sha,\n  notify: 'Пост не опубликован: ' + p.file + '\\nПричина: ' + String(err).slice(0, 300) + '\\nФайл перенесён в failed/.'\n} }];\n"
+      },
+      "name": "Ошибка",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2060,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "={{ 'https://api.github.com/repos/' + $('Настройки').first().json.repo + '/contents/' + $json.path }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "X-GitHub-Api-Version",
+              "value": "2022-11-28"
+            }
+          ]
+        },
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ message: $json.message, content: $json.content, committer: $('Настройки').first().json.committer, author: $('Настройки').first().json.committer }) }}"
+      },
+      "name": "Записать в GitHub",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2300,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "={{ 'https://api.github.com/repos/' + $('Настройки').first().json.repo + '/contents/outbox/' + $('Выбрать пост').first().json.name }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "X-GitHub-Api-Version",
+              "value": "2022-11-28"
+            }
+          ]
+        },
+        "options": {},
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ message: 'publish ' + $('Выбрать пост').first().json.name + ' (n8n)', sha: $('Выбрать пост').first().json.sha, committer: $('Настройки').first().json.committer, author: $('Настройки').first().json.committer }) }}"
+      },
+      "name": "Убрать из outbox",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2520,
+        0
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === НАСТРОЙКИ: единственное место, которое нужно менять ===\nreturn [{ json: {\n  repo: 'drokhman/channels-publisher',              // владелец/репозиторий в GitHub\n  allowed: ['@chelovek_vs_ai', '@ryadom_repetitor'], // куда разрешено публиковать\n  admin_chat_id: '1073319162',          // ваш личный ID в Telegram: сюда приходят ошибки и тестовые посты\n  default_hour: 10,           // время выхода, если в имени файла только дата (по Москве)\n  min_gap_minutes: 120,       // не чаще одного поста в канал за это время\n  pause_minutes: 60,          // пауза после ошибки Telegram\n  caption_limit: 1000,        // подпись к фото — до 1024 знаков\n  committer: { name: 'n8n-publisher (сервер)', email: 'publisher@channels-publisher.local' }  // подпись сервера в журнале GitHub\n} }];\n"
+      },
+      "id": "3b552370-a4c1-43eb-b8b3-f35504994c6e",
+      "name": "Настройки",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Настройки').first().json.admin_chat_id }}",
+        "text": "={{ $json.notify }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "id": "35e58e52-efb1-4867-a694-49693d1c817c",
+      "name": "Сообщить мне",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2280,
+        380
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === Проверка очереди: один раз сообщить, что outbox опустел ===\nconst cfg = $('Настройки').first().json;\nconst s = $getWorkflowStaticData('global');\nconst posts = $input.all().map(i => i.json).filter(f => f && f.type === 'file' && String(f.name).endsWith('.json'));\nif (posts.length > 0) { s.emptyNotified = false; return []; }\nif (s.emptyNotified) return [];\ns.emptyNotified = true;\nreturn [{ json: { notify: 'Публикатор: очередь outbox пуста, новых постов к выходу нет.' } }];\n"
+      },
+      "id": "2e4b8f78-a52f-4b56-93a3-3ae16c42a2ec",
+      "name": "Проверка очереди",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Настройки').first().json.admin_chat_id }}",
+        "text": "={{ $json.notify }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "id": "ba70bb61-a4bc-4d85-81b0-82c887ecaae2",
+      "name": "Сообщить: очередь пуста",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        660,
+        260
+      ],
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "connections": {
+    "Каждые 2 минуты": {
+      "main": [
+        [
+          {
+            "node": "Настройки",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Список outbox": {
+      "main": [
+        [
+          {
+            "node": "Выбрать пост",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Проверка очереди",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Выбрать пост": {
+      "main": [
+        [
+          {
+            "node": "Скачать пост",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Скачать пост": {
+      "main": [
+        [
+          {
+            "node": "Подготовить",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Подготовить": {
+      "main": [
+        [
+          {
+            "node": "Что отправить",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Что отправить": {
+      "main": [
+        [
+          {
+            "node": "Отправить картинку",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Отправить текст",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ошибка",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Отправить картинку": {
+      "main": [
+        [
+          {
+            "node": "Нужен отдельный текст?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ошибка",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Нужен отдельный текст?": {
+      "main": [
+        [
+          {
+            "node": "Отправить текст",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Итог",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Отправить текст": {
+      "main": [
+        [
+          {
+            "node": "Итог",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ошибка",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Итог": {
+      "main": [
+        [
+          {
+            "node": "Записать в GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ошибка": {
+      "main": [
+        [
+          {
+            "node": "Записать в GitHub",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Сообщить мне",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Записать в GitHub": {
+      "main": [
+        [
+          {
+            "node": "Убрать из outbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Настройки": {
+      "main": [
+        [
+          {
+            "node": "Список outbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Проверка очереди": {
+      "main": [
+        [
+          {
+            "node": "Сообщить: очередь пуста",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Moscow"
+  },
+  "pinData": {}
+}
