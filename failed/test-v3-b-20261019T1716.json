@@ -1,0 +1,13 @@
+{
+  "id": "test-v3-b",
+  "channel": "Тест",
+  "chat_id": "@ne_v_spiske_test",
+  "text_html": "Тест v3: этот пост не должен уйти, канал не в белом списке.",
+  "failed": {
+    "at": "2026-10-19T17:16:14.042Z",
+    "error": "Канал @ne_v_spiske_test не в белом списке",
+    "by": "n8n-server v3.1",
+    "photo_already_sent_message_id": null,
+    "hint": "Исправьте причину и верните файл в outbox/. Если фото уже ушло, уберите image_base64."
+  }
+}
