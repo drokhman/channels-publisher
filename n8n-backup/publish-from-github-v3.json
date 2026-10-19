@@ -351,7 +351,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// === НАСТРОЙКИ: единственное место, которое нужно менять ===\nreturn [{ json: {\n  repo: 'drokhman/channels-publisher',              // владелец/репозиторий в GitHub\n  allowed: ['@chelovek_vs_ai', '@ryadom_repetitor'], // куда разрешено публиковать\n  admin_chat_id: '',          // ваш личный ID в Telegram: сюда приходят ошибки и тестовые посты\n  default_hour: 10,           // время выхода, если в имени файла только дата (по Москве)\n  min_gap_minutes: 120,       // не чаще одного поста в канал за это время\n  pause_minutes: 60,          // пауза после ошибки Telegram\n  caption_limit: 1000         // подпись к фото — до 1024 знаков\n} }];\n"
+        "jsCode": "// === НАСТРОЙКИ: единственное место, которое нужно менять ===\nreturn [{ json: {\n  repo: 'drokhman/channels-publisher',              // владелец/репозиторий в GitHub\n  allowed: ['@chelovek_vs_ai', '@ryadom_repetitor'], // куда разрешено публиковать\n  admin_chat_id: '1073319162',          // ваш личный ID в Telegram: сюда приходят ошибки и тестовые посты\n  default_hour: 10,           // время выхода, если в имени файла только дата (по Москве)\n  min_gap_minutes: 120,       // не чаще одного поста в канал за это время\n  pause_minutes: 60,          // пауза после ошибки Telegram\n  caption_limit: 1000         // подпись к фото — до 1024 знаков\n} }];\n"
       },
       "id": "3b552370-a4c1-43eb-b8b3-f35504994c6e",
       "name": "Настройки",
