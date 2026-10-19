@@ -1,0 +1,13 @@
+{
+  "id": "test-v31-c",
+  "channel": "Тест",
+  "chat_id": "1073319162",
+  "photo_message_id": null,
+  "text_message_id": 5,
+  "link": "https://t.me/1073319162/5",
+  "file": "test-v31-c.json",
+  "due_at": "1970-01-01T00:00:00.000Z",
+  "published_at": "2026-10-19T17:14:14.167Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
