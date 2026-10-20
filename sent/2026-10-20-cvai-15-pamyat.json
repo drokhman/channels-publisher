@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-20-cvai-15-pamyat",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 48,
+  "text_message_id": 49,
+  "link": "https://t.me/chelovek_vs_ai/49",
+  "file": "2026-10-20-cvai-15-pamyat.json",
+  "due_at": "2026-10-20T07:00:00.000Z",
+  "published_at": "2026-10-20T13:36:18.873Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
