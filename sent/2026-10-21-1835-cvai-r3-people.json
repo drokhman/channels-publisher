@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-21-1835-cvai-r3-people",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 60,
+  "text_message_id": 61,
+  "link": "https://t.me/chelovek_vs_ai/61",
+  "file": "2026-10-21-1835-cvai-r3-people.json",
+  "due_at": "2026-10-21T15:35:00.000Z",
+  "published_at": "2026-10-21T17:24:14.938Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
