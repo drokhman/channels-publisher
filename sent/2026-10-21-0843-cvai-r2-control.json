@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-21-0843-cvai-r2-control",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 52,
+  "text_message_id": 53,
+  "link": "https://t.me/chelovek_vs_ai/53",
+  "file": "2026-10-21-0843-cvai-r2-control.json",
+  "due_at": "2026-10-21T05:43:00.000Z",
+  "published_at": "2026-10-21T05:44:14.736Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
