@@ -1,0 +1,15 @@
+@page { size: A4; margin: 18mm 17mm 16mm 17mm; @bottom-center { content: counter(page); font: 9pt 'Noto Sans'; color:#8a94a6; } }
+body { font-family: 'Noto Sans', 'Liberation Sans', sans-serif; font-size: 10pt; line-height: 1.42; color:#1d2433; }
+h1 { font-size: 21pt; line-height:1.2; margin: 0 0 4mm; color:#0f2a4a; }
+.sub { color:#4b5568; font-size: 11pt; margin-bottom: 7mm; }
+h2 { font-size: 13.5pt; color:#0f2a4a; margin: 5mm 0 2mm; border-bottom: 2px solid #1fa3a3; padding-bottom: 1.5mm; }
+p { margin: 0 0 2.5mm; }
+ul,ol { margin: 0 0 3mm 5mm; padding-left: 4mm; } li { margin-bottom: 1.2mm; }
+table { width:100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 10pt; }
+th { background:#0f2a4a; color:#fff; text-align:left; padding: 2mm 2.5mm; }
+td { border-bottom: 1px solid #dfe4ec; padding: 2mm 2.5mm; vertical-align: top; }
+.box { background:#eef7f7; border-left: 4px solid #1fa3a3; padding: 3mm 4mm; margin: 3mm 0 4mm; }
+.code { font-family: 'DejaVu Sans Mono', monospace; font-size: 9pt; background:#f4f6f9; border:1px solid #dfe4ec; padding: 3mm 4mm; white-space: pre-wrap; line-height:1.45; }
+.foot { margin-top: 8mm; color:#4b5568; font-size: 9.5pt; border-top:1px solid #dfe4ec; padding-top: 3mm; }
+.tag { display:inline-block; background:#0f2a4a; color:#fff; font-size:8.5pt; padding: 0.8mm 2.5mm; border-radius: 2mm; margin-bottom: 3mm; }
+.avoid { page-break-inside: avoid; }

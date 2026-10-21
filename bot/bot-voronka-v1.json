@@ -1,0 +1,110 @@
+{
+ "name": "Бот-воронка для двух каналов v1",
+ "nodes": [
+  {
+   "parameters": {
+    "rule": {
+     "interval": [
+      {
+       "field": "minutes",
+       "minutesInterval": 1
+      }
+     ]
+    }
+   },
+   "id": "fd22ad9e-baf0-4be5-9e7e-2f45101b4cb4",
+   "name": "Каждую минуту",
+   "type": "n8n-nodes-base.scheduleTrigger",
+   "typeVersion": 1.2,
+   "position": [
+    0,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "jsCode": "// === НАСТРОЙКИ БОТА-ВОРОНКИ: единственное место, которое нужно менять ===\n// Ключ бота вставляете только здесь, в n8n. Никому его не пересылайте.\nreturn [{ json: {\n  token: 'ВСТАВЬТЕ_СЮДА_КЛЮЧ_БОТА',   // ключ из BotFather, вида 1234567890:AA...\n  owner_id: 1073319162,               // ваш личный ID: сюда приходят заявки, статистика, команды владельца\n  channels: {                         // ветки бота и их каналы\n    cvai:   '@chelovek_vs_ai',\n    ryadom: '@ryadom_repetitor'\n  },\n  send_from_hour: 10,   // цепочку присылаем только с 10:00\n  send_to_hour: 20,     // и до 20:00 по Москве\n  max_per_run: 25,      // не больше сообщений цепочки за один запуск\n  poll_seconds: 40      // сколько секунд ждать новых сообщений за один запуск\n} }];\n"
+   },
+   "id": "9354bd17-5f85-46cb-a654-614cc1128ef1",
+   "name": "Настройки",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    220,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "jsCode": "// === ТЕКСТЫ БОТА. Меняйте смело, только сохраняйте кавычки ` ` вокруг текста ===\n// Разметка: <b>жирный</b>, <a href=\"ссылка\">текст</a>.\n// delays: через сколько часов после подарка приходит каждое сообщение цепочки.\nreturn [{ json: {\n  choose: `Здравствуйте! Подскажите, что вам ближе?`,\n  choose_buttons: { cvai: 'ИИ в управлении', ryadom: 'Я репетитор' },\n\n  check_button: 'Я подписался',\n  subscribe_button: 'Подписаться на канал',\n  not_subscribed: 'Пока не вижу подписки. Подпишитесь на канал и нажмите кнопку ещё раз.',\n  stop: 'Готово, больше не пишу. Если захотите вернуться, нажмите /start.',\n  gift_missing: 'Подарок уже в пути: пришлю его в течение дня.',\n\n  cvai: {\n    welcome: `Здравствуйте! Я Дмитрий Рохман, директор по логистике больших форматов в Магните и автор канала <b>«Человек VS ИИ. Кто кого?»</b>.\n\nПишу о том, как руководителю работать рядом с ИИ: что отдать машине, что оставить себе и за что всё равно отвечаешь ты.\n\n🎁 Для вас подарок: шаблон <b>«Битва мозгов»</b>. Три корзины для задач, строка ИИ-агента в RACI и готовые правила для агента.\n\nЧтобы получить его, подпишитесь на канал и нажмите «Я подписался».\n\nБот пришлёт ещё несколько полезных сообщений. Отключить их можно командой /stop.`,\n    gift_caption: `🎁 Ваш шаблон «Битва мозгов». Начните с одного процесса, который чаще всего буксует.`,\n    chain: [\n      { text: `💧 Мысль, с которой во многом начался канал: ИИ работает как вода. Если где-то есть щель, он её найдёт, и очень быстро. Ему не нужна злая воля, ему достаточно, что это возможно.\n\nОб этом мой пост про Фантомаса: <a href=\"https://t.me/chelovek_vs_ai/39\">читать в канале</a>.` },\n      { text: `📋 Кто отвечает за работу ИИ? Точно не сам ИИ. Когда чат-бот Air Canada придумал несуществующее правило возврата денег, суд решил, что отвечает компания.\n\nПоэтому у каждого агента должен быть хозяин с фамилией. Как вписать агента в RACI и держать матрицу живой: <a href=\"https://t.me/chelovek_vs_ai/55\">читать в канале</a>.` },\n      { text: `🧠 Самое неожиданное, что я узнал за последнее время: ИИ может переписать нашу память. Человек видит изменённую картинку и потом уверенно «помнит» её как оригинал.\n\nВывод для руководителя простой: проверять работу ИИ по записи и документу, а не по памяти. <a href=\"https://t.me/chelovek_vs_ai/49\">Читать в канале</a>.` },\n      { text: `🛠 Этот канал я веду вместе с ИИ. Темы, черновики, картинки и очередь публикаций готовит связка ИИ и n8n, а я согласую каждый пост. Сейчас так работают два канала, по два поста в день.\n\nЕсли хотите такую же систему для своего канала или команды, нажмите кнопку. Я напишу вам лично.`, lead_button: 'Хочу такую систему' },\n      { text: `Последнее сообщение от меня в этой серии. Дальше всё самое интересное в канале и комментариях к постам.\n\nЕсли система публикации для вашего канала всё ещё актуальна, кнопка ниже.`, lead_button: 'Напишите мне' }\n    ],\n    delays: [24, 48, 72, 96, 144],\n    lead_thanks: `Спасибо! Я получил вашу заявку и напишу вам лично в Telegram.`\n  },\n\n  ryadom: {\n    welcome: `Здравствуйте! Это канал <b>«Он рядом»</b> для частных репетиторов.\n\nЗдесь о том, как ИИ помогает с подготовкой, проверкой и сообщениями родителям, и как при этом не рисковать данными учеников.\n\n🎁 Для вас подарок: памятка <b>«ИИ для репетитора без риска»</b> и шаблон сообщения родителям после урока.\n\nЧтобы получить его, подпишитесь на канал и нажмите «Я подписался».\n\nБот пришлёт ещё несколько полезных сообщений. Отключить их можно командой /stop.`,\n    gift_caption: `🎁 Ваша памятка. Главное правило: если не показали бы это постороннему, не показывайте и чату.`,\n    chain: [\n      { text: `📚 Урок длится час. А потом начинается вторая смена, которую никто не оплачивает: вспомнить ошибки, записать, что прошли, написать родителям, подобрать задания.\n\nОб этом пост в канале: <a href=\"https://t.me/ryadom_repetitor/9\">читать</a>.` },\n      { text: `🎯 Если у вас 3 или 4 урока в день, к каждому ещё от 30 до 60 минут подготовки и отчётов. Это почти два урока, которые вы не провели.\n\nКак вернуть это время: <a href=\"https://t.me/ryadom_repetitor/14\">читать в канале</a>.` },\n      { text: `👥 Школьный учитель, студент и опытный репетитор работают по-разному, а рутина у всех одна.\n\nУзнайте себя: <a href=\"https://t.me/ryadom_repetitor/12\">читать в канале</a>.` },\n      { text: `🤝 Я делаю «Он рядом», помощника репетитора. В нём история уроков, разбор занятия и задания для практики ученика. Сейчас идёт тест с учителями.\n\nХотите попробовать одним из первых? Нажмите кнопку, я напишу вам лично.`, lead_button: 'Хочу попробовать' },\n      { text: `Последнее сообщение в этой серии. Дальше всё в канале «Он рядом».\n\nЕсли захотите попробовать помощника, кнопка ниже.`, lead_button: 'Напишите мне' }\n    ],\n    delays: [24, 48, 72, 96, 144],\n    lead_thanks: `Спасибо! Я получил вашу заявку и напишу вам лично в Telegram.`\n  }\n} }];\n"
+   },
+   "id": "5398d265-ca48-4c53-aa81-42d405e75edc",
+   "name": "Тексты",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    440,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "jsCode": "// === БОТ-ВОРОНКА: логика. Обычно менять не нужно ===\nconst S = $('Настройки').first().json;\nconst T = $('Тексты').first().json;\nconst st = $getWorkflowStaticData('global');\nst.offset = st.offset || 0;\nst.users = st.users || {};\nst.gifts = st.gifts || {};\nconst helpers = this.helpers;\nif (!helpers || !helpers.httpRequest) throw new Error('В этой версии n8n нет this.helpers.httpRequest в узле Code. Напишите ассистенту.');\nconst now = Date.now();\nconst log = [];\n\nasync function api(method, body, timeoutMs) {\n  try {\n    return await helpers.httpRequest({\n      method: 'POST',\n      url: `https://api.telegram.org/bot${S.token}/${method}`,\n      body, json: true, timeout: timeoutMs || 20000\n    });\n  } catch (e) {\n    const r = e.response && e.response.body ? e.response.body : null;\n    return { ok: false, error_code: r && r.error_code, description: (r && r.description) || String(e.message || e) };\n  }\n}\nconst send = (chat_id, text, kb) => api('sendMessage', {\n  chat_id, text, parse_mode: 'HTML', disable_web_page_preview: false,\n  ...(kb ? { reply_markup: { inline_keyboard: kb } } : {})\n});\nconst branches = Object.keys(S.channels);\nconst clean = s => String(s || '').replace(/[^A-Za-z0-9_\\-]/g, '').slice(0, 64);\nconst branchOf = p => branches.find(b => p === b || p.startsWith(b + '_')) || null;\nconst chanUrl = b => 'https://t.me/' + S.channels[b].replace('@', '');\nconst isOwner = id => Number(id) === Number(S.owner_id);\nfunction mskHour(ts) { return new Date(ts + 3 * 3600e3).getUTCHours(); }\n\nasync function welcome(u) {\n  const B = T[u.branch];\n  await send(u.id, B.welcome, [\n    [{ text: T.subscribe_button, url: chanUrl(u.branch) }],\n    [{ text: T.check_button, callback_data: 'check:' + u.branch }]\n  ]);\n}\nasync function giveGift(u) {\n  const B = T[u.branch];\n  const fid = st.gifts[u.branch];\n  if (fid) {\n    await api('sendDocument', { chat_id: u.id, document: fid, caption: B.gift_caption });\n  } else {\n    await send(u.id, T.gift_missing);\n    await send(S.owner_id, `⚠️ Нет файла подарка для ветки ${u.branch}. Пришлите боту PDF с подписью gift_${u.branch}`);\n  }\n  u.subscribed = true; u.giftAt = now; u.step = 0;\n  u.next = now + B.delays[0] * 3600e3;\n}\nasync function sendStep(u) {\n  const B = T[u.branch];\n  const m = B.chain[u.step];\n  if (!m) { u.next = null; return; }\n  const kb = m.lead_button ? [[{ text: m.lead_button, callback_data: 'lead:' + u.branch }]] : null;\n  const r = await send(u.id, m.text, kb);\n  if (!r.ok && r.error_code === 403) { u.stopped = true; u.next = null; return; }\n  u.step += 1;\n  u.next = u.step < B.chain.length ? u.giftAt + B.delays[u.step] * 3600e3 : null;\n  if (u.next !== null && u.next < now) u.next = now + 3600e3; // не слать два подряд\n}\nfunction stats() {\n  const by = {};\n  for (const u of Object.values(st.users)) {\n    const k = (u.branch || 'без ветки') + ' / ' + (u.source || 'без метки');\n    by[k] = by[k] || { start: 0, sub: 0, done: 0, lead: 0, stop: 0 };\n    by[k].start++; if (u.subscribed) by[k].sub++;\n    if (u.branch && u.step >= T[u.branch].chain.length) by[k].done++;\n    if (u.lead) by[k].lead++; if (u.stopped) by[k].stop++;\n  }\n  const rows = Object.entries(by).sort((a, b) => b[1].start - a[1].start)\n    .map(([k, v]) => `${k}: старт ${v.start}, подписка ${v.sub}, цепочка до конца ${v.done}, заявки ${v.lead}, отписались ${v.stop}`);\n  return '📊 <b>Статистика бота</b>\\n\\n' + (rows.join('\\n') || 'Пока никого.') +\n    `\\n\\nВсего: ${Object.keys(st.users).length}`;\n}\n\n// 1. Новые сообщения и нажатия кнопок\nconst up = await api('getUpdates', { offset: st.offset, timeout: S.poll_seconds, allowed_updates: ['message', 'callback_query'] }, (S.poll_seconds + 15) * 1000);\nif (up.ok) {\n  for (const x of up.result) {\n    st.offset = x.update_id + 1;\n    try {\n      if (x.message) {\n        const m = x.message, from = m.from || {}, id = from.id;\n        if (!id || m.chat.type !== 'private') continue;\n        const text = (m.text || '').trim();\n        // команды владельца\n        if (isOwner(id) && m.document && /^gift_/.test(m.caption || '')) {\n          const b = (m.caption || '').replace('gift_', '').trim();\n          if (S.channels[b]) { st.gifts[b] = m.document.file_id; await send(id, `✅ Подарок для ветки ${b} сохранён.`); }\n          else await send(id, `Не знаю ветку «${b}». Есть: ${branches.join(', ')}`);\n          continue;\n        }\n        if (isOwner(id) && text === '/stats') { await send(id, stats()); continue; }\n        if (isOwner(id) && text.startsWith('/demo')) {\n          const b = text.split(' ')[1];\n          if (!S.channels[b]) { await send(id, 'Напишите /demo cvai или /demo ryadom'); continue; }\n          const B = T[b];\n          await send(id, B.welcome);\n          if (st.gifts[b]) await api('sendDocument', { chat_id: id, document: st.gifts[b], caption: B.gift_caption });\n          for (const c of B.chain) await send(id, c.text, c.lead_button ? [[{ text: c.lead_button, callback_data: 'noop' }]] : null);\n          continue;\n        }\n        if (text === '/stop') {\n          const u = st.users[id]; if (u) { u.stopped = true; u.next = null; }\n          await send(id, T.stop); continue;\n        }\n        if (text.startsWith('/start')) {\n          const payload = clean(text.split(' ')[1]);\n          let u = st.users[id];\n          if (!u) {\n            u = st.users[id] = { id, name: from.first_name || '', username: from.username || '', source: payload || '', branch: branchOf(payload), created: now, step: 0, subscribed: false, giftAt: null, next: null, stopped: false, lead: false };\n          } else {\n            u.stopped = false;\n            if (!u.branch && branchOf(payload)) u.branch = branchOf(payload);\n          }\n          if (!u.branch) {\n            await send(id, T.choose, [[\n              { text: T.choose_buttons.cvai, callback_data: 'branch:cvai' },\n              { text: T.choose_buttons.ryadom, callback_data: 'branch:ryadom' }\n            ]]);\n          } else if (u.subscribed && u.giftAt) {\n            await giveGift(Object.assign({}, u)); // повторно прислать подарок, не сбивая цепочку\n          } else {\n            await welcome(u);\n          }\n          continue;\n        }\n      }\n      if (x.callback_query) {\n        const q = x.callback_query, id = q.from.id, data = q.data || '';\n        let u = st.users[id];\n        if (!u) u = st.users[id] = { id, name: q.from.first_name || '', username: q.from.username || '', source: '', branch: null, created: now, step: 0, subscribed: false, giftAt: null, next: null, stopped: false, lead: false };\n        if (data.startsWith('branch:')) {\n          const b = data.split(':')[1]; if (S.channels[b]) { u.branch = b; await welcome(u); }\n          await api('answerCallbackQuery', { callback_query_id: q.id });\n        } else if (data.startsWith('check:')) {\n          const b = data.split(':')[1]; if (S.channels[b] && !u.branch) u.branch = b;\n          const r = await api('getChatMember', { chat_id: S.channels[u.branch], user_id: id });\n          const ok = r.ok && (['member', 'administrator', 'creator'].includes(r.result.status) || (r.result.status === 'restricted' && r.result.is_member));\n          if (ok) {\n            await api('answerCallbackQuery', { callback_query_id: q.id, text: 'Спасибо! Отправляю подарок.' });\n            if (!u.subscribed) await giveGift(u); else await giveGift(Object.assign({}, u));\n          } else {\n            await api('answerCallbackQuery', { callback_query_id: q.id, text: T.not_subscribed, show_alert: true });\n            if (!r.ok) log.push('getChatMember: ' + r.description);\n          }\n        } else if (data.startsWith('lead:')) {\n          const b = data.split(':')[1];\n          await api('answerCallbackQuery', { callback_query_id: q.id });\n          if (!u.lead) {\n            u.lead = true; u.leadAt = now;\n            const who = (u.name || '') + (u.username ? ' @' + u.username : ` (id ${id}, без username)`);\n            await send(S.owner_id, `🔥 <b>Новая заявка</b>\\nКто: ${who}\\nВетка: ${b}\\nОткуда: ${u.source || 'без метки'}\\nНаписать: <a href=\"tg://user?id=${id}\">открыть чат</a>`);\n          }\n          await send(id, T[b].lead_thanks);\n        } else {\n          await api('answerCallbackQuery', { callback_query_id: q.id });\n        }\n      }\n    } catch (e) { log.push('ошибка: ' + String(e.message || e)); }\n  }\n} else {\n  log.push('getUpdates: ' + up.description);\n}\n\n// 2. Цепочка сообщений по расписанию\nconst h = mskHour(now);\nlet sent = 0;\nif (h >= S.send_from_hour && h < S.send_to_hour) {\n  for (const u of Object.values(st.users)) {\n    if (sent >= S.max_per_run) break;\n    if (u.stopped || !u.subscribed || !u.next || u.next > now || !u.branch) continue;\n    await sendStep(u); sent++;\n  }\n}\n\nreturn [{ json: { updates: up.ok ? up.result.length : 'ошибка', chain_sent: sent, users: Object.keys(st.users).length, log } }];\n"
+   },
+   "id": "ba673a8c-4b9c-4ef4-b21f-46f6de231b16",
+   "name": "Бот",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    660,
+    0
+   ]
+  }
+ ],
+ "connections": {
+  "Каждую минуту": {
+   "main": [
+    [
+     {
+      "node": "Настройки",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Настройки": {
+   "main": [
+    [
+     {
+      "node": "Тексты",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Тексты": {
+   "main": [
+    [
+     {
+      "node": "Бот",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "active": false,
+ "settings": {
+  "executionOrder": "v1",
+  "saveDataSuccessExecution": "none",
+  "saveDataErrorExecution": "all",
+  "saveManualExecutions": true
+ },
+ "pinData": {},
+ "meta": {
+  "templateCredsSetupCompleted": true
+ }
+}
