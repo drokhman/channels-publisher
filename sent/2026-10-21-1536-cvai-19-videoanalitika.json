@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-21-1536-cvai-19-videoanalitika",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 56,
+  "text_message_id": 57,
+  "link": "https://t.me/chelovek_vs_ai/57",
+  "file": "2026-10-21-1536-cvai-19-videoanalitika.json",
+  "due_at": "2026-10-21T12:36:00.000Z",
+  "published_at": "2026-10-21T12:38:14.996Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
