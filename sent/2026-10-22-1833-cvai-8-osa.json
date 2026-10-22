@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-22-1833-cvai-8-osa",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 64,
+  "text_message_id": 65,
+  "link": "https://t.me/chelovek_vs_ai/65",
+  "file": "2026-10-22-1833-cvai-8-osa.json",
+  "due_at": "2026-10-22T15:33:00.000Z",
+  "published_at": "2026-10-22T15:34:15.867Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
