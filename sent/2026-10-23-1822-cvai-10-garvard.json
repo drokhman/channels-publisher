@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-23-1822-cvai-10-garvard",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 68,
+  "text_message_id": 69,
+  "link": "https://t.me/chelovek_vs_ai/69",
+  "file": "2026-10-23-1822-cvai-10-garvard.json",
+  "due_at": "2026-10-23T15:22:00.000Z",
+  "published_at": "2026-10-23T15:22:14.883Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
