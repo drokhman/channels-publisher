@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-24-0825-cvai-ru1-skuchnyj",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 70,
+  "text_message_id": 71,
+  "link": "https://t.me/chelovek_vs_ai/71",
+  "file": "2026-10-24-0825-cvai-ru1-skuchnyj.json",
+  "due_at": "2026-10-24T05:25:00.000Z",
+  "published_at": "2026-10-24T05:26:14.468Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
