@@ -1,0 +1,71 @@
+{
+  "action": "poll",
+  "question": "Как вы закрываете пиковую потребность в складском персонале?",
+  "options": [
+    "Аутстаффинг через агентство",
+    "Самозанятые через платформу",
+    "Собственный штат и резерв",
+    "Смешанная модель",
+    "Другое — напишу в комментариях"
+  ],
+  "anonymous": true,
+  "multiple": false,
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 25,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792954527,
+      "poll": {
+        "id": "5399995018993734604",
+        "question": "Как вы закрываете пиковую потребность в складском персонале?",
+        "options": [
+          {
+            "persistent_id": "0",
+            "text": "Аутстаффинг через агентство",
+            "voter_count": 0
+          },
+          {
+            "persistent_id": "1",
+            "text": "Самозанятые через платформу",
+            "voter_count": 0
+          },
+          {
+            "persistent_id": "2",
+            "text": "Собственный штат и резерв",
+            "voter_count": 0
+          },
+          {
+            "persistent_id": "3",
+            "text": "Смешанная модель",
+            "voter_count": 0
+          },
+          {
+            "persistent_id": "4",
+            "text": "Другое — напишу в комментариях",
+            "voter_count": 0
+          }
+        ],
+        "total_voter_count": 0,
+        "is_closed": false,
+        "is_anonymous": true,
+        "allows_multiple_answers": false,
+        "allows_revoting": true,
+        "members_only": false,
+        "type": "regular"
+      }
+    }
+  },
+  "at": "2026-10-25T18:55:27Z"
+}

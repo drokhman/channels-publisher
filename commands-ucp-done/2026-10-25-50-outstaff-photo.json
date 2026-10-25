@@ -1,0 +1,85 @@
+{
+  "action": "photo",
+  "image": "commands-ucp-media/img-outstaff.jpg",
+  "text_html": "<b>Обеление аутстаффинга: что делает ФНС и чем это закончится для склада</b>\n\nЭксперимент ФНС, позиции экспертов и что сделать заказчику — в посте ниже.\n\n#НППЦП #логистика #закупки",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 23,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792954523,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMXat5Qm0FD9C4dXIWSdxu8mbrVSukAAqskaxvcovBKlJzF3fALOOIBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADqyRrG9yi8Ep4",
+          "file_size": 1826,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMXat5Qm0FD9C4dXIWSdxu8mbrVSukAAqskaxvcovBKlJzF3fALOOIBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADqyRrG9yi8Epy",
+          "file_size": 27136,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMXat5Qm0FD9C4dXIWSdxu8mbrVSukAAqskaxvcovBKlJzF3fALOOIBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADqyRrG9yi8Ep9",
+          "file_size": 111868,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMXat5Qm0FD9C4dXIWSdxu8mbrVSukAAqskaxvcovBKlJzF3fALOOIBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADqyRrG9yi8Ep-",
+          "file_size": 227225,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMXat5Qm0FD9C4dXIWSdxu8mbrVSukAAqskaxvcovBKlJzF3fALOOIBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADqyRrG9yi8Ep8",
+          "file_size": 291355,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "Обеление аутстаффинга: что делает ФНС и чем это закончится для склада\n\nЭксперимент ФНС, позиции экспертов и что сделать заказчику — в посте ниже.\n\n#НППЦП #логистика #закупки",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 69,
+          "type": "bold"
+        },
+        {
+          "offset": 147,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 154,
+          "length": 10,
+          "type": "hashtag"
+        },
+        {
+          "offset": 165,
+          "length": 8,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T18:55:24Z"
+}
