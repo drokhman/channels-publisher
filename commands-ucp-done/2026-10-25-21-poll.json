@@ -1,0 +1,71 @@
+{
+  "action": "poll",
+  "question": "Какая тема недели сильнее всего влияет на ваш результат?",
+  "options": [
+    "Ставки автоперевозок",
+    "ЭПД и подпись перевозчиков",
+    "Сроки и погрузка на ж/д",
+    "Топливо и скидки",
+    "Другое — напишу в комментариях"
+  ],
+  "anonymous": true,
+  "multiple": false,
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 15,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792948917,
+      "poll": {
+        "id": "5399995018993734575",
+        "question": "Какая тема недели сильнее всего влияет на ваш результат?",
+        "options": [
+          {
+            "persistent_id": "0",
+            "text": "Ставки автоперевозок",
+            "voter_count": 0
+          },
+          {
+            "persistent_id": "1",
+            "text": "ЭПД и подпись перевозчиков",
+            "voter_count": 0
+          },
+          {
+            "persistent_id": "2",
+            "text": "Сроки и погрузка на ж/д",
+            "voter_count": 0
+          },
+          {
+            "persistent_id": "3",
+            "text": "Топливо и скидки",
+            "voter_count": 0
+          },
+          {
+            "persistent_id": "4",
+            "text": "Другое — напишу в комментариях",
+            "voter_count": 0
+          }
+        ],
+        "total_voter_count": 0,
+        "is_closed": false,
+        "is_anonymous": true,
+        "allows_multiple_answers": false,
+        "allows_revoting": true,
+        "members_only": false,
+        "type": "regular"
+      }
+    }
+  },
+  "at": "2026-10-25T17:21:57Z"
+}
