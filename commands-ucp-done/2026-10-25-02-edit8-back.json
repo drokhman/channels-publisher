@@ -1,0 +1,125 @@
+{
+  "action": "edit_caption",
+  "message_id": 8,
+  "text_html": "<b>Фура +21% за год, закупочная цена — прежняя</b>\n\nКоллеги, заявок на автоперевозки по России в III квартале стало больше на 18–20% г/г (<a href=\"https://www.vedomosti.ru/business/articles/2026/10/19/1238026-spros-na-avtoperevozki-rastet\">Ведомости</a>). Ставка за большегруз — 114 руб./км, +21% г/г (Cargo.run). <a href=\"https://ati.su/analytics\">Индекс ATI.SU FTL</a> 5 сентября обновил максимум — 2443 п. Прогноз на конец года: 115–120 руб./км у «Логлаба», ещё +10–15% у «Траско» (<a href=\"https://www.tks.ru/logistics/2026/10/19/0004/avtoperevozki-v-rossii-dorozhayut-iz-za-toplivnyih-pereboev-i-nehvatki-transporta/\">TKS.RU</a>).\n\nДрайверы: топливо, дефицит ТС, ЭПД, сезон рефов, предновогодний спрос. Участники рынка ждут высоких ставок весь IV квартал.\n\n<b>Почему это вопрос поставщика</b>\nКонтракт с сетью считался при старых ставках, доставку до РЦ везёт поставщик. Рост съедает маржу и проявляется к закрытию квартала.\n\n<b>Что сделать до переговоров</b>\n1️⃣ Стоимость доставки единицы — по каждому РЦ, не средняя.\n2️⃣ Загрузка ТС: ставка +21% при недогрузе 20% = единица дороже на ~51%.\n3️⃣ Сравнить с забором силами сети и кросс-доком.\n4️⃣ К КМ — с расчётом и рыночными данными, не с просьбой.\n\n<a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/\">Платформа НППЦП</a> — рабочая группа по цепям поставок.\n#НППЦП #автоперевозки #поставщикам",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 8,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792947909,
+      "edit_date": 1792948493,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMIat42xOocB9MasxVjBjNCgZNm0dEAAhUkaxvcovBKLZys7lcjWbgBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADFSRrG9yi8Ep4",
+          "file_size": 1273,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMIat42xOocB9MasxVjBjNCgZNm0dEAAhUkaxvcovBKLZys7lcjWbgBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADFSRrG9yi8Epy",
+          "file_size": 18174,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMIat42xOocB9MasxVjBjNCgZNm0dEAAhUkaxvcovBKLZys7lcjWbgBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADFSRrG9yi8Ep9",
+          "file_size": 90291,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMIat42xOocB9MasxVjBjNCgZNm0dEAAhUkaxvcovBKLZys7lcjWbgBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADFSRrG9yi8Ep-",
+          "file_size": 206453,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMIat42xOocB9MasxVjBjNCgZNm0dEAAhUkaxvcovBKLZys7lcjWbgBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADFSRrG9yi8Ep8",
+          "file_size": 260373,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "Фура +21% за год, закупочная цена — прежняя\n\nКоллеги, заявок на автоперевозки по России в III квартале стало больше на 18–20% г/г (Ведомости). Ставка за большегруз — 114 руб./км, +21% г/г (Cargo.run). Индекс ATI.SU FTL 5 сентября обновил максимум — 2443 п. Прогноз на конец года: 115–120 руб./км у «Логлаба», ещё +10–15% у «Траско» (TKS.RU).\n\nДрайверы: топливо, дефицит ТС, ЭПД, сезон рефов, предновогодний спрос. Участники рынка ждут высоких ставок весь IV квартал.\n\nПочему это вопрос поставщика\nКонтракт с сетью считался при старых ставках, доставку до РЦ везёт поставщик. Рост съедает маржу и проявляется к закрытию квартала.\n\nЧто сделать до переговоров\n1️⃣ Стоимость доставки единицы — по каждому РЦ, не средняя.\n2️⃣ Загрузка ТС: ставка +21% при недогрузе 20% = единица дороже на ~51%.\n3️⃣ Сравнить с забором силами сети и кросс-доком.\n4️⃣ К КМ — с расчётом и рыночными данными, не с просьбой.\n\nПлатформа НППЦП — рабочая группа по цепям поставок.\n#НППЦП #автоперевозки #поставщикам",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 43,
+          "type": "bold"
+        },
+        {
+          "offset": 131,
+          "length": 9,
+          "type": "text_link",
+          "url": "https://www.vedomosti.ru/business/articles/2026/10/19/1238026-spros-na-avtoperevozki-rastet"
+        },
+        {
+          "offset": 189,
+          "length": 9,
+          "type": "url"
+        },
+        {
+          "offset": 201,
+          "length": 17,
+          "type": "text_link",
+          "url": "https://ati.su/analytics"
+        },
+        {
+          "offset": 333,
+          "length": 6,
+          "type": "text_link",
+          "url": "https://www.tks.ru/logistics/2026/10/19/0004/avtoperevozki-v-rossii-dorozhayut-iz-za-toplivnyih-pereboev-i-nehvatki-transporta/"
+        },
+        {
+          "offset": 468,
+          "length": 28,
+          "type": "bold"
+        },
+        {
+          "offset": 630,
+          "length": 26,
+          "type": "bold"
+        },
+        {
+          "offset": 899,
+          "length": 15,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/"
+        },
+        {
+          "offset": 951,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 958,
+          "length": 14,
+          "type": "hashtag"
+        },
+        {
+          "offset": 973,
+          "length": 12,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T17:14:53Z"
+}
