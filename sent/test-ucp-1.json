@@ -1,0 +1,13 @@
+{
+  "id": "test-ucp-1",
+  "channel": "Тест УЦП",
+  "chat_id": "1073319162",
+  "photo_message_id": null,
+  "text_message_id": 10,
+  "link": "https://t.me/1073319162/10",
+  "file": "test-ucp-1.json",
+  "due_at": "1970-01-01T00:00:00.000Z",
+  "published_at": "2026-10-25T14:36:18.139Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
