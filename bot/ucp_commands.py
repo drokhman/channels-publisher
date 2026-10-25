@@ -7,6 +7,7 @@
   {"action":"poll","question":"...","options":["А","Б"],"anonymous":true,"multiple":false}
   {"action":"pin","message_id":8} / {"action":"unpin","message_id":8}
   {"action":"send","text_html":"..."}
+  {"action":"photo","image":"commands-ucp-media/x.jpg","text_html":"..."}  # фото + подпись
   {"action":"check"}                                            # права бота в канале
 Поле chat_id необязательно (по умолчанию @nscspr), разрешены только каналы из ALLOWED.
 Результат: commands-ucp-done/ или commands-ucp-failed/, команда удаляется.
@@ -26,6 +27,27 @@ def tg(method, payload):
         data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        try:
+            return json.load(e)
+        except Exception:
+            return {"ok": False, "description": f"HTTP {e.code}"}
+
+
+def tg_photo(chat, path, caption):
+    import uuid
+    b = uuid.uuid4().hex
+    data = path.read_bytes()
+    parts = []
+    for k, v in (("chat_id", chat), ("caption", caption), ("parse_mode", "HTML")):
+        parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode())
+    parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"photo\"; filename=\"{path.name}\"\r\nContent-Type: image/jpeg\r\n\r\n".encode() + data + b"\r\n")
+    parts.append(f"--{b}--\r\n".encode())
+    req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/sendPhoto", data=b"".join(parts),
+                                 headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
             return json.load(r)
     except urllib.error.HTTPError as e:
         try:
@@ -60,6 +82,9 @@ def run(c):
     if a == "send":
         return tg("sendMessage", {"chat_id": chat, "text": c["text_html"],
                                   "link_preview_options": {"is_disabled": not c.get("preview", False)}, **html})
+    if a == "photo":
+        # {"action":"photo","image":"commands-ucp-media/x.jpg","text_html":"..."} — подпись до 1024 видимых символов
+        return tg_photo(chat, ROOT / c["image"], c.get("text_html", ""))
     if a == "check":
         me = tg("getMe", {})
         if not me.get("ok"):
