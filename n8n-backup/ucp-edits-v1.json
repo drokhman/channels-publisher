@@ -34,7 +34,7 @@
   },
   {
    "parameters": {
-    "jsCode": "// === НАСТРОЙКИ ПРАВОК УЦП ===\n// Команды кладутся в GitHub: commands-ucp/имя.json\n//   { \"action\": \"edit\",   \"chat_id\": \"@канал\", \"message_id\": 12, \"text_html\": \"Новый текст\" }\n//   { \"action\": \"delete\", \"chat_id\": \"@канал\", \"message_id\": 12 }\n// Удалить ботом можно только пост младше 48 часов (ограничение Telegram). Править можно в любое время.\nreturn [{ json: {\n  repo: 'drokhman/channels-publisher',\n  folder: 'commands-ucp',                 // папка с командами\n  allowed: ['@АДРЕС_КАНАЛА'],             // где разрешено править и удалять\n  admin_chat_id: '1073319162',            // ваш личный чат: тоже разрешён, для тестов\n  committer: { name: 'n8n-edits УЦП (сервер)', email: 'publisher@channels-publisher.local' }\n} }];\n"
+    "jsCode": "// === НАСТРОЙКИ ПРАВОК УЦП ===\n// Команды кладутся в GitHub: commands-ucp/имя.json\n//   { \"action\": \"edit\",   \"chat_id\": \"@канал\", \"message_id\": 12, \"text_html\": \"Новый текст\" }\n//   { \"action\": \"delete\", \"chat_id\": \"@канал\", \"message_id\": 12 }\n// Удалить ботом можно только пост младше 48 часов (ограничение Telegram). Править можно в любое время.\nreturn [{ json: {\n  repo: 'drokhman/channels-publisher',\n  folder: 'commands-ucp',                 // папка с командами\n  allowed: ['@nscspr'],             // где разрешено править и удалять\n  admin_chat_id: '1073319162',            // ваш личный чат: тоже разрешён, для тестов\n  committer: { name: 'n8n-edits УЦП (сервер)', email: 'publisher@channels-publisher.local' }\n} }];\n"
    },
    "id": "8ad8075e-00ff-4ec6-8331-a17b0ec528cb",
    "name": "Настройки",
