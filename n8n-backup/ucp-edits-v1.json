@@ -1,0 +1,560 @@
+{
+ "name": "УЦП правки",
+ "nodes": [
+  {
+   "parameters": {},
+   "id": "07b08745-d945-4207-970f-1e12ac12c66b",
+   "name": "Запустить вручную",
+   "type": "n8n-nodes-base.manualTrigger",
+   "typeVersion": 1,
+   "position": [
+    0,
+    -120
+   ]
+  },
+  {
+   "parameters": {
+    "rule": {
+     "interval": [
+      {
+       "field": "minutes",
+       "minutesInterval": 2
+      }
+     ]
+    }
+   },
+   "id": "a7c34de2-16be-4121-9467-e0294d6ff69e",
+   "name": "Каждые 2 минуты",
+   "type": "n8n-nodes-base.scheduleTrigger",
+   "typeVersion": 1.2,
+   "position": [
+    0,
+    80
+   ]
+  },
+  {
+   "parameters": {
+    "jsCode": "// === НАСТРОЙКИ ПРАВОК УЦП ===\n// Команды кладутся в GitHub: commands-ucp/имя.json\n//   { \"action\": \"edit\",   \"chat_id\": \"@канал\", \"message_id\": 12, \"text_html\": \"Новый текст\" }\n//   { \"action\": \"delete\", \"chat_id\": \"@канал\", \"message_id\": 12 }\n// Удалить ботом можно только пост младше 48 часов (ограничение Telegram). Править можно в любое время.\nreturn [{ json: {\n  repo: 'drokhman/channels-publisher',\n  folder: 'commands-ucp',                 // папка с командами\n  allowed: ['@АДРЕС_КАНАЛА'],             // где разрешено править и удалять\n  admin_chat_id: '1073319162',            // ваш личный чат: тоже разрешён, для тестов\n  committer: { name: 'n8n-edits УЦП (сервер)', email: 'publisher@channels-publisher.local' }\n} }];\n"
+   },
+   "id": "8ad8075e-00ff-4ec6-8331-a17b0ec528cb",
+   "name": "Настройки",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    220,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "method": "GET",
+    "url": "={{ 'https://api.github.com/repos/' + $('Настройки').first().json.repo + '/contents/' + $('Настройки').first().json.folder }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Accept",
+       "value": "application/vnd.github+json"
+      },
+      {
+       "name": "X-GitHub-Api-Version",
+       "value": "2022-11-28"
+      }
+     ]
+    },
+    "options": {}
+   },
+   "id": "d0b3d9a2-d5e4-4039-960b-9ecb37a5973e",
+   "name": "Список команд",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    440,
+    0
+   ],
+   "alwaysOutputData": true
+  },
+  {
+   "parameters": {
+    "jsCode": "// Берём самую раннюю команду (по имени файла)\nconst files = $input.all().map(i => i.json).filter(f => f && f.type === 'file' && String(f.name).endsWith('.json'));\nfiles.sort((a, b) => a.name.localeCompare(b.name));\nif (!files.length) return [];\nconst f = files[0];\nreturn [{ json: { name: f.name, sha: f.sha, url: f.url } }];\n"
+   },
+   "id": "83465e9d-6d41-4adc-815e-54e16a08f1d5",
+   "name": "Выбрать команду",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    660,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "method": "GET",
+    "url": "={{ $json.url }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Accept",
+       "value": "application/vnd.github.raw+json"
+      },
+      {
+       "name": "X-GitHub-Api-Version",
+       "value": "2022-11-28"
+      }
+     ]
+    },
+    "options": {
+     "response": {
+      "response": {
+       "responseFormat": "json"
+      }
+     }
+    }
+   },
+   "id": "d8830f4f-5b99-465f-bf95-2b57712a4579",
+   "name": "Скачать команду",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    880,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "jsCode": "// Проверить команду\nconst cfg = $('Настройки').first().json;\nconst ALLOWED = [...cfg.allowed, String(cfg.admin_chat_id)];\nconst c = $input.first().json;\nconst file = $('Выбрать команду').first().json;\nconst base = { file: file.name, sha: file.sha, action: String(c.action || ''), chat_id: String(c.chat_id || ''),\n  message_id: Number(c.message_id), text_html: c.text_html || c.text || '', preview: !!c.preview };\nlet reason = '';\nif (!ALLOWED.includes(base.chat_id)) reason = 'Канал ' + base.chat_id + ' не в белом списке';\nelse if (!Number.isInteger(base.message_id) || base.message_id <= 0) reason = 'Нет номера сообщения message_id';\nelse if (!['edit', 'delete'].includes(base.action)) reason = 'Неизвестное действие: ' + base.action;\nelse if (base.action === 'edit' && !base.text_html) reason = 'Для правки нужен text_html';\nreturn [{ json: { ...base, go: reason ? 'reject' : base.action, reason } }];\n"
+   },
+   "id": "dfebf75b-043e-42ab-8829-2439a3eac5ee",
+   "name": "Проверить",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1100,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "rules": {
+     "values": [
+      {
+       "conditions": {
+        "options": {
+         "caseSensitive": true,
+         "leftValue": "",
+         "typeValidation": "strict"
+        },
+        "conditions": [
+         {
+          "leftValue": "={{ $json.go }}",
+          "rightValue": "delete",
+          "operator": {
+           "type": "string",
+           "operation": "equals"
+          }
+         }
+        ],
+        "combinator": "and"
+       },
+       "renameOutput": true,
+       "outputKey": "Удалить"
+      },
+      {
+       "conditions": {
+        "options": {
+         "caseSensitive": true,
+         "leftValue": "",
+         "typeValidation": "strict"
+        },
+        "conditions": [
+         {
+          "leftValue": "={{ $json.go }}",
+          "rightValue": "edit",
+          "operator": {
+           "type": "string",
+           "operation": "equals"
+          }
+         }
+        ],
+        "combinator": "and"
+       },
+       "renameOutput": true,
+       "outputKey": "Исправить"
+      },
+      {
+       "conditions": {
+        "options": {
+         "caseSensitive": true,
+         "leftValue": "",
+         "typeValidation": "strict"
+        },
+        "conditions": [
+         {
+          "leftValue": "={{ $json.go }}",
+          "rightValue": "reject",
+          "operator": {
+           "type": "string",
+           "operation": "equals"
+          }
+         }
+        ],
+        "combinator": "and"
+       },
+       "renameOutput": true,
+       "outputKey": "Отказ"
+      }
+     ]
+    },
+    "options": {}
+   },
+   "id": "b67c6bc0-efb2-4916-82fc-5157ed45b5e8",
+   "name": "Что сделать",
+   "type": "n8n-nodes-base.switch",
+   "typeVersion": 3,
+   "position": [
+    1320,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "operation": "deleteMessage",
+    "chatId": "={{ $('Проверить').first().json.chat_id }}",
+    "messageId": "={{ $('Проверить').first().json.message_id }}"
+   },
+   "id": "624f71fa-af69-455c-b744-1d199757f278",
+   "name": "Удалить пост",
+   "type": "n8n-nodes-base.telegram",
+   "typeVersion": 1.2,
+   "position": [
+    1560,
+    -160
+   ],
+   "onError": "continueErrorOutput"
+  },
+  {
+   "parameters": {
+    "operation": "editMessageText",
+    "chatId": "={{ $('Проверить').first().json.chat_id }}",
+    "messageId": "={{ $('Проверить').first().json.message_id }}",
+    "text": "={{ $('Проверить').first().json.text_html }}",
+    "additionalFields": {
+     "parse_mode": "HTML",
+     "disable_web_page_preview": "={{ !$('Проверить').first().json.preview }}"
+    }
+   },
+   "id": "59d1199c-a5f4-48b7-900f-b282c8890874",
+   "name": "Исправить пост",
+   "type": "n8n-nodes-base.telegram",
+   "typeVersion": 1.2,
+   "position": [
+    1560,
+    0
+   ],
+   "onError": "continueErrorOutput"
+  },
+  {
+   "parameters": {
+    "jsCode": "// Записать результат в commands-ucp-done/\nconst p = $('Проверить').first().json;\nconst record = { ...$('Скачать команду').first().json, result: 'ok', done_at: new Date().toISOString(), by: 'n8n-edits УЦП' };\nreturn [{ json: {\n  path: 'commands-ucp-done/' + p.file,\n  message: p.action + ' ' + p.chat_id + '/' + p.message_id + ' (n8n)',\n  content: Buffer.from(JSON.stringify(record, null, 2)).toString('base64'),\n  notify: (p.action === 'delete' ? 'Удалено: ' : 'Исправлено: ') + p.chat_id + '/' + p.message_id\n} }];\n"
+   },
+   "id": "c6044155-347a-4173-95e1-574e765e6cbd",
+   "name": "Итог",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1800,
+    -100
+   ]
+  },
+  {
+   "parameters": {
+    "jsCode": "// Ошибка: команда уходит в commands-ucp-failed/ с причиной\nconst p = $('Проверить').first().json;\nconst inErr = $input.first().json.error;\nconst why = inErr ? (inErr.message || JSON.stringify(inErr)) : (p.reason || 'неизвестная ошибка');\nconst record = { ...$('Скачать команду').first().json, result: 'failed', error: String(why).slice(0, 500), at: new Date().toISOString(),\n  hint: 'Удалить ботом можно только пост младше 48 часов; старые посты удаляйте вручную в Telegram.' };\nconst stamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 13);\nreturn [{ json: {\n  path: 'commands-ucp-failed/' + p.file.replace(/\\.json$/, '') + '-' + stamp + '.json',\n  message: 'failed ' + p.file + ' (n8n)',\n  content: Buffer.from(JSON.stringify(record, null, 2)).toString('base64'),\n  notify: 'Правка УЦП не выполнена: ' + p.file + '\\nПричина: ' + String(why).slice(0, 300)\n} }];\n"
+   },
+   "id": "fe033b27-9da7-4443-bbd2-08bda7a65dab",
+   "name": "Ошибка",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1800,
+    140
+   ]
+  },
+  {
+   "parameters": {
+    "method": "PUT",
+    "url": "={{ 'https://api.github.com/repos/' + $('Настройки').first().json.repo + '/contents/' + $json.path }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Accept",
+       "value": "application/vnd.github+json"
+      },
+      {
+       "name": "X-GitHub-Api-Version",
+       "value": "2022-11-28"
+      }
+     ]
+    },
+    "options": {},
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ message: $json.message, content: $json.content, committer: $('Настройки').first().json.committer, author: $('Настройки').first().json.committer }) }}"
+   },
+   "id": "1b28622b-69f8-4b4c-b1ae-2578b0c5fb8e",
+   "name": "Записать в GitHub",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    2040,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "method": "DELETE",
+    "url": "={{ 'https://api.github.com/repos/' + $('Настройки').first().json.repo + '/contents/' + $('Настройки').first().json.folder + '/' + $('Выбрать команду').first().json.name }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Accept",
+       "value": "application/vnd.github+json"
+      },
+      {
+       "name": "X-GitHub-Api-Version",
+       "value": "2022-11-28"
+      }
+     ]
+    },
+    "options": {},
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ message: 'remove ' + $('Выбрать команду').first().json.name + ' (n8n)', sha: $('Выбрать команду').first().json.sha, committer: $('Настройки').first().json.committer, author: $('Настройки').first().json.committer }) }}"
+   },
+   "id": "57959892-288c-402f-a583-1caea7ad15b9",
+   "name": "Убрать команду",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    2260,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "chatId": "={{ $('Настройки').first().json.admin_chat_id }}",
+    "text": "={{ $('Итог').isExecuted ? $('Итог').first().json.notify : $('Ошибка').first().json.notify }}",
+    "additionalFields": {
+     "appendAttribution": false
+    }
+   },
+   "id": "a6fe4ed9-5534-40f7-bde8-2ec6bfd66c18",
+   "name": "Сообщить мне",
+   "type": "n8n-nodes-base.telegram",
+   "typeVersion": 1.2,
+   "position": [
+    2480,
+    0
+   ],
+   "onError": "continueRegularOutput"
+  }
+ ],
+ "connections": {
+  "Запустить вручную": {
+   "main": [
+    [
+     {
+      "node": "Настройки",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Каждые 2 минуты": {
+   "main": [
+    [
+     {
+      "node": "Настройки",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Настройки": {
+   "main": [
+    [
+     {
+      "node": "Список команд",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Список команд": {
+   "main": [
+    [
+     {
+      "node": "Выбрать команду",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Выбрать команду": {
+   "main": [
+    [
+     {
+      "node": "Скачать команду",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Скачать команду": {
+   "main": [
+    [
+     {
+      "node": "Проверить",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Проверить": {
+   "main": [
+    [
+     {
+      "node": "Что сделать",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Что сделать": {
+   "main": [
+    [
+     {
+      "node": "Удалить пост",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Исправить пост",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Ошибка",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Удалить пост": {
+   "main": [
+    [
+     {
+      "node": "Итог",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Ошибка",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Исправить пост": {
+   "main": [
+    [
+     {
+      "node": "Итог",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Ошибка",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Итог": {
+   "main": [
+    [
+     {
+      "node": "Записать в GitHub",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Ошибка": {
+   "main": [
+    [
+     {
+      "node": "Записать в GitHub",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Записать в GitHub": {
+   "main": [
+    [
+     {
+      "node": "Убрать команду",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Убрать команду": {
+   "main": [
+    [
+     {
+      "node": "Сообщить мне",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1",
+  "timezone": "Europe/Moscow"
+ }
+}
