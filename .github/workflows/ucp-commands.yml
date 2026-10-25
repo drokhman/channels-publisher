@@ -1,0 +1,27 @@
+name: УЦП команды
+on:
+  push:
+    branches: [main]
+    paths: ['commands-ucp/*.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ucp-commands
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Выполнить команды
+        env:
+          UCP_BOT_TOKEN: ${{ secrets.UCP_BOT_TOKEN }}
+        run: python3 bot/ucp_commands.py
+      - name: Сохранить результат
+        run: |
+          git config user.name "ucp-commands (GitHub Actions)"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A commands-ucp commands-ucp-done commands-ucp-failed
+          git diff --cached --quiet || (git commit -m "УЦП: результат команд" && git pull --rebase && git push)
