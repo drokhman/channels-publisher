@@ -1,0 +1,13 @@
+{
+  "id": "ucp-2026-10-25-fura-21-r2",
+  "channel": "УЦП",
+  "chat_id": "@nscspr",
+  "photo_message_id": null,
+  "text_message_id": 7,
+  "link": "https://t.me/nscspr/7",
+  "file": "ucp-fura-21-r2.json",
+  "due_at": "1970-01-01T00:00:00.000Z",
+  "published_at": "2026-10-25T16:35:18.633Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
