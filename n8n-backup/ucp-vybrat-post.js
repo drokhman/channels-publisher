@@ -16,7 +16,7 @@ const manual = $execution.mode !== 'production';   // ручной запуск 
 if (!manual && s.pauseUntil && now < s.pauseUntil) return [];   // пауза после ошибки Telegram (ручной запуск её пропускает)
 
 function dueAt(name) {
-  const m = name.match(/^(\d{4})-(\d{2})-(\d{2})(?:-(\d{2})(\d{2}))?(?=[-_.])/);
+  const m = name.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})(?:-([0-9]{2})([0-9]{2}))?(?=[-_.])/);
   if (!m) return 0;
   let hh = DEFAULT_HOUR, mm = 0;
   if (m[4] !== undefined && +m[4] < 24 && +m[5] < 60) { hh = +m[4]; mm = +m[5]; }
