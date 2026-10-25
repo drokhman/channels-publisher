@@ -1,0 +1,91 @@
+{
+  "action": "photo",
+  "image": "commands-ucp-media/img-c4.jpg",
+  "text_html": "<b>Конгресс СПЦП, трек 4: логистика, склад, люди</b>\n\nПо <a href=\"https://scmpro.ru/13_scm_congress/\">программе 13-го конгресса</a>, итогов организатор пока не публиковал.\n\nЛогистика: «Стратегическая близорукость в логистике: почему бюджет и адаптация не заменяют стратегическое мышление» (Дмитрий Рохман, «Магнит»); логистика для магазинов нового формата («Магнит»); акт весового контроля (ITALON).\n\nСклад: автоматизация при дефиците кадров (Лемана ПРО), три действия и −20% затрат («Мир Инструмента»), роботы на 12 метрах (Диалог-Терминал).\n\nЛюди: обучение бригадиров (Алгоритм24), кросс-функциональные KPI производства и логистики (СВЕЗА-Лес), студенческий чемпионат Logus Nova — финал 19 ноября.\n\n<b>Вопросы для своей команды</b>\n1️⃣ Есть ли стратегия логистики на 3 года, а не только бюджет?\n2️⃣ Общие KPI у производства и логистики?\n3️⃣ Как растим бригадиров?\n\n#НППЦП #SCMКонгресс",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 20,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792951381,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMUat5EVWt2Od4CwaFt-6qywWEoDNAAAlYkaxvcovBKL77u2U8-WlkBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADViRrG9yi8Ep4",
+          "file_size": 1735,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMUat5EVWt2Od4CwaFt-6qywWEoDNAAAlYkaxvcovBKL77u2U8-WlkBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADViRrG9yi8Epy",
+          "file_size": 26357,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMUat5EVWt2Od4CwaFt-6qywWEoDNAAAlYkaxvcovBKL77u2U8-WlkBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADViRrG9yi8Ep9",
+          "file_size": 109328,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMUat5EVWt2Od4CwaFt-6qywWEoDNAAAlYkaxvcovBKL77u2U8-WlkBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADViRrG9yi8Ep-",
+          "file_size": 222264,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMUat5EVWt2Od4CwaFt-6qywWEoDNAAAlYkaxvcovBKL77u2U8-WlkBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADViRrG9yi8Ep8",
+          "file_size": 267389,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "Конгресс СПЦП, трек 4: логистика, склад, люди\n\nПо программе 13-го конгресса, итогов организатор пока не публиковал.\n\nЛогистика: «Стратегическая близорукость в логистике: почему бюджет и адаптация не заменяют стратегическое мышление» (Дмитрий Рохман, «Магнит»); логистика для магазинов нового формата («Магнит»); акт весового контроля (ITALON).\n\nСклад: автоматизация при дефиците кадров (Лемана ПРО), три действия и −20% затрат («Мир Инструмента»), роботы на 12 метрах (Диалог-Терминал).\n\nЛюди: обучение бригадиров (Алгоритм24), кросс-функциональные KPI производства и логистики (СВЕЗА-Лес), студенческий чемпионат Logus Nova — финал 19 ноября.\n\nВопросы для своей команды\n1️⃣ Есть ли стратегия логистики на 3 года, а не только бюджет?\n2️⃣ Общие KPI у производства и логистики?\n3️⃣ Как растим бригадиров?\n\n#НППЦП #SCMКонгресс",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 45,
+          "type": "bold"
+        },
+        {
+          "offset": 50,
+          "length": 25,
+          "type": "text_link",
+          "url": "https://scmpro.ru/13_scm_congress/"
+        },
+        {
+          "offset": 645,
+          "length": 25,
+          "type": "bold"
+        },
+        {
+          "offset": 804,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 811,
+          "length": 12,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T18:03:01Z"
+}

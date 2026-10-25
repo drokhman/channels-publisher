@@ -1,0 +1,122 @@
+{
+  "action": "photo",
+  "image": "commands-ucp-media/img-p2.jpg",
+  "text_html": "<b>Платформа НППЦП: инструменты для практики</b>\n\n1️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#vc\">Виртуальная компания</a> — модель розничной компании: процессы, роли, RACI, KPI, сценарии и стресс-тесты. Методы проверяются до работы с реальной компанией.\n2️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#hr\">HR-модуль</a> — оргструктура, профили, компетенции с цветом совпадения, пробелы команды, HR-метрики.\n3️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#library\">Библиотека</a> — карта компетенций ProVector: 12 направлений, 30 компетенций, 92 роли.\n4️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#companies\">Компании</a> — пилоты оцифровки: статус и документы по каждой компании.\n5️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#contracts\">Договоры и документы</a> — шаблоны договора пилота, NDA, согласия работника.\n6️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#cvai\">Персональная подборка</a> — материалы по вашему направлению и роли, отметки «Полезно / Не моё».\n7️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#plan\">План развития</a> — что в работе и что дальше.\n\n#НППЦП #платформа",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 22,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792951385,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMWat5EWabPDOytTXQoET-zr5BtihsAAlgkaxvcovBKZk5OS4zVLzoBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADWCRrG9yi8Ep4",
+          "file_size": 1569,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMWat5EWabPDOytTXQoET-zr5BtihsAAlgkaxvcovBKZk5OS4zVLzoBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADWCRrG9yi8Epy",
+          "file_size": 19159,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMWat5EWabPDOytTXQoET-zr5BtihsAAlgkaxvcovBKZk5OS4zVLzoBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADWCRrG9yi8Ep9",
+          "file_size": 75857,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMWat5EWabPDOytTXQoET-zr5BtihsAAlgkaxvcovBKZk5OS4zVLzoBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADWCRrG9yi8Ep-",
+          "file_size": 156967,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMWat5EWabPDOytTXQoET-zr5BtihsAAlgkaxvcovBKZk5OS4zVLzoBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADWCRrG9yi8Ep8",
+          "file_size": 191399,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "Платформа НППЦП: инструменты для практики\n\n1️⃣ Виртуальная компания — модель розничной компании: процессы, роли, RACI, KPI, сценарии и стресс-тесты. Методы проверяются до работы с реальной компанией.\n2️⃣ HR-модуль — оргструктура, профили, компетенции с цветом совпадения, пробелы команды, HR-метрики.\n3️⃣ Библиотека — карта компетенций ProVector: 12 направлений, 30 компетенций, 92 роли.\n4️⃣ Компании — пилоты оцифровки: статус и документы по каждой компании.\n5️⃣ Договоры и документы — шаблоны договора пилота, NDA, согласия работника.\n6️⃣ Персональная подборка — материалы по вашему направлению и роли, отметки «Полезно / Не моё».\n7️⃣ План развития — что в работе и что дальше.\n\n#НППЦП #платформа",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 41,
+          "type": "bold"
+        },
+        {
+          "offset": 47,
+          "length": 20,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#vc"
+        },
+        {
+          "offset": 204,
+          "length": 9,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#hr"
+        },
+        {
+          "offset": 305,
+          "length": 10,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#library"
+        },
+        {
+          "offset": 392,
+          "length": 8,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#companies"
+        },
+        {
+          "offset": 464,
+          "length": 20,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#contracts"
+        },
+        {
+          "offset": 541,
+          "length": 21,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#cvai"
+        },
+        {
+          "offset": 637,
+          "length": 13,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#plan"
+        },
+        {
+          "offset": 681,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 688,
+          "length": 10,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T18:03:05Z"
+}

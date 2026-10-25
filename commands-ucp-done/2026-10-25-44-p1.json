@@ -1,0 +1,109 @@
+{
+  "action": "photo",
+  "image": "commands-ucp-media/img-p1.jpg",
+  "text_html": "<b>Платформа НППЦП: функции рабочей группы</b>\n\nКоллеги, <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#overview\">НППЦП</a> строит единый отраслевой стандарт управления цепями поставок РусКор силами руководителей направлений. Рабочая площадка — инструмент, на котором группа его собирает.\n\n1️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#approvals\">Согласования</a> — ТЗ и MVP по разделам: оценка 1–5, ответ текстом или голосом. Чужие ответы видны только после своего — без эффекта толпы.\n2️⃣ Кворум — итоги вопроса раскрываются, когда ответили все обязательные участники.\n3️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#questions\">Открытые вопросы</a> — модератор ставит вопрос, видит, кто ещё не ответил.\n4️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#log\">Журнал решений</a> — что решили, когда и почему.\n5️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#docs\">Документы</a> и <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#stands\">стенды блоков MVP</a> — статус каждого блока: в работе, на обкатке, принят.\n\n#НППЦП #платформа",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 21,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792951383,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMVat5EV9Ba0wkmv7zEcNPPa3cevfQAAlckaxvcovBKIr7zkRcgLOsBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADVyRrG9yi8Ep4",
+          "file_size": 512,
+          "width": 90,
+          "height": 51
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMVat5EV9Ba0wkmv7zEcNPPa3cevfQAAlckaxvcovBKIr7zkRcgLOsBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADVyRrG9yi8Epy",
+          "file_size": 4151,
+          "width": 320,
+          "height": 180
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMVat5EV9Ba0wkmv7zEcNPPa3cevfQAAlckaxvcovBKIr7zkRcgLOsBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADVyRrG9yi8Ep9",
+          "file_size": 12957,
+          "width": 800,
+          "height": 450
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMVat5EV9Ba0wkmv7zEcNPPa3cevfQAAlckaxvcovBKIr7zkRcgLOsBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADVyRrG9yi8Ep-",
+          "file_size": 22988,
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "caption": "Платформа НППЦП: функции рабочей группы\n\nКоллеги, НППЦП строит единый отраслевой стандарт управления цепями поставок РусКор силами руководителей направлений. Рабочая площадка — инструмент, на котором группа его собирает.\n\n1️⃣ Согласования — ТЗ и MVP по разделам: оценка 1–5, ответ текстом или голосом. Чужие ответы видны только после своего — без эффекта толпы.\n2️⃣ Кворум — итоги вопроса раскрываются, когда ответили все обязательные участники.\n3️⃣ Открытые вопросы — модератор ставит вопрос, видит, кто ещё не ответил.\n4️⃣ Журнал решений — что решили, когда и почему.\n5️⃣ Документы и стенды блоков MVP — статус каждого блока: в работе, на обкатке, принят.\n\n#НППЦП #платформа",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 39,
+          "type": "bold"
+        },
+        {
+          "offset": 50,
+          "length": 5,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#overview"
+        },
+        {
+          "offset": 226,
+          "length": 12,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#approvals"
+        },
+        {
+          "offset": 450,
+          "length": 16,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#questions"
+        },
+        {
+          "offset": 525,
+          "length": 14,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#log"
+        },
+        {
+          "offset": 574,
+          "length": 9,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#docs"
+        },
+        {
+          "offset": 586,
+          "length": 17,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#stands"
+        },
+        {
+          "offset": 659,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 666,
+          "length": 10,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T18:03:03Z"
+}
