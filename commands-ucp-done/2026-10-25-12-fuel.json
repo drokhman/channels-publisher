@@ -1,0 +1,108 @@
+{
+  "action": "photo",
+  "image": "commands-ucp-media/img-fuel.jpg",
+  "text_html": "<b>ДТ +21,4% с начала года, скидки по топливным картам — 3–4%</b>\n\nПо Росстату на 12 октября: ДТ — 86,67 руб./л, бензин — 78,68 руб./л, с конца 2025 г. +21,4% и +13,5% (<a href=\"https://www.rzd-partner.ru/auto/comments/toplivo-dorozhaet-skidki-tayut-kak-perevozchiki-zashchishchayut-reysy-ot-pereboev-na-azs/\">РЖД-Партнёр</a>). Межсезонное ДТ на бирже 9–16 октября +1,8%, до 66 855 руб./т (<a href=\"https://portnews.ru/news/398536/\">PortNews</a>). Скидки по картам сократились с 16% до 3–4% (Д. Говоров, «АСТ Плюс»).\n\nДизель на рынке есть, дефицит — по бензину (<a href=\"https://pronedra.ru/pochemu-dizel-est-a-benzina-ne-hvataet-v-rossii-osenyu-2026-prichiny-toplivnogo-disbalansa-834119.html\">Pronedra</a>). Давление — через цену и скидки.\n\n<b>Почему это вопрос перевозчика</b>\nСкидка 16% → 3,5% ≈ +15% к цене топлива. При доле топлива 30% — около +4,5% к себестоимости рейса.\n\n<b>Что сделать</b>\n1️⃣ Себестоимость км — по фактической скидке.\n2️⃣ Топливная оговорка в договорах — индекс Росстата или биржи.\n3️⃣ 2–3 топливных оператора на ключевых направлениях.\n4️⃣ Неснижаемый остаток и расход — по телематике.\n\n#НППЦП #топливо",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 11,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792948834,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMLat46YpNIBNGNxOL63g2X-eZb0YIAAiYkaxvcovBKHIyp6BJ4FoUBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADJiRrG9yi8Ep4",
+          "file_size": 1468,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMLat46YpNIBNGNxOL63g2X-eZb0YIAAiYkaxvcovBKHIyp6BJ4FoUBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADJiRrG9yi8Epy",
+          "file_size": 20186,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMLat46YpNIBNGNxOL63g2X-eZb0YIAAiYkaxvcovBKHIyp6BJ4FoUBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADJiRrG9yi8Ep9",
+          "file_size": 94697,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMLat46YpNIBNGNxOL63g2X-eZb0YIAAiYkaxvcovBKHIyp6BJ4FoUBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADJiRrG9yi8Ep-",
+          "file_size": 214617,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMLat46YpNIBNGNxOL63g2X-eZb0YIAAiYkaxvcovBKHIyp6BJ4FoUBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADJiRrG9yi8Ep8",
+          "file_size": 269688,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "ДТ +21,4% с начала года, скидки по топливным картам — 3–4%\n\nПо Росстату на 12 октября: ДТ — 86,67 руб./л, бензин — 78,68 руб./л, с конца 2025 г. +21,4% и +13,5% (РЖД-Партнёр). Межсезонное ДТ на бирже 9–16 октября +1,8%, до 66 855 руб./т (PortNews). Скидки по картам сократились с 16% до 3–4% (Д. Говоров, «АСТ Плюс»).\n\nДизель на рынке есть, дефицит — по бензину (Pronedra). Давление — через цену и скидки.\n\nПочему это вопрос перевозчика\nСкидка 16% → 3,5% ≈ +15% к цене топлива. При доле топлива 30% — около +4,5% к себестоимости рейса.\n\nЧто сделать\n1️⃣ Себестоимость км — по фактической скидке.\n2️⃣ Топливная оговорка в договорах — индекс Росстата или биржи.\n3️⃣ 2–3 топливных оператора на ключевых направлениях.\n4️⃣ Неснижаемый остаток и расход — по телематике.\n\n#НППЦП #топливо",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 58,
+          "type": "bold"
+        },
+        {
+          "offset": 162,
+          "length": 11,
+          "type": "text_link",
+          "url": "https://www.rzd-partner.ru/auto/comments/toplivo-dorozhaet-skidki-tayut-kak-perevozchiki-zashchishchayut-reysy-ot-pereboev-na-azs/"
+        },
+        {
+          "offset": 238,
+          "length": 8,
+          "type": "text_link",
+          "url": "https://portnews.ru/news/398536/"
+        },
+        {
+          "offset": 363,
+          "length": 8,
+          "type": "text_link",
+          "url": "https://pronedra.ru/pochemu-dizel-est-a-benzina-ne-hvataet-v-rossii-osenyu-2026-prichiny-toplivnogo-disbalansa-834119.html"
+        },
+        {
+          "offset": 407,
+          "length": 29,
+          "type": "bold"
+        },
+        {
+          "offset": 537,
+          "length": 11,
+          "type": "bold"
+        },
+        {
+          "offset": 764,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 771,
+          "length": 8,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T17:20:34Z"
+}

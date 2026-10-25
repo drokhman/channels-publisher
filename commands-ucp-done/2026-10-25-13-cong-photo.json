@@ -1,0 +1,62 @@
+{
+  "action": "photo",
+  "image": "commands-ucp-media/img-cong.jpg",
+  "text_html": "",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 12,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792948836,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMMat46ZLnt76Ry0K6aI5zW7BIuruEAAickaxvcovBKM7qQ2Wra8LEBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADJyRrG9yi8Ep4",
+          "file_size": 1650,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMMat46ZLnt76Ry0K6aI5zW7BIuruEAAickaxvcovBKM7qQ2Wra8LEBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADJyRrG9yi8Epy",
+          "file_size": 22413,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMMat46ZLnt76Ry0K6aI5zW7BIuruEAAickaxvcovBKM7qQ2Wra8LEBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADJyRrG9yi8Ep9",
+          "file_size": 94304,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMMat46ZLnt76Ry0K6aI5zW7BIuruEAAickaxvcovBKM7qQ2Wra8LEBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADJyRrG9yi8Ep-",
+          "file_size": 196881,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMMat46ZLnt76Ry0K6aI5zW7BIuruEAAickaxvcovBKM7qQ2Wra8LEBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADJyRrG9yi8Ep8",
+          "file_size": 241526,
+          "width": 1536,
+          "height": 1024
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T17:20:36Z"
+}
