@@ -1,0 +1,117 @@
+{
+  "action": "edit",
+  "message_id": 14,
+  "text_html": "<b>Навигатор канала · неделя 19–25 октября</b>\n\nКоллеги, главное за неделю — коротко, подробности по ссылкам.\n\n1️⃣ <a href=\"https://t.me/nscspr/8\">Фура +21% за год, закупочная цена — прежняя</a> — ставки FTL и переговоры поставщика с сетью\n2️⃣ <a href=\"https://t.me/nscspr/9\">ЭПД: 62 млн документов, подпись — у 16% перевозчиков</a> — что контролировать грузоотправителю\n3️⃣ <a href=\"https://t.me/nscspr/10\">Погрузка РЖД −1,2%</a> — рынок ждёт ухудшения в IV квартале, что пересчитать производителю\n4️⃣ <a href=\"https://t.me/nscspr/11\">ДТ +21,4% с начала года</a> — скидки по топливным картам и себестоимость рейса\n5️⃣ <a href=\"https://t.me/nscspr/13\">13-й Конгресс руководителей цепей поставок</a> — обзор тем и что взять в работу\n\n<b>Впереди</b>\n19 ноября — финал студенческого чемпионата Logus Nova (<a href=\"https://scmpro.ru/\">СПЦП</a>).\n\n<b>Платформа НППЦП</b>\n<a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#overview\">Обзор</a> · <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#docs\">Документы</a> · <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#questions\">Открытые вопросы</a> · <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#library\">Библиотека</a> — заходите и регистрируйтесь.\n\n#НППЦП #навигатор",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 14,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792948916,
+      "edit_date": 1792950536,
+      "text": "Навигатор канала · неделя 19–25 октября\n\nКоллеги, главное за неделю — коротко, подробности по ссылкам.\n\n1️⃣ Фура +21% за год, закупочная цена — прежняя — ставки FTL и переговоры поставщика с сетью\n2️⃣ ЭПД: 62 млн документов, подпись — у 16% перевозчиков — что контролировать грузоотправителю\n3️⃣ Погрузка РЖД −1,2% — рынок ждёт ухудшения в IV квартале, что пересчитать производителю\n4️⃣ ДТ +21,4% с начала года — скидки по топливным картам и себестоимость рейса\n5️⃣ 13-й Конгресс руководителей цепей поставок — обзор тем и что взять в работу\n\nВпереди\n19 ноября — финал студенческого чемпионата Logus Nova (СПЦП).\n\nПлатформа НППЦП\nОбзор · Документы · Открытые вопросы · Библиотека — заходите и регистрируйтесь.\n\n#НППЦП #навигатор",
+      "entities": [
+        {
+          "offset": 0,
+          "length": 39,
+          "type": "bold"
+        },
+        {
+          "offset": 108,
+          "length": 43,
+          "type": "text_link",
+          "url": "https://t.me/nscspr/8"
+        },
+        {
+          "offset": 201,
+          "length": 52,
+          "type": "text_link",
+          "url": "https://t.me/nscspr/9"
+        },
+        {
+          "offset": 296,
+          "length": 18,
+          "type": "text_link",
+          "url": "https://t.me/nscspr/10"
+        },
+        {
+          "offset": 387,
+          "length": 23,
+          "type": "text_link",
+          "url": "https://t.me/nscspr/11"
+        },
+        {
+          "offset": 466,
+          "length": 42,
+          "type": "text_link",
+          "url": "https://t.me/nscspr/13"
+        },
+        {
+          "offset": 543,
+          "length": 7,
+          "type": "bold"
+        },
+        {
+          "offset": 606,
+          "length": 4,
+          "type": "text_link",
+          "url": "https://scmpro.ru/"
+        },
+        {
+          "offset": 614,
+          "length": 15,
+          "type": "bold"
+        },
+        {
+          "offset": 630,
+          "length": 5,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#overview"
+        },
+        {
+          "offset": 638,
+          "length": 9,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#docs"
+        },
+        {
+          "offset": 650,
+          "length": 16,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#questions"
+        },
+        {
+          "offset": 669,
+          "length": 10,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#library"
+        },
+        {
+          "offset": 711,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 718,
+          "length": 10,
+          "type": "hashtag"
+        }
+      ],
+      "link_preview_options": {
+        "is_disabled": true
+      }
+    }
+  },
+  "at": "2026-10-25T17:48:56Z"
+}
