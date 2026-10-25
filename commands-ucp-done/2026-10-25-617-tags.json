@@ -1,0 +1,103 @@
+{
+  "action": "edit_caption",
+  "message_id": 17,
+  "text_html": "<b>Конгресс СПЦП, трек 1: ИИ и цифровизация</b>\n\nПо <a href=\"https://scmpro.ru/13_scm_congress/\">программе 13-го конгресса</a>, итогов организатор пока не публиковал.\n\nОткрывающая панель — «ИИ в управлении цепями поставок. Снижение роли человека при использовании ИИ, риски, опасения, сомнения»: Сбер, МТС, «Авито», Axenix, Mondelez, Loginet, «Магнит» (Дмитрий Рохман). Вопрос — где ИИ уже рабочий инструмент, а где классическая оптимизация надёжнее и дешевле; критерий — окупаемость и TCO (<a href=\"https://logistics.ru/upravlenie-logistikoy-i-kompaniey/pragmatichnyy-podkhod-lidery-rynka-obsudyat-granicy-effektivnosti\">Logistics.ru</a>).\n\nСессия «Технологии»: сбои на стыках функций (РУСКОР), платформа SCMS «Магнита», аналитика за минуты (Glarus), ЭПД как ступень цифровизации (СКБ Контур), «почему идеальные системы не работают» (Бургер Кинг).\n\n<b>Вопросы для своей команды</b>\n1️⃣ Какие 2–3 задачи отдаём ИИ, а какие — оптимизации?\n2️⃣ Посчитан ли TCO до пилота?\n3️⃣ Где решение остаётся за человеком?\n\n#НППЦП #цифровизация #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 17,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792951375,
+      "edit_date": 1792951593,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMRat5ET8QMpCscFyUcJB7ZPuNmMncAAlMkaxvcovBKDKmKQHpu4LoBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADUyRrG9yi8Ep4",
+          "file_size": 1388,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMRat5ET8QMpCscFyUcJB7ZPuNmMncAAlMkaxvcovBKDKmKQHpu4LoBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADUyRrG9yi8Epy",
+          "file_size": 16952,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMRat5ET8QMpCscFyUcJB7ZPuNmMncAAlMkaxvcovBKDKmKQHpu4LoBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADUyRrG9yi8Ep9",
+          "file_size": 67420,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMRat5ET8QMpCscFyUcJB7ZPuNmMncAAlMkaxvcovBKDKmKQHpu4LoBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADUyRrG9yi8Ep-",
+          "file_size": 143975,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMRat5ET8QMpCscFyUcJB7ZPuNmMncAAlMkaxvcovBKDKmKQHpu4LoBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADUyRrG9yi8Ep8",
+          "file_size": 176698,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "Конгресс СПЦП, трек 1: ИИ и цифровизация\n\nПо программе 13-го конгресса, итогов организатор пока не публиковал.\n\nОткрывающая панель — «ИИ в управлении цепями поставок. Снижение роли человека при использовании ИИ, риски, опасения, сомнения»: Сбер, МТС, «Авито», Axenix, Mondelez, Loginet, «Магнит» (Дмитрий Рохман). Вопрос — где ИИ уже рабочий инструмент, а где классическая оптимизация надёжнее и дешевле; критерий — окупаемость и TCO (Logistics.ru).\n\nСессия «Технологии»: сбои на стыках функций (РУСКОР), платформа SCMS «Магнита», аналитика за минуты (Glarus), ЭПД как ступень цифровизации (СКБ Контур), «почему идеальные системы не работают» (Бургер Кинг).\n\nВопросы для своей команды\n1️⃣ Какие 2–3 задачи отдаём ИИ, а какие — оптимизации?\n2️⃣ Посчитан ли TCO до пилота?\n3️⃣ Где решение остаётся за человеком?\n\n#НППЦП #цифровизация #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 40,
+          "type": "bold"
+        },
+        {
+          "offset": 45,
+          "length": 25,
+          "type": "text_link",
+          "url": "https://scmpro.ru/13_scm_congress/"
+        },
+        {
+          "offset": 435,
+          "length": 12,
+          "type": "text_link",
+          "url": "https://logistics.ru/upravlenie-logistikoy-i-kompaniey/pragmatichnyy-podkhod-lidery-rynka-obsudyat-granicy-effektivnosti"
+        },
+        {
+          "offset": 659,
+          "length": 25,
+          "type": "bold"
+        },
+        {
+          "offset": 811,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 818,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 832,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T18:06:34Z"
+}

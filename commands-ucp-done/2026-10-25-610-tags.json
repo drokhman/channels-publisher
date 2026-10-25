@@ -1,0 +1,108 @@
+{
+  "action": "edit_caption",
+  "message_id": 10,
+  "text_html": "<b>Погрузка РЖД −1,2%, рынок ждёт ухудшения в IV квартале</b>\n\nПогрузка в сентябре — 90,3 млн т, −1,2% г/г; за 9 месяцев — 824,4 млн т, −0,7% (<a href=\"https://www.interfax.ru/business/1119602\">Интерфакс</a>). Грузооборот в сентябре +3,4%, рост у зерна (+9%) и цемента (+7,3%). Почти половина грузовладельцев и операторов ждёт ухудшения перевозок в IV квартале к III (обзор Infoline, <a href=\"https://www.vedomosti.ru/business/articles/2026/10/20/1238382-ne-zhdut-uluchsheniya-situatsii-na-seti-rzhd\">Ведомости</a>).\n\nПричины, по оценке грузоотправителей: диспетчеризация, простои вагонов, ремонт. Погрузка снижается пятый год — быстро не уйдёт.\n\n<b>Почему это вопрос производителя</b>\nСрок доставки менее предсказуем — растут страховой запас и риск по OTIF клиенту.\n\n<b>Что сделать</b>\n1️⃣ Фактический срок доставки за III кв. vs норматив — по направлениям.\n2️⃣ Страховой запас — под фактический разброс сроков.\n3️⃣ Авто или контейнер по 2–3 направлениям — расчёт стоимости.\n4️⃣ Объёмы на ноябрь–декабрь — заявить заранее.\n\n#НППЦП #транспорт #логистика",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 10,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792948832,
+      "edit_date": 1792951587,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMKat46YGEdoMSp188OAw9S5lLR83AAAiUkaxvcovBKwQFGlo8x7WcBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADJSRrG9yi8Ep4",
+          "file_size": 1266,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMKat46YGEdoMSp188OAw9S5lLR83AAAiUkaxvcovBKwQFGlo8x7WcBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADJSRrG9yi8Epy",
+          "file_size": 22521,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMKat46YGEdoMSp188OAw9S5lLR83AAAiUkaxvcovBKwQFGlo8x7WcBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADJSRrG9yi8Ep9",
+          "file_size": 122229,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMKat46YGEdoMSp188OAw9S5lLR83AAAiUkaxvcovBKwQFGlo8x7WcBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADJSRrG9yi8Ep-",
+          "file_size": 289993,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMKat46YGEdoMSp188OAw9S5lLR83AAAiUkaxvcovBKwQFGlo8x7WcBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADJSRrG9yi8Ep8",
+          "file_size": 363978,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "Погрузка РЖД −1,2%, рынок ждёт ухудшения в IV квартале\n\nПогрузка в сентябре — 90,3 млн т, −1,2% г/г; за 9 месяцев — 824,4 млн т, −0,7% (Интерфакс). Грузооборот в сентябре +3,4%, рост у зерна (+9%) и цемента (+7,3%). Почти половина грузовладельцев и операторов ждёт ухудшения перевозок в IV квартале к III (обзор Infoline, Ведомости).\n\nПричины, по оценке грузоотправителей: диспетчеризация, простои вагонов, ремонт. Погрузка снижается пятый год — быстро не уйдёт.\n\nПочему это вопрос производителя\nСрок доставки менее предсказуем — растут страховой запас и риск по OTIF клиенту.\n\nЧто сделать\n1️⃣ Фактический срок доставки за III кв. vs норматив — по направлениям.\n2️⃣ Страховой запас — под фактический разброс сроков.\n3️⃣ Авто или контейнер по 2–3 направлениям — расчёт стоимости.\n4️⃣ Объёмы на ноябрь–декабрь — заявить заранее.\n\n#НППЦП #транспорт #логистика",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 54,
+          "type": "bold"
+        },
+        {
+          "offset": 136,
+          "length": 9,
+          "type": "text_link",
+          "url": "https://www.interfax.ru/business/1119602"
+        },
+        {
+          "offset": 322,
+          "length": 9,
+          "type": "text_link",
+          "url": "https://www.vedomosti.ru/business/articles/2026/10/20/1238382-ne-zhdut-uluchsheniya-situatsii-na-seti-rzhd"
+        },
+        {
+          "offset": 464,
+          "length": 31,
+          "type": "bold"
+        },
+        {
+          "offset": 578,
+          "length": 11,
+          "type": "bold"
+        },
+        {
+          "offset": 828,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 835,
+          "length": 10,
+          "type": "hashtag"
+        },
+        {
+          "offset": 846,
+          "length": 10,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T18:06:27Z"
+}

@@ -1,0 +1,109 @@
+{
+  "action": "edit_caption",
+  "message_id": 19,
+  "text_html": "<b>Конгресс СПЦП, трек 3: ЭПД, ВЭД и риски</b>\n\nПо <a href=\"https://scmpro.ru/13_scm_congress/\">программе 13-го конгресса</a>, итогов организатор пока не публиковал.\n\nЭПД: «ЭТрН спустя 2 месяца» и круглые столы с ответами на вопросы — перевозчики, операторы ЭДО, производители.\n\nВЭД: плюсы и минусы статуса УЭО, ошибки мастер-данных и финансирование импорта (МАЗ Москвич), маркировка на таможенном складе (Major Terminal), импорт из Китая (БЕВ).\n\nРиски: стресс-тесты цепи и страхование в S&amp;OP-цикле, чек-листы «страховой уязвимости» (<a href=\"https://arsconsulting.ru/ehkspert-a-r-s-konsalting-vystupil-na-13m-kongresse-rukovoditelej/\">А.Р.С. Консалтинг</a>).\n\n<b>Вопросы для своей команды</b>\n1️⃣ Что будет, если выпадет ключевой поставщик или склад?\n2️⃣ Мастер-данные импорта сверены с таможенными?\n3️⃣ Вопросы по ЭПД — в <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#questions\">открытые вопросы НППЦП</a>.\n\n#НППЦП #транспорт #логистика",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 19,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792951379,
+      "edit_date": 1792951596,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMTat5EUxYlRtFd-fUsESMSDbD32LwAAlUkaxvcovBKsRVHvp7D3hsBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADVSRrG9yi8Ep4",
+          "file_size": 1535,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMTat5EUxYlRtFd-fUsESMSDbD32LwAAlUkaxvcovBKsRVHvp7D3hsBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADVSRrG9yi8Epy",
+          "file_size": 22066,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMTat5EUxYlRtFd-fUsESMSDbD32LwAAlUkaxvcovBKsRVHvp7D3hsBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADVSRrG9yi8Ep9",
+          "file_size": 93804,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMTat5EUxYlRtFd-fUsESMSDbD32LwAAlUkaxvcovBKsRVHvp7D3hsBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADVSRrG9yi8Ep-",
+          "file_size": 197608,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMTat5EUxYlRtFd-fUsESMSDbD32LwAAlUkaxvcovBKsRVHvp7D3hsBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADVSRrG9yi8Ep8",
+          "file_size": 240944,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "Конгресс СПЦП, трек 3: ЭПД, ВЭД и риски\n\nПо программе 13-го конгресса, итогов организатор пока не публиковал.\n\nЭПД: «ЭТрН спустя 2 месяца» и круглые столы с ответами на вопросы — перевозчики, операторы ЭДО, производители.\n\nВЭД: плюсы и минусы статуса УЭО, ошибки мастер-данных и финансирование импорта (МАЗ Москвич), маркировка на таможенном складе (Major Terminal), импорт из Китая (БЕВ).\n\nРиски: стресс-тесты цепи и страхование в S&OP-цикле, чек-листы «страховой уязвимости» (А.Р.С. Консалтинг).\n\nВопросы для своей команды\n1️⃣ Что будет, если выпадет ключевой поставщик или склад?\n2️⃣ Мастер-данные импорта сверены с таможенными?\n3️⃣ Вопросы по ЭПД — в открытые вопросы НППЦП.\n\n#НППЦП #транспорт #логистика",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 39,
+          "type": "bold"
+        },
+        {
+          "offset": 44,
+          "length": 25,
+          "type": "text_link",
+          "url": "https://scmpro.ru/13_scm_congress/"
+        },
+        {
+          "offset": 478,
+          "length": 17,
+          "type": "text_link",
+          "url": "https://arsconsulting.ru/ehkspert-a-r-s-konsalting-vystupil-na-13m-kongresse-rukovoditelej/"
+        },
+        {
+          "offset": 499,
+          "length": 25,
+          "type": "bold"
+        },
+        {
+          "offset": 655,
+          "length": 22,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#questions"
+        },
+        {
+          "offset": 680,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 687,
+          "length": 10,
+          "type": "hashtag"
+        },
+        {
+          "offset": 698,
+          "length": 10,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T18:06:37Z"
+}

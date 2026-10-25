@@ -1,0 +1,97 @@
+{
+  "action": "edit_caption",
+  "message_id": 18,
+  "text_html": "<b>Конгресс СПЦП, трек 2: планирование и закупки</b>\n\nПо <a href=\"https://scmpro.ru/13_scm_congress/\">программе 13-го конгресса</a>, итогов организатор пока не публиковал.\n\nПланирование: IBP «Перекрёстка» — от плана до онлайн-мониторинга; совместное планирование с поставщиком в DIY (Hoff и КМК); DDMRP на производстве — запасы ниже при том же сервисе (Атлантик Теплолюкс); потери от ошибок планирования в деньгах (Novo BI); 4 кейса IBP («Оптимакрос»).\n\nЗакупки: 10 мер стабилизации поставок (bidzaar), двухслойная оценка поставщиков (ОВЕН), ИИ-агенты в закупках (ДжиАйТиЭл, ГК 3Z), партнёрство сети с поставщиками («Перекрёсток»).\n\n<b>Вопросы для своей команды</b>\n1️⃣ Ошибка прогноза переведена в деньги — запас, списания, упущенные продажи?\n2️⃣ Есть ли общий план с ключевыми поставщиками?\n3️⃣ По каким критериям оцениваем поставщика, кроме цены?\n\n#НППЦП #закупки #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 18,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1792951377,
+      "edit_date": 1792951595,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMSat5EUTA7shwre5xG8-nbOcx83R4AAlQkaxvcovBKdmEiU48jmI0BAAMCAANzAAM9BA",
+          "file_unique_id": "AQADVCRrG9yi8Ep4",
+          "file_size": 1637,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMSat5EUTA7shwre5xG8-nbOcx83R4AAlQkaxvcovBKdmEiU48jmI0BAAMCAANtAAM9BA",
+          "file_unique_id": "AQADVCRrG9yi8Epy",
+          "file_size": 20524,
+          "width": 320,
+          "height": 213
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMSat5EUTA7shwre5xG8-nbOcx83R4AAlQkaxvcovBKdmEiU48jmI0BAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADVCRrG9yi8Ep9",
+          "file_size": 83972,
+          "width": 800,
+          "height": 533
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMSat5EUTA7shwre5xG8-nbOcx83R4AAlQkaxvcovBKdmEiU48jmI0BAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADVCRrG9yi8Ep-",
+          "file_size": 174329,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMSat5EUTA7shwre5xG8-nbOcx83R4AAlQkaxvcovBKdmEiU48jmI0BAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADVCRrG9yi8Ep8",
+          "file_size": 212196,
+          "width": 1536,
+          "height": 1024
+        }
+      ],
+      "caption": "Конгресс СПЦП, трек 2: планирование и закупки\n\nПо программе 13-го конгресса, итогов организатор пока не публиковал.\n\nПланирование: IBP «Перекрёстка» — от плана до онлайн-мониторинга; совместное планирование с поставщиком в DIY (Hoff и КМК); DDMRP на производстве — запасы ниже при том же сервисе (Атлантик Теплолюкс); потери от ошибок планирования в деньгах (Novo BI); 4 кейса IBP («Оптимакрос»).\n\nЗакупки: 10 мер стабилизации поставок (bidzaar), двухслойная оценка поставщиков (ОВЕН), ИИ-агенты в закупках (ДжиАйТиЭл, ГК 3Z), партнёрство сети с поставщиками («Перекрёсток»).\n\nВопросы для своей команды\n1️⃣ Ошибка прогноза переведена в деньги — запас, списания, упущенные продажи?\n2️⃣ Есть ли общий план с ключевыми поставщиками?\n3️⃣ По каким критериям оцениваем поставщика, кроме цены?\n\n#НППЦП #закупки #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 45,
+          "type": "bold"
+        },
+        {
+          "offset": 50,
+          "length": 25,
+          "type": "text_link",
+          "url": "https://scmpro.ru/13_scm_congress/"
+        },
+        {
+          "offset": 577,
+          "length": 25,
+          "type": "bold"
+        },
+        {
+          "offset": 788,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 795,
+          "length": 8,
+          "type": "hashtag"
+        },
+        {
+          "offset": 804,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-25T18:06:35Z"
+}
