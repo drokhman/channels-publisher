@@ -12,7 +12,7 @@ s.chatByFile = s.chatByFile || {};
 s.doneFiles = s.doneFiles || {};   // защита от повтора, если файл не удалился из outbox
 const now = Date.now();
 
-const manual = $execution.mode === 'manual';   // ручной запуск кнопкой Execute workflow
+const manual = $execution.mode !== 'production';   // ручной запуск кнопкой Execute workflow (режим test)
 if (!manual && s.pauseUntil && now < s.pauseUntil) return [];   // пауза после ошибки Telegram (ручной запуск её пропускает)
 
 function dueAt(name) {
