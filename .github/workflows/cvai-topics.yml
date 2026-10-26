@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
       - name: Разложить посты по темам
         env:
-          CVAI_BOT_TOKEN: ${{ secrets.CVAI_BOT_TOKEN || secrets.UCP_BOT_TOKEN }}
+          CVAI_BOT_TOKEN: ${{ secrets.CVAI_BOT_TOKEN }}
         run: python3 bot/cvai_topics.py
       - name: Сохранить результат
         if: always()
