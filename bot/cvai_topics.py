@@ -58,6 +58,9 @@ def pick_topic(cfg, raw):
 
 def main():
     cfg = json.load(open(CFG_PATH, encoding="utf-8"))
+    if TOKEN:
+        me = api("getMe", {})
+        print("Бот:", "@" + me.get("result", {}).get("username", "?") if me.get("ok") else me)
     if not cfg.get("enabled") or not cfg.get("group_chat_id"):
         print("Рубрикатор выключен или не задана группа — пропуск")
         return 0
