@@ -1,17 +1,88 @@
 {
-  "enabled": false,
-  "group_chat_id": null,
+  "enabled": true,
+  "group_chat_id": -1004326691613,
   "source_channel": "@chelovek_vs_ai",
   "mode": "forward",
   "backfill": true,
   "topics": [
-    {"key": "shnobel",  "name": "Шнобель недели",         "tags": ["#шнобель"], "icon_color": 16766590, "thread_id": null},
-    {"key": "mozg",     "name": "Мозг против ИИ",         "tags": ["#мозгпротивИИ", "#навыки", "#обучение"], "icon_color": 13338331, "thread_id": null},
-    {"key": "rounds",   "name": "Раунды: человек и ИИ",   "tags": ["#раунд"], "icon_color": 16478047, "thread_id": null},
-    {"key": "process",  "name": "Процессы и контроль",    "tags": ["#процессы", "#внедрение", "#цифровизация", "#агенты", "#ритейл", "#RACI", "#логистика"], "icon_color": 7322096, "thread_id": null},
-    {"key": "people",   "name": "Люди и команда",         "tags": ["#управление", "#решения", "#продуктивность", "#креатив", "#найм", "#адаптация"], "icon_color": 9367192, "thread_id": null},
-    {"key": "security", "name": "Безопасность и риски",   "tags": ["#безопасность"], "icon_color": 16749490, "thread_id": null},
-    {"key": "news",     "name": "Новости и навигатор",    "tags": ["#новости", "#новостинедели", "#итогинедели"], "icon_color": 7322096, "thread_id": null}
+    {
+      "key": "shnobel",
+      "name": "Шнобель недели",
+      "tags": [
+        "#шнобель"
+      ],
+      "icon_color": 16766590,
+      "thread_id": null
+    },
+    {
+      "key": "mozg",
+      "name": "Мозг против ИИ",
+      "tags": [
+        "#мозгпротивИИ",
+        "#навыки",
+        "#обучение"
+      ],
+      "icon_color": 13338331,
+      "thread_id": null
+    },
+    {
+      "key": "rounds",
+      "name": "Раунды: человек и ИИ",
+      "tags": [
+        "#раунд"
+      ],
+      "icon_color": 16478047,
+      "thread_id": null
+    },
+    {
+      "key": "process",
+      "name": "Процессы и контроль",
+      "tags": [
+        "#процессы",
+        "#внедрение",
+        "#цифровизация",
+        "#агенты",
+        "#ритейл",
+        "#RACI",
+        "#логистика"
+      ],
+      "icon_color": 7322096,
+      "thread_id": null
+    },
+    {
+      "key": "people",
+      "name": "Люди и команда",
+      "tags": [
+        "#управление",
+        "#решения",
+        "#продуктивность",
+        "#креатив",
+        "#найм",
+        "#адаптация"
+      ],
+      "icon_color": 9367192,
+      "thread_id": null
+    },
+    {
+      "key": "security",
+      "name": "Безопасность и риски",
+      "tags": [
+        "#безопасность"
+      ],
+      "icon_color": 16749490,
+      "thread_id": null
+    },
+    {
+      "key": "news",
+      "name": "Новости и навигатор",
+      "tags": [
+        "#новости",
+        "#новостинедели",
+        "#итогинедели"
+      ],
+      "icon_color": 7322096,
+      "thread_id": null
+    }
   ],
   "default_topic": "process",
   "manual": {

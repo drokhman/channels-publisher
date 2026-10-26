@@ -6,7 +6,7 @@
 совпавший хештег по порядку тем в config/cvai-topics.json, иначе default_topic.
 Результат: topics-cvai/<id>.json. Ничего не делает, пока enabled=false.
 """
-import glob, json, os, re, subprocess, sys, urllib.request, urllib.error
+import glob, json, os, re, subprocess, sys, time, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG_PATH = os.path.join(ROOT, "config", "cvai-topics.json")
@@ -14,7 +14,17 @@ DONE_DIR = os.path.join(ROOT, "topics-cvai")
 TOKEN = os.environ.get("CVAI_BOT_TOKEN", "")
 
 
-def api(method, payload):
+def api(method, payload, tries=3):
+    for _ in range(tries):
+        r = _api(method, payload)
+        ra = (r.get("parameters") or {}).get("retry_after")
+        if r.get("ok") or not ra:
+            return r
+        time.sleep(ra + 1)
+    return r
+
+
+def _api(method, payload):
     req = urllib.request.Request(
         f"https://api.telegram.org/bot{TOKEN}/{method}",
         data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
@@ -111,6 +121,7 @@ def main():
             out["group_message_ids"] = [m["message_id"] for m in r["result"]]
             json.dump(out, open(done, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
             print("OK", pid, "→", topic["name"])
+            time.sleep(4)
         else:
             errors += 1
             print("ОШИБКА", pid, r)
