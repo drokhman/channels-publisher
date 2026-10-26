@@ -2,3 +2,4 @@
 *.key
 *.pem
 id_*
+__pycache__/

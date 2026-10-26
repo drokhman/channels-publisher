@@ -1,0 +1,36 @@
+name: УЦП расписание
+# Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
+on:
+  schedule:
+    - cron: '48 10 26 10 *'   # 2026-10-26-1348-migration.json · пост
+    - cron: '13 11 26 10 *'   # 2026-10-26-1348-migration.json · страховка
+    - cron: '2 12 26 10 *'   # 2026-10-26-1502-release-0510.json · пост
+    - cron: '27 12 26 10 *'   # 2026-10-26-1502-release-0510.json · страховка
+    - cron: '4 13 26 10 *'   # 2026-10-26-1604-wci.json · пост
+    - cron: '29 13 26 10 *'   # 2026-10-26-1604-wci.json · страховка
+    - cron: '5 14 26 10 *'   # 2026-10-26-1705-book-goal.json · пост
+    - cron: '30 14 26 10 *'   # 2026-10-26-1705-book-goal.json · страховка
+    - cron: '15 15 26 10 *'   # 2026-10-26-1815-ftl-season.json · пост
+    - cron: '40 15 26 10 *'   # 2026-10-26-1815-ftl-season.json · страховка
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ucp-schedule
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Опубликовать пост, чьё время наступило
+        env:
+          UCP_BOT_TOKEN: ${{ secrets.UCP_BOT_TOKEN }}
+        run: python3 bot/ucp_schedule.py
+      - name: Сохранить результат
+        run: |
+          git config user.name "ucp-schedule (GitHub Actions)"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A scheduled-ucp scheduled-ucp-done scheduled-ucp-failed
+          git diff --cached --quiet || (git commit -m "УЦП: пост по расписанию" && git pull --rebase && git push)

@@ -1,0 +1,9 @@
+{
+  "steps": [
+    {
+      "action": "photo",
+      "image": "commands-ucp-media/img-r0510.jpg",
+      "text_html": "<b>Платформа НППЦП 0.5.10: новое меню и уровни доступа</b>\n\n1️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#overview\">Обзор</a> — презентация проекта на 7 слайдов: зачем площадка и как в ней работать.\n2️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#companies\">Компании</a> и <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#people\">Участники</a> — отдельные разделы меню.\n3️⃣ Уровни: участник, рабочая группа, кворум, модератор, администратор. Модератор и администратор входят в кворум по умолчанию.\n4️⃣ Допуск к компании — для каждой отдельно, вкладка «Доступ» в карточке. Данные пилота видят только допущенные.\n5️⃣ <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#approvals\">Согласования</a> и проект — в «Моём кабинете», договоры — вкладка в <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#docs\">Документах</a>.\n\nДля компании-пилота это значит: её процессы и цифры не видны всей группе.\n\n#НППЦП #цифровизация #цепипоставок"
+    }
+  ]
+}
