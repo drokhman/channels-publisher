@@ -1,0 +1,248 @@
+{
+  "method": "editMessageReplyMarkup",
+  "payload": {
+    "chat_id": "@chelovek_vs_ai",
+    "message_id": 43,
+    "reply_markup": {
+      "inline_keyboard": [
+        [
+          {
+            "text": "📚 Библиотека: все посты по рубрикам",
+            "url": "https://t.me/+NX-joz_PlAFiNDli"
+          }
+        ]
+      ]
+    }
+  },
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 43,
+      "sender_chat": {
+        "id": -1003998806121,
+        "title": "Человек vs ИИ",
+        "username": "chelovek_vs_ai",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003998806121,
+        "title": "Человек vs ИИ",
+        "username": "chelovek_vs_ai",
+        "type": "channel"
+      },
+      "date": 1792404224,
+      "edit_date": 1793023694,
+      "text": "Навигатор по каналу «Человек VS ИИ»\n\nЗдесь собраны все посты по темам. Выберите, что ближе, и начните с любого.\n\n🧭 С чего начать\n▪️ О канале: каждый пост — раунд человека и ИИ\n▪️ Как я подключаю ИИ к своему каналу: n8n\n\n🤖 Где ошибается ИИ и кто за это отвечает\n▪️ Как именно ошибается ИИ: пять реальных случаев\n▪️ ИИ ошибся. Кто виноват?\n▪️ Чем больше доверяешь ИИ, тем меньше думаешь\n▪️ Фантомас разбушевался: ИИ открывает чужие двери\n\n🔒 Безопасность\n▪️ Дипфейк финдиректора: минус 25 млн долларов\n▪️ Что нельзя вставлять в ChatGPT. Шпаргалка\n\n💸 Внедрение и отдача\n▪️ 95% пилотов ИИ без отдачи. Почему\n▪️ Отчёт для совета директоров: человек против ИИ\n▪️ ИИ против одного KPI\n▪️ Amazon против ИИ-рекрутера\n▪️ Они уже проиграли: ИИ их уволил\n\n📋 Регламенты и ответственность\n▪️ Регламент устаревает в момент подписания. Часть 1\n▪️ Кто виноват, когда каждый формально прав. Часть 2\n▪️ Как я это сделал: инструкция на один вечер. Часть 3\n▪️ Протоколы, которые никто не читает\n\n👥 Люди и работа\n▪️ Офис или тюрьма\n▪️ Тиндер в HR: таланты внутри компании\n▪️ ИИ ломает закон, на котором держались компании\n▪️ Оруэлл не предсказал ChatGPT\n\n🛒 Розница: полки и камеры\n▪️ Наш человек непобедим: пустые полки\n▪️ Что доступно без ИИ: отчёты по эффективности\n▪️ Камеры есть. А понимание бизнеса?\n\n📰 Итоги недели\n▪️ 12–19 октября: топ новостей\n\nНавигатор обновляю раз в месяц.\n❓ Какой темы здесь не хватает? Напишите в комментариях.",
+      "entities": [
+        {
+          "offset": 0,
+          "length": 35,
+          "type": "bold"
+        },
+        {
+          "offset": 113,
+          "length": 16,
+          "type": "bold"
+        },
+        {
+          "offset": 133,
+          "length": 43,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/2"
+        },
+        {
+          "offset": 180,
+          "length": 39,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/28"
+        },
+        {
+          "offset": 221,
+          "length": 41,
+          "type": "bold"
+        },
+        {
+          "offset": 266,
+          "length": 46,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/25"
+        },
+        {
+          "offset": 316,
+          "length": 23,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/24"
+        },
+        {
+          "offset": 343,
+          "length": 43,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/35"
+        },
+        {
+          "offset": 390,
+          "length": 47,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/39"
+        },
+        {
+          "offset": 439,
+          "length": 15,
+          "type": "bold"
+        },
+        {
+          "offset": 458,
+          "length": 43,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/31"
+        },
+        {
+          "offset": 505,
+          "length": 41,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/33"
+        },
+        {
+          "offset": 548,
+          "length": 21,
+          "type": "bold"
+        },
+        {
+          "offset": 573,
+          "length": 33,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/37"
+        },
+        {
+          "offset": 610,
+          "length": 46,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/3"
+        },
+        {
+          "offset": 660,
+          "length": 20,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/7"
+        },
+        {
+          "offset": 684,
+          "length": 26,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/8"
+        },
+        {
+          "offset": 714,
+          "length": 31,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/4"
+        },
+        {
+          "offset": 747,
+          "length": 31,
+          "type": "bold"
+        },
+        {
+          "offset": 782,
+          "length": 49,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/13"
+        },
+        {
+          "offset": 835,
+          "length": 49,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/14"
+        },
+        {
+          "offset": 888,
+          "length": 51,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/15"
+        },
+        {
+          "offset": 943,
+          "length": 34,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/23"
+        },
+        {
+          "offset": 979,
+          "length": 16,
+          "type": "bold"
+        },
+        {
+          "offset": 999,
+          "length": 15,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/26"
+        },
+        {
+          "offset": 1018,
+          "length": 36,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/19"
+        },
+        {
+          "offset": 1058,
+          "length": 46,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/21"
+        },
+        {
+          "offset": 1108,
+          "length": 28,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/12"
+        },
+        {
+          "offset": 1138,
+          "length": 26,
+          "type": "bold"
+        },
+        {
+          "offset": 1168,
+          "length": 35,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/9"
+        },
+        {
+          "offset": 1207,
+          "length": 44,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/17"
+        },
+        {
+          "offset": 1255,
+          "length": 33,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/18"
+        },
+        {
+          "offset": 1290,
+          "length": 15,
+          "type": "bold"
+        },
+        {
+          "offset": 1309,
+          "length": 27,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/42"
+        }
+      ],
+      "link_preview_options": {
+        "is_disabled": true
+      },
+      "reply_markup": {
+        "inline_keyboard": [
+          [
+            {
+              "text": "📚 Библиотека: все посты по рубрикам",
+              "url": "https://t.me/+NX-joz_PlAFiNDli"
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
