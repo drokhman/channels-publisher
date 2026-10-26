@@ -18,5 +18,22 @@
       "anonymous": true,
       "multiple": false
     }
+  ],
+  "due": "2026-10-26T18:15:00+03:00",
+  "sent_at": "2026-10-26T18:15:37.016688+03:00",
+  "late_min": 1,
+  "results": [
+    {
+      "action": "photo",
+      "ok": true,
+      "message_id": 31,
+      "description": null
+    },
+    {
+      "action": "poll",
+      "ok": true,
+      "message_id": 32,
+      "description": null
+    }
   ]
 }
