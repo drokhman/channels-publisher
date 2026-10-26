@@ -1,0 +1,11 @@
+{
+  "action": "edit_caption",
+  "message_id": 27,
+  "text_html": "<b>С 3 ноября — новые штрафы для иностранных работников</b>\n\nКоллеги, через неделю вступает в силу <a href=\"https://base.garant.ru/414700601/\">Федеральный закон от 04.08.2026 № 294-ФЗ</a>. Для складов, РЦ и доставки, где работают мигранты, это вопрос устойчивости смены.\n\n1️⃣ Нарушение режима пребывания: 2–5 → 4–7 тыс. руб.\n2️⃣ Незаконная работа: 2 → 4 тыс., повторно — 7–9 тыс.\n3️⃣ Основания для выдворения — с 22 до 45 статей КоАП.\n\nШтрафы юрлиц по 18.15, 18.9, 18.16 КоАП не меняются; растут только для граждан-работодателей (<a href=\"https://kvotnik.ru/izmeneniya/shtrafy-18-15-koap-2026/\">Квотник</a>). Но выдворенный — это минус человек в графике.\n\n<b>Что сделать</b>\n1️⃣ Сверить патенты, регистрацию и сроки по каждому сотруднику и у подрядчиков.\n2️⃣ Добавить в договор аутстаффинга обязанность подрядчика по документам.\n3️⃣ Резерв смены на пик.\n\nДанные: <a href=\"https://workingcell.ru/news/koap-294-fz-vydvorenie-inostrancev-2026/\">Рабочая Ячейка</a>, <a href=\"https://www.rosbalt.ru/news/2026-10-17/s-noyabrya-inostrantsev-zhdut-novye-shtrafy-za-chto-pridetsya-platit-bolshe-5709494\">Росбалт</a>.\n\n#НППЦП #склад #логистика",
+  "result": {
+    "ok": false,
+    "error_code": 400,
+    "description": "Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message"
+  },
+  "at": "2026-10-26T13:21:30Z"
+}
