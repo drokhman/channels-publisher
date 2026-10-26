@@ -12,7 +12,7 @@
         "#шнобель"
       ],
       "icon_color": 16766590,
-      "thread_id": null
+      "thread_id": 4
     },
     {
       "key": "mozg",
@@ -23,7 +23,7 @@
         "#обучение"
       ],
       "icon_color": 13338331,
-      "thread_id": null
+      "thread_id": 5
     },
     {
       "key": "rounds",
@@ -32,7 +32,7 @@
         "#раунд"
       ],
       "icon_color": 16478047,
-      "thread_id": null
+      "thread_id": 6
     },
     {
       "key": "process",
@@ -47,7 +47,7 @@
         "#логистика"
       ],
       "icon_color": 7322096,
-      "thread_id": null
+      "thread_id": 7
     },
     {
       "key": "people",
@@ -61,7 +61,7 @@
         "#адаптация"
       ],
       "icon_color": 9367192,
-      "thread_id": null
+      "thread_id": 8
     },
     {
       "key": "security",
@@ -70,7 +70,7 @@
         "#безопасность"
       ],
       "icon_color": 16749490,
-      "thread_id": null
+      "thread_id": 9
     },
     {
       "key": "news",
@@ -81,7 +81,7 @@
         "#итогинедели"
       ],
       "icon_color": 7322096,
-      "thread_id": null
+      "thread_id": 10
     }
   ],
   "default_topic": "process",
