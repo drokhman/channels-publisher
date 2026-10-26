@@ -24,6 +24,8 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # свежий main, а не коммит запуска: иначе повтор поста
       - name: Опубликовать пост, чьё время наступило
         env:
           UCP_BOT_TOKEN: ${{ secrets.UCP_BOT_TOKEN }}
