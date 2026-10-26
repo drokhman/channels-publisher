@@ -1,0 +1,23 @@
+{
+  "method": "createChatInviteLink",
+  "payload": {
+    "chat_id": -1004326691613,
+    "name": "Навигатор канала"
+  },
+  "result": {
+    "ok": true,
+    "result": {
+      "invite_link": "https://t.me/+NX-joz_PlAFiNDli",
+      "name": "Навигатор канала",
+      "creator": {
+        "id": 8631248019,
+        "is_bot": true,
+        "first_name": "Master or servant?",
+        "username": "MasterORservant_bot"
+      },
+      "creates_join_request": false,
+      "is_primary": false,
+      "is_revoked": false
+    }
+  }
+}
