@@ -1,0 +1,22 @@
+{
+  "steps": [
+    {
+      "action": "photo",
+      "image": "commands-ucp-media/img-wh27.jpg",
+      "text_html": "<b>Склады Подмосковья дешевеют: рынок за арендатора</b>\n\n1️⃣ Ставка на склады класса А в Московском регионе — 10 140 руб./кв. м в год в сентябре, −7% за 9 месяцев. К концу года NF Group ждёт 9 500 руб.\n2️⃣ Свободно 4,8% (CORE.XP) — 6,9% (NF Group) с учётом субаренды, только в прямой аренде и субаренде больше 2 млн кв. м.\n3️⃣ Спрос не упал: в Московском регионе сделки на 1,6 млн кв. м, +51% за год. Онлайн-торговля — 64% сделок по России.\n4️⃣ Около 42% сделок — build-to-suit, склады под заказчика.\n\n<b>Что сделать</b>\n1️⃣ Договор продлевается в 2026–2027 — торговаться: ставка, индексация, арендные каникулы.\n2️⃣ Сравнить с субарендой: там часто дешевле и быстрее.\n3️⃣ Под рост сети — сравнить аренду с build-to-suit.\n\nДанные: <a href=\"https://stroygaz.ru/publication/commercial/etap-perestroyki-skladskoy-rynok-stanovitsya-bolee-differentsirovannym-i-trebovatelnym-k-kachestvu/\">«Стройгазета» / NF Group</a>, <a href=\"https://logistics.ru/skladirovanie/investicii-v-sklady-upali-na-21-dokhodnost-zavisit-ot-kachestva-arendy\">logistics.ru / CORE.XP</a>.\n\n#НППЦП #склад #логистика"
+    },
+    {
+      "action": "poll",
+      "question": "Что вы сделаете со складом в 2027 году?",
+      "options": [
+        "Продлим на текущих условиях",
+        "Пересмотрим ставку при продлении",
+        "Переедем на более дешёвый склад",
+        "Строим под себя (build-to-suit)",
+        "Отдадим склад 3PL"
+      ],
+      "anonymous": true,
+      "multiple": false
+    }
+  ]
+}
