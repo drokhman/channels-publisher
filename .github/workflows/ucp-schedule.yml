@@ -2,18 +2,16 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '11 5 27 10 *'   # 2026-10-27-0811-wci.json · пост
-    - cron: '36 5 27 10 *'   # 2026-10-27-0811-wci.json · страховка
-    - cron: '30 6 27 10 *'   # 2026-10-27-0930-warehouse-q3.json · пост
-    - cron: '55 6 27 10 *'   # 2026-10-27-0930-warehouse-q3.json · страховка
-    - cron: '32 7 27 10 *'   # 2026-10-27-1032-road-registry.json · пост
-    - cron: '57 7 27 10 *'   # 2026-10-27-1032-road-registry.json · страховка
-    - cron: '52 8 27 10 *'   # 2026-10-27-1152-book-goal.json · пост
-    - cron: '17 9 27 10 *'   # 2026-10-27-1152-book-goal.json · страховка
-    - cron: '16 10 27 10 *'   # 2026-10-27-1316-repost-osa.json · пост
-    - cron: '41 10 27 10 *'   # 2026-10-27-1316-repost-osa.json · страховка
-    - cron: '29 11 27 10 *'   # 2026-10-27-1429-release-0512.json · пост
-    - cron: '54 11 27 10 *'   # 2026-10-27-1429-release-0512.json · страховка
+    - cron: '45 5 28 10 *'   # 2026-10-28-0845-nov1-marking.json · пост
+    - cron: '10 6 28 10 *'   # 2026-10-28-0845-nov1-marking.json · страховка
+    - cron: '56 6 28 10 *'   # 2026-10-28-0956-fridge-cyber.json · пост
+    - cron: '21 7 28 10 *'   # 2026-10-28-0956-fridge-cyber.json · страховка
+    - cron: '12 8 28 10 *'   # 2026-10-28-1112-repost-boring-ai.json · пост
+    - cron: '37 8 28 10 *'   # 2026-10-28-1112-repost-boring-ai.json · страховка
+    - cron: '16 9 28 10 *'   # 2026-10-28-1216-staff-shortage.json · пост
+    - cron: '41 9 28 10 *'   # 2026-10-28-1216-staff-shortage.json · страховка
+    - cron: '46 10 28 10 *'   # 2026-10-28-1346-release-0515.json · пост
+    - cron: '11 11 28 10 *'   # 2026-10-28-1346-release-0515.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
