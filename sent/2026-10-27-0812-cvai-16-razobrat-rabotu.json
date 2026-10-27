@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-27-0812-cvai-16-razobrat-rabotu",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 83,
+  "text_message_id": 84,
+  "link": "https://t.me/chelovek_vs_ai/84",
+  "file": "2026-10-27-0812-cvai-16-razobrat-rabotu.json",
+  "due_at": "2026-10-27T05:12:00.000Z",
+  "published_at": "2026-10-27T05:12:14.338Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
