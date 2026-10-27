@@ -1,0 +1,62 @@
+{
+  "action": "photo",
+  "image": "commands-ucp-media/scor-apqc.jpg",
+  "text_html": "",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 42,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1793109968,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMqauCv0M11S9czrIwSVYc0Ealao1MAAtwfaxvoKwFL5Ezp9tlKb0wBAAMCAANzAAM9BA",
+          "file_unique_id": "AQAD3B9rG-grAUt4",
+          "file_size": 1299,
+          "width": 90,
+          "height": 60
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMqauCv0M11S9czrIwSVYc0Ealao1MAAtwfaxvoKwFL5Ezp9tlKb0wBAAMCAANtAAM9BA",
+          "file_unique_id": "AQAD3B9rG-grAUty",
+          "file_size": 17825,
+          "width": 320,
+          "height": 214
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMqauCv0M11S9czrIwSVYc0Ealao1MAAtwfaxvoKwFL5Ezp9tlKb0wBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQAD3B9rG-grAUt9",
+          "file_size": 75011,
+          "width": 800,
+          "height": 534
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMqauCv0M11S9czrIwSVYc0Ealao1MAAtwfaxvoKwFL5Ezp9tlKb0wBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQAD3B9rG-grAUt-",
+          "file_size": 154735,
+          "width": 1280,
+          "height": 854
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMqauCv0M11S9czrIwSVYc0Ealao1MAAtwfaxvoKwFL5Ezp9tlKb0wBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQAD3B9rG-grAUt8",
+          "file_size": 212164,
+          "width": 1600,
+          "height": 1067
+        }
+      ]
+    }
+  },
+  "at": "2026-10-27T14:06:08Z"
+}
