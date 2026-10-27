@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-27-1836-cvai-22-skrytaya-cel",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 86,
+  "text_message_id": 87,
+  "link": "https://t.me/chelovek_vs_ai/87",
+  "file": "2026-10-27-1836-cvai-22-skrytaya-cel.json",
+  "due_at": "2026-10-27T15:36:00.000Z",
+  "published_at": "2026-10-27T15:36:14.813Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
