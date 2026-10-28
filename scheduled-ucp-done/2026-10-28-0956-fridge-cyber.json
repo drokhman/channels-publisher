@@ -5,5 +5,16 @@
       "image": "commands-ucp-media/img-fridge28.jpg",
       "text_html": "<b>Хакеры разогрели холодильники 700 супермаркетов Франции</b>\n\nВ ночь на 12 октября холодильное оборудование магазинов E.Leclerc, Intermarché, Carrefour, Monoprix, Coopérative U нагрели до +50 °C. Пострадали около 700 из 10 000 супермаркетов страны (<a href=\"https://www.achrnews.com/articles/166867-massive-cyberattack-targets-refrigeration-systems-at-french-supermarkets\">ACHR News</a>).\n\n1️⃣ Вход — удалённые контроллеры Danfoss, затем Copeland и Dixell (<a href=\"https://www.securityweek.com/supermarket-refrigeration-attack-widens-to-copeland-dixell-controllers/\">SecurityWeek</a>).\n2️⃣ Большинство взломанных систем — старые модели без обновлений безопасности.\n3️⃣ Тонны продуктов в утиль, в части магазинов возгорания, полки пустые на третий день (<a href=\"https://www.kommersant.ru/doc/9026320\">«Коммерсантъ»</a>).\n\nВ 2022 году так пытались разморозить 40 тыс. т мяса и рыбы на складе «Селятино» в Подмосковье: −24 °C поменяли на +30 °C, служба безопасности успела вернуть режим.\n\n<b>Что сделать</b>\n1️⃣ Составить список холодильных контроллеров с удалённым доступом: модель, прошивка, кто подключается.\n2️⃣ Убрать их из открытого интернета, доступ — только через защищённый канал.\n3️⃣ Независимые датчики температуры с тревогой на телефон дежурного.\n\n#НППЦП #склад #цифровизация"
     }
+  ],
+  "due": "2026-10-28T09:56:00+03:00",
+  "sent_at": "2026-10-28T12:16:50.765416+03:00",
+  "late_min": 141,
+  "results": [
+    {
+      "action": "photo",
+      "ok": true,
+      "message_id": 46,
+      "description": null
+    }
   ]
 }
