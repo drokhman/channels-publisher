@@ -1,0 +1,98 @@
+{
+  "action": "edit_caption",
+  "message_id": 47,
+  "text_html": "<b>5 млрд рублей от ИИ — и ни одного чат-бота</b>\n\nПока все спорят, какой ассистент умнее, X5 заработала на ИИ около 5 млрд рублей операционной прибыли за 2025 год. Почти весь эффект дал ИИ там, где логист работает каждый день. Где именно и почему у других не получается — <a href=\"https://t.me/chelovek_vs_ai/71\">в разборе</a>.\n\nБольше о том, как ИИ работает в компаниях, — на канале <a href=\"https://t.me/chelovek_vs_ai\">«Человек VS ИИ»</a>, подписывайтесь.\n\n#НППЦП #цифровизация #планирование",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 47,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1793179038,
+      "edit_date": 1793203377,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMvauG9nlHvfJJFo9i4dfUSPhrVt1AAAukhaxvoKxFLj3mPW5qQmyoBAAMCAANzAAM9BA",
+          "file_unique_id": "AQAD6SFrG-grEUt4",
+          "file_size": 1556,
+          "width": 90,
+          "height": 51
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMvauG9nlHvfJJFo9i4dfUSPhrVt1AAAukhaxvoKxFLj3mPW5qQmyoBAAMCAANtAAM9BA",
+          "file_unique_id": "AQAD6SFrG-grEUty",
+          "file_size": 20426,
+          "width": 320,
+          "height": 180
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMvauG9nlHvfJJFo9i4dfUSPhrVt1AAAukhaxvoKxFLj3mPW5qQmyoBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQAD6SFrG-grEUt9",
+          "file_size": 86482,
+          "width": 800,
+          "height": 450
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMvauG9nlHvfJJFo9i4dfUSPhrVt1AAAukhaxvoKxFLj3mPW5qQmyoBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQAD6SFrG-grEUt-",
+          "file_size": 180759,
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMvauG9nlHvfJJFo9i4dfUSPhrVt1AAAukhaxvoKxFLj3mPW5qQmyoBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQAD6SFrG-grEUt8",
+          "file_size": 273603,
+          "width": 1672,
+          "height": 941
+        }
+      ],
+      "caption": "5 млрд рублей от ИИ — и ни одного чат-бота\n\nПока все спорят, какой ассистент умнее, X5 заработала на ИИ около 5 млрд рублей операционной прибыли за 2025 год. Почти весь эффект дал ИИ там, где логист работает каждый день. Где именно и почему у других не получается — в разборе.\n\nБольше о том, как ИИ работает в компаниях, — на канале «Человек VS ИИ», подписывайтесь.\n\n#НППЦП #цифровизация #планирование",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 42,
+          "type": "bold"
+        },
+        {
+          "offset": 266,
+          "length": 9,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/71"
+        },
+        {
+          "offset": 333,
+          "length": 15,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai"
+        },
+        {
+          "offset": 367,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 374,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 388,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-28T16:02:57Z"
+}

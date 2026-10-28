@@ -1,0 +1,98 @@
+{
+  "action": "edit_caption",
+  "message_id": 40,
+  "text_html": "<b>12 штук в системе — пустая полка</b>\n\nЗнакомо? Остаток есть, KPI зелёные, продаж нет. Товар в неразобранной коробке, на верхнем хранении, в чужой ячейке.\n\nВ канале «Человек VS ИИ» — <a href=\"https://t.me/chelovek_vs_ai/65\">разбор подхода из трёх сигналов</a>:\n1️⃣ Остаток: есть ли товар в магазине физически.\n2️⃣ Камера: нет ли пустоты на месте товара по планограмме.\n3️⃣ Ритм продаж: не оборвался ли привычный пульс покупок.\n\nКомбинация сигналов показывает причину: товар не на полке или ошибка учёта. ИИ даёт гипотезу и приоритет, причину подтверждает человек в магазине.\n\nУзнать больше о том, как ИИ работает в рознице и управлении, — на канале <a href=\"https://t.me/chelovek_vs_ai\">«Человек VS ИИ»</a>.\n\n#НППЦП #цифровизация #склад",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 40,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1793096179,
+      "edit_date": 1793203375,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMoauB5885YwXNBsKWMmP8L1KoJXNwAAqEeaxvoKwFLbdtqL7eArTMBAAMCAANzAAM9BA",
+          "file_unique_id": "AQADoR5rG-grAUt4",
+          "file_size": 1635,
+          "width": 90,
+          "height": 51
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMoauB5885YwXNBsKWMmP8L1KoJXNwAAqEeaxvoKwFLbdtqL7eArTMBAAMCAANtAAM9BA",
+          "file_unique_id": "AQADoR5rG-grAUty",
+          "file_size": 24524,
+          "width": 320,
+          "height": 180
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMoauB5885YwXNBsKWMmP8L1KoJXNwAAqEeaxvoKwFLbdtqL7eArTMBAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADoR5rG-grAUt9",
+          "file_size": 104735,
+          "width": 800,
+          "height": 450
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMoauB5885YwXNBsKWMmP8L1KoJXNwAAqEeaxvoKwFLbdtqL7eArTMBAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADoR5rG-grAUt-",
+          "file_size": 216440,
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AAMoauB5885YwXNBsKWMmP8L1KoJXNwAAqEeaxvoKwFLbdtqL7eArTMBAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADoR5rG-grAUt8",
+          "file_size": 317051,
+          "width": 1672,
+          "height": 941
+        }
+      ],
+      "caption": "12 штук в системе — пустая полка\n\nЗнакомо? Остаток есть, KPI зелёные, продаж нет. Товар в неразобранной коробке, на верхнем хранении, в чужой ячейке.\n\nВ канале «Человек VS ИИ» — разбор подхода из трёх сигналов:\n1️⃣ Остаток: есть ли товар в магазине физически.\n2️⃣ Камера: нет ли пустоты на месте товара по планограмме.\n3️⃣ Ритм продаж: не оборвался ли привычный пульс покупок.\n\nКомбинация сигналов показывает причину: товар не на полке или ошибка учёта. ИИ даёт гипотезу и приоритет, причину подтверждает человек в магазине.\n\nУзнать больше о том, как ИИ работает в рознице и управлении, — на канале «Человек VS ИИ».\n\n#НППЦП #цифровизация #склад",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 32,
+          "type": "bold"
+        },
+        {
+          "offset": 178,
+          "length": 31,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai/65"
+        },
+        {
+          "offset": 599,
+          "length": 15,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai"
+        },
+        {
+          "offset": 617,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 624,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 638,
+          "length": 6,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-10-28T16:02:55Z"
+}
