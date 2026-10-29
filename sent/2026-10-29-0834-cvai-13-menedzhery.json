@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-29-0834-cvai-13-menedzhery",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 92,
+  "text_message_id": 93,
+  "link": "https://t.me/chelovek_vs_ai/93",
+  "file": "2026-10-29-0834-cvai-13-menedzhery.json",
+  "due_at": "2026-10-29T05:34:00.000Z",
+  "published_at": "2026-10-29T05:34:15.463Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
