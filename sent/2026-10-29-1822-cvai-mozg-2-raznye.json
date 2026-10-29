@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-29-1822-cvai-mozg-2-raznye",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 95,
+  "text_message_id": 96,
+  "link": "https://t.me/chelovek_vs_ai/96",
+  "file": "2026-10-29-1822-cvai-mozg-2-raznye.json",
+  "due_at": "2026-10-29T15:22:00.000Z",
+  "published_at": "2026-10-29T15:22:14.983Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
