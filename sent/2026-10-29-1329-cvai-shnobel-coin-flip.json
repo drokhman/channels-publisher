@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-29-1329-cvai-shnobel-coin-flip",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": null,
+  "text_message_id": 94,
+  "link": "https://t.me/chelovek_vs_ai/94",
+  "file": "2026-10-29-1329-cvai-shnobel-coin-flip.json",
+  "due_at": "2026-10-29T10:29:00.000Z",
+  "published_at": "2026-10-29T10:30:14.120Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
