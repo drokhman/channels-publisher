@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-29-1334-ryadom-ig-coin-flip",
+  "channel": "Он рядом",
+  "chat_id": "@ryadom_repetitor",
+  "photo_message_id": null,
+  "text_message_id": 206,
+  "link": "https://t.me/ryadom_repetitor/206",
+  "file": "2026-10-29-1334-ryadom-ig-coin-flip.json",
+  "due_at": "2026-10-29T10:34:00.000Z",
+  "published_at": "2026-10-29T10:34:13.907Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
