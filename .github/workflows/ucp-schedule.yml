@@ -2,16 +2,16 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '56 5 29 10 *'   # 2026-10-29-0856-ozon-fires-pallets.json · пост
-    - cron: '21 6 29 10 *'   # 2026-10-29-0856-ozon-fires-pallets.json · страховка
-    - cron: '8 7 29 10 *'   # 2026-10-29-1008-ups-q3.json · пост
-    - cron: '33 7 29 10 *'   # 2026-10-29-1008-ups-q3.json · страховка
-    - cron: '20 8 29 10 *'   # 2026-10-29-1120-repost-ai-advisor.json · пост
-    - cron: '45 8 29 10 *'   # 2026-10-29-1120-repost-ai-advisor.json · страховка
-    - cron: '45 9 29 10 *'   # 2026-10-29-1245-events-nov.json · пост
-    - cron: '10 10 29 10 *'   # 2026-10-29-1245-events-nov.json · страховка
-    - cron: '13 11 29 10 *'   # 2026-10-29-1413-release-0517-flow.json · пост
-    - cron: '38 11 29 10 *'   # 2026-10-29-1413-release-0517-flow.json · страховка
+    - cron: '0 5 30 10 *'   # 2026-10-30-0800-lenta-remi-remote-qc.json · пост
+    - cron: '25 5 30 10 *'   # 2026-10-30-0800-lenta-remi-remote-qc.json · страховка
+    - cron: '4 6 30 10 *'   # 2026-10-30-0904-returns-bill.json · пост
+    - cron: '29 6 30 10 *'   # 2026-10-30-0904-returns-bill.json · страховка
+    - cron: '14 7 30 10 *'   # 2026-10-30-1014-repost-tasks-before-ai.json · пост
+    - cron: '39 7 30 10 *'   # 2026-10-30-1014-repost-tasks-before-ai.json · страховка
+    - cron: '39 8 30 10 *'   # 2026-10-30-1139-bullwhip.json · пост
+    - cron: '4 9 30 10 *'   # 2026-10-30-1139-bullwhip.json · страховка
+    - cron: '7 10 30 10 *'   # 2026-10-30-1307-release-bpd.json · пост
+    - cron: '32 10 30 10 *'   # 2026-10-30-1307-release-bpd.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
