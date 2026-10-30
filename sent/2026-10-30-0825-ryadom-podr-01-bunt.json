@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-30-0825-ryadom-podr-01-bunt",
+  "channel": "Он рядом",
+  "chat_id": "@ryadom_repetitor",
+  "photo_message_id": 208,
+  "text_message_id": 209,
+  "link": "https://t.me/ryadom_repetitor/209",
+  "file": "2026-10-30-0825-ryadom-podr-01-bunt.json",
+  "due_at": "2026-10-30T05:25:00.000Z",
+  "published_at": "2026-10-30T05:26:14.400Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
