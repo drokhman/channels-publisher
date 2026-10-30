@@ -2,16 +2,16 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '0 5 30 10 *'   # 2026-10-30-0800-lenta-remi-remote-qc.json · пост
-    - cron: '25 5 30 10 *'   # 2026-10-30-0800-lenta-remi-remote-qc.json · страховка
-    - cron: '4 6 30 10 *'   # 2026-10-30-0904-returns-bill.json · пост
-    - cron: '29 6 30 10 *'   # 2026-10-30-0904-returns-bill.json · страховка
-    - cron: '14 7 30 10 *'   # 2026-10-30-1014-repost-tasks-before-ai.json · пост
-    - cron: '39 7 30 10 *'   # 2026-10-30-1014-repost-tasks-before-ai.json · страховка
-    - cron: '39 8 30 10 *'   # 2026-10-30-1139-bullwhip.json · пост
-    - cron: '4 9 30 10 *'   # 2026-10-30-1139-bullwhip.json · страховка
-    - cron: '7 10 30 10 *'   # 2026-10-30-1307-release-bpd.json · пост
-    - cron: '32 10 30 10 *'   # 2026-10-30-1307-release-bpd.json · страховка
+    - cron: '17 5 31 10 *'   # 2026-10-31-0817-suez-return.json · пост
+    - cron: '42 5 31 10 *'   # 2026-10-31-0817-suez-return.json · страховка
+    - cron: '35 6 31 10 *'   # 2026-10-31-0935-apvgk.json · пост
+    - cron: '0 7 31 10 *'   # 2026-10-31-0935-apvgk.json · страховка
+    - cron: '44 7 31 10 *'   # 2026-10-31-1044-repost-uber-kroger.json · пост
+    - cron: '9 8 31 10 *'   # 2026-10-31-1044-repost-uber-kroger.json · страховка
+    - cron: '54 8 31 10 *'   # 2026-10-31-1154-wb-lease-warehouses.json · пост
+    - cron: '19 9 31 10 *'   # 2026-10-31-1154-wb-lease-warehouses.json · страховка
+    - cron: '18 10 31 10 *'   # 2026-10-31-1318-book-machine.json · пост
+    - cron: '43 10 31 10 *'   # 2026-10-31-1318-book-machine.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
