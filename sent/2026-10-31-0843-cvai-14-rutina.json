@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-31-0843-cvai-14-rutina",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 105,
+  "text_message_id": 106,
+  "link": "https://t.me/chelovek_vs_ai/106",
+  "file": "2026-10-31-0843-cvai-14-rutina.json",
+  "due_at": "2026-10-31T05:43:00.000Z",
+  "published_at": "2026-10-31T05:44:14.698Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
