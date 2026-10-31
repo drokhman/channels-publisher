@@ -1,0 +1,13 @@
+{
+  "id": "2026-10-31-1829-cvai-27-klarna",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 107,
+  "text_message_id": 108,
+  "link": "https://t.me/chelovek_vs_ai/108",
+  "file": "2026-10-31-1829-cvai-27-klarna.json",
+  "due_at": "2026-10-31T15:29:00.000Z",
+  "published_at": "2026-10-31T15:30:16.152Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
