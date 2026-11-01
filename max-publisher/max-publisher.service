@@ -1,0 +1,15 @@
+[Unit]
+Description=Публикатор MAX: дублирует вышедшие в Telegram посты в канал MAX
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=maxpub
+EnvironmentFile=/opt/max-publisher/.env
+ExecStart=/usr/bin/python3 /opt/max-publisher/max_publisher.py
+TimeoutStartSec=600
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/max-publisher
+ProtectHome=true
+PrivateTmp=true

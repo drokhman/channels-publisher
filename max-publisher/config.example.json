@@ -1,0 +1,15 @@
+{
+  "enabled": false,
+  "repo": "drokhman/channels-publisher",
+  "channels": {
+    "@chelovek_vs_ai": "",
+    "@ryadom_repetitor": ""
+  },
+  "start_from": "2026-11-01T00:00",
+  "max_lag_hours": 12,
+  "text_limit": 4000,
+  "admin_chat_id": "1073319162",
+  "extra_ca": "/opt/max-publisher/russian_trusted_root_ca.pem",
+  "state_dir": "/var/lib/max-publisher",
+  "committer": { "name": "max-publisher (Россия)", "email": "publisher@channels-publisher.local" }
+}
