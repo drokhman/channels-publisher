@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Публикатор MAX на российском сервере.
+"""Публикатор MAX на российском сервере. Версия 1.1 (01.11.2026): разовые команды commands-max/.
 
 Берёт из GitHub посты, которые уже вышли в Telegram, и публикует тот же пост в канал MAX:
 - каналы n8n: sent/{id}.json, текст и картинка — из истории outbox/;
 - канал НППЦП @nscspr: scheduled-ucp-done/{id}.json (текст и путь к картинке в commands-ucp-media/),
   id в sent-max/ с приставкой ucp-. Опросы в MAX не переносятся.
 Telegram этот скрипт не трогает: его по-прежнему публикует n8n в Нидерландах.
+
+- разовые команды: commands-max/{имя}.json — отправить с кнопками и закрепить, исправить, удалить.
 
 Результат: sent-max/{id}.json при успехе, failed-max/{id}-{время}.json при ошибке.
 Защита от дублей: локальная отметка в STATE_DIR ставится сразу после ответа MAX,
@@ -352,6 +354,108 @@ def process_ucp(file, now):
     publish(pid, base, items, parse_time(d.get('sent_at'), now), now, link)
 
 
+# ---------- разовые команды для каналов MAX ----------
+def process_command(file, now):
+    """commands-max/{имя}.json — разовые действия в канале MAX: отправить (с кнопками и закреплением),
+    исправить, закрепить, удалить. Пример: {"channel": "@nscspr", "steps": [
+      {"action": "send", "key": "toc", "text_html": "...", "buttons": [[{"text": "...", "url": "..."}]], "pin": true},
+      {"action": "edit", "key": "toc", "text_html": "...", "buttons": [...]},
+      {"action": "pin", "key": "toc"}, {"action": "delete", "key": "toc"}]}
+    key — имя сообщения: по нему потом можно исправить или закрепить его (связка key → mid в commands-max/keys.json).
+    Результат: commands-max-done/{имя}.json или commands-max-failed/{имя}-{время}.json."""
+    pid = 'cmd-' + file[:-5]
+    s, b = gh('GET', '/contents/commands-max/' + urllib.parse.quote(file), raw=True)
+    if s != 200:
+        raise RuntimeError('commands-max/%s: HTTP %s' % (file, s))
+    d = json.loads(b)
+    chat = str((CFG.get('channels') or {}).get(d.get('channel'), '')).strip()
+    keys = keys_load()
+    results, error = [], None
+    if not chat:
+        error = 'канал %s не подключён в config.json' % d.get('channel')
+    for st in ([] if error else d.get('steps') or []):
+        a = st.get('action')
+        mid = st.get('mid') or keys.get('%s:%s' % (d.get('channel'), st.get('key')))
+        r = {'action': a, 'key': st.get('key')}
+        if DRY:
+            log('[dry-run]', pid, a, st.get('key'), mid); continue
+        if a in ('send', 'edit'):
+            body = {'text': to_max_html(st.get('text_html') or ''), 'format': 'html'}
+            if len(body['text']) > CFG.get('text_limit', 4000):
+                error = 'текст длиннее %s знаков' % CFG.get('text_limit', 4000); break
+            att = []
+            if st.get('image'):
+                att.append({'type': 'image', 'payload': upload_image(repo_file_b64(st['image']),
+                            'image/png' if st['image'].endswith('.png') else 'image/jpeg')})
+                time.sleep(CFG.get('after_upload_seconds', 3))
+            if st.get('buttons'):
+                att.append({'type': 'inline_keyboard', 'payload': {'buttons': [
+                    [{'type': 'link', 'text': x['text'], 'url': x['url']} for x in row] for row in st['buttons']]}})
+            if att or a == 'send':
+                body['attachments'] = att
+            if a == 'send':
+                rs = send(chat, body)
+                if not rs['ok']:
+                    error = rs['error']; break
+                mid = rs['max_mid']; r.update(max_mid=mid, max_url=rs.get('max_url'))
+                if st.get('key'):
+                    keys['%s:%s' % (d.get('channel'), st['key'])] = mid
+            else:
+                if not mid:
+                    error = 'edit: не найден mid для key=%s' % st.get('key'); break
+                s2, rr = max_req('PUT', '/messages?message_id=' + urllib.parse.quote(mid), body)
+                if s2 != 200 or not rr.get('success'):
+                    error = 'edit: HTTP %s %s' % (s2, json.dumps(rr, ensure_ascii=False)[:200]); break
+                r['max_mid'] = mid
+        if a == 'pin' or (a == 'send' and st.get('pin')):
+            s2, rr = max_req('PUT', '/chats/%s/pin' % chat, {'message_id': mid, 'notify': bool(st.get('notify', False))})
+            if s2 != 200 or not rr.get('success'):
+                error = 'pin: HTTP %s %s' % (s2, json.dumps(rr, ensure_ascii=False)[:200]); break
+            r['pinned'] = True
+        if a == 'delete':
+            s2, rr = max_req('DELETE', '/messages?message_id=' + urllib.parse.quote(mid or ''))
+            if s2 != 200 or not rr.get('success'):
+                error = 'delete: HTTP %s %s' % (s2, json.dumps(rr, ensure_ascii=False)[:200]); break
+            keys.pop('%s:%s' % (d.get('channel'), st.get('key')), None)
+        results.append(r); log(pid, '→', a, st.get('key') or '', mid or ''); time.sleep(1)
+    if DRY:
+        return
+    keys_save(keys)
+    rec = {'id': pid, 'file': 'commands-max/' + file, 'channel': d.get('channel'), 'max_chat_id': chat,
+           'results': results, 'at': now.isoformat(), 'by': 'max-publisher (Россия)'}
+    if error:
+        rec['error'] = error
+        path = 'commands-max-failed/%s-%s.json' % (file[:-5], now.strftime('%Y%m%dT%H%M'))
+        notify('MAX: команда %s не выполнена — %s' % (file, error[:300]))
+    else:
+        path = 'commands-max-done/' + file
+    m = {'id': pid, 'status': 'failed' if error else 'ok', 'pushed': False, 'gh_path': path, 'gh_record': rec,
+         'gh_message': 'commands-max ' + file[:-5] + ' (ru)'}
+    mark(pid, m)
+    if gh_put(path, rec, m['gh_message']):
+        m['pushed'] = True; mark(pid, m)
+
+
+def keys_load():
+    try:
+        return json.load(open(os.path.join(STATE, 'keys.json'), encoding='utf-8'))
+    except FileNotFoundError:
+        s, b = gh('GET', '/contents/commands-max-done/keys.json', raw=True)
+        return json.loads(b) if s == 200 else {}
+
+
+def keys_save(keys):
+    with open(os.path.join(STATE, 'keys.json'), 'w', encoding='utf-8') as f:
+        json.dump(keys, f, ensure_ascii=False, indent=2)
+    path = '/contents/commands-max-done/keys.json'
+    s, b = gh('GET', path)
+    body = {'message': 'commands-max keys (ru)', 'committer': CFG['committer'], 'author': CFG['committer'],
+            'content': base64.b64encode(json.dumps(keys, ensure_ascii=False, indent=2).encode()).decode()}
+    if s == 200:
+        body['sha'] = js(b).get('sha')
+    gh('PUT', path, body)
+
+
 def check():
     ok = True
     s, b = gh('GET', '')
@@ -405,6 +509,8 @@ def main():
     if str((CFG.get('channels') or {}).get('@nscspr', '')).strip():
         queue += [('ucp-' + n[:-5], n, process_ucp) for n in gh_list('scheduled-ucp-done')
                   if n.endswith('.json') and id_time(n) and id_time(n) >= dt.datetime.fromisoformat(CFG.get('start_from_ucp') or CFG['start_from'])]
+    queue += [('cmd-' + n[:-5], n, process_command) for n in gh_list('commands-max') if n.endswith('.json')]
+    done |= set('cmd-' + n[:-5] for n in gh_list('commands-max-done') if n != 'keys.json')
     for pid, n, fn in sorted(queue, key=lambda q: q[1]):
         if pid in done or load_mark(pid):
             continue
