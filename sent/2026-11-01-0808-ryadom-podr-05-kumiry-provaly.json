@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-01-0808-ryadom-podr-05-kumiry-provaly",
+  "channel": "Он рядом",
+  "chat_id": "@ryadom_repetitor",
+  "photo_message_id": 222,
+  "text_message_id": 223,
+  "link": "https://t.me/ryadom_repetitor/223",
+  "file": "2026-11-01-0808-ryadom-podr-05-kumiry-provaly.json",
+  "due_at": "2026-11-01T05:08:00.000Z",
+  "published_at": "2026-11-01T05:08:14.644Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
