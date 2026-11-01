@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-01-1337-ryadom-artemis",
+  "channel": "Он рядом",
+  "chat_id": "@ryadom_repetitor",
+  "photo_message_id": null,
+  "text_message_id": 224,
+  "link": "https://t.me/ryadom_repetitor/224",
+  "file": "2026-11-01-1337-ryadom-artemis.json",
+  "due_at": "2026-11-01T10:37:00.000Z",
+  "published_at": "2026-11-01T10:38:13.955Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
