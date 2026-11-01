@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-01-1831-cvai-29-sud-agent",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 115,
+  "text_message_id": 116,
+  "link": "https://t.me/chelovek_vs_ai/116",
+  "file": "2026-11-01-1831-cvai-29-sud-agent.json",
+  "due_at": "2026-11-01T15:31:00.000Z",
+  "published_at": "2026-11-01T15:32:14.489Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
