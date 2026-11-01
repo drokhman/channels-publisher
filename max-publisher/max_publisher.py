@@ -174,12 +174,23 @@ def send(chat_id, body):
 
 # ---------- уведомление ----------
 def notify(text):
-    if not (TG_TOKEN and CFG.get('admin_chat_id')) or DRY:
+    """Сначала в личный диалог с ботом в MAX (из России доступен надёжно), затем в Telegram."""
+    if DRY:
         return
-    body = json.dumps({'chat_id': CFG['admin_chat_id'], 'text': text}).encode()
-    s, _ = http('POST', TG_API + '/bot' + TG_TOKEN + '/sendMessage', {'Content-Type': 'application/json'}, body, timeout=15)
-    if s != 200:
-        log('уведомление в Telegram не ушло (HTTP %s); ошибка записана в failed-max/' % s)
+    sent = False
+    if CFG.get('admin_max_user_id'):
+        s, r = max_req('POST', '/messages?user_id=' + urllib.parse.quote(str(CFG['admin_max_user_id'])), {'text': text})
+        sent = 200 <= s < 300
+        if not sent:
+            log('уведомление в MAX не ушло: HTTP %s %s' % (s, json.dumps(r, ensure_ascii=False)[:150]))
+    if TG_TOKEN and CFG.get('admin_chat_id'):
+        body = json.dumps({'chat_id': CFG['admin_chat_id'], 'text': text}).encode()
+        s, _ = http('POST', TG_API + '/bot' + TG_TOKEN + '/sendMessage', {'Content-Type': 'application/json'}, body, timeout=15)
+        sent = sent or s == 200
+        if s != 200:
+            log('уведомление в Telegram не ушло (HTTP %s)' % s)
+    if not sent:
+        log('уведомление не доставлено; ошибка записана в failed-max/')
 
 
 # ---------- локальное состояние ----------
@@ -363,6 +374,9 @@ def check():
             if str(cid).strip():
                 s2, c = max_req('GET', '/chats/' + str(cid).strip())
                 print('  канал из config.json %s:' % cid, ('OK, ' + str(c.get('title'))) if s2 == 200 else 'ошибка HTTP %s %s' % (s2, json.dumps(c, ensure_ascii=False)[:150]))
+    if '--notify-test' in sys.argv:
+        notify('Проверка уведомлений публикатора MAX: если вы это читаете, уведомления доходят.')
+        print('тестовое уведомление отправлено (см. MAX и Telegram)')
     if TG_TOKEN:
         s, _ = http('GET', TG_API + '/bot' + TG_TOKEN + '/getMe', timeout=15)
         print('Telegram (только для уведомлений):', 'OK' if s == 200 else 'недоступен, HTTP %s' % s)

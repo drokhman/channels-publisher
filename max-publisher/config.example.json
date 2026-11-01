@@ -16,5 +16,6 @@
     "name": "max-publisher (Россия)",
     "email": "publisher@channels-publisher.local"
   },
-  "start_from_ucp": ""
+  "start_from_ucp": "",
+  "admin_max_user_id": ""
 }
