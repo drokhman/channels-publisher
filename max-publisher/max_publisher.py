@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Публикатор MAX на российском сервере.
 
-Берёт из GitHub посты, которые уже вышли в Telegram (sent/), достаёт их текст
-и картинку из истории outbox/ и публикует тот же пост в канал MAX.
+Берёт из GitHub посты, которые уже вышли в Telegram, и публикует тот же пост в канал MAX:
+- каналы n8n: sent/{id}.json, текст и картинка — из истории outbox/;
+- канал НППЦП @nscspr: scheduled-ucp-done/{id}.json (текст и путь к картинке в commands-ucp-media/),
+  id в sent-max/ с приставкой ucp-. Опросы в MAX не переносятся.
 Telegram этот скрипт не трогает: его по-прежнему публикует n8n в Нидерландах.
 
 Результат: sent-max/{id}.json при успехе, failed-max/{id}-{время}.json при ошибке.
@@ -95,6 +97,13 @@ def original_post(file):
         if s2 == 200:
             return json.loads(b2)
     raise RuntimeError('не найден текст поста outbox/' + file + ' в истории GitHub')
+
+
+def repo_file_b64(path):
+    s, b = gh('GET', '/contents/' + urllib.parse.quote(path), raw=True)
+    if s != 200:
+        raise RuntimeError('файл %s: HTTP %s' % (path, s))
+    return base64.b64encode(b).decode()
 
 
 # ---------- MAX ----------
@@ -216,7 +225,69 @@ def id_time(pid):
 
 
 # ---------- основной проход ----------
-def process(file, now):
+def publish(pid, base, items, published_at, now, notify_link):
+    """items: [{'text': html, 'image_b64'|'image_url': ..., 'mime': ...}] — отправляются по порядку."""
+    limit = CFG.get('text_limit', 4000)
+    error, results = None, []
+    if (now - published_at).total_seconds() > CFG.get('max_lag_hours', 12) * 3600:
+        error = 'Опоздание: в Telegram пост вышел %s, позже %s ч. В MAX не отправлен, чтобы не выпускать пачку старых постов.' % (published_at.isoformat(), CFG.get('max_lag_hours', 12))
+    for it in items:
+        if not error and len(it['text']) > limit:
+            error = 'Текст для MAX длиннее %s знаков (%s). Сократите или задайте max_text_html.' % (limit, len(it['text']))
+    if DRY:
+        for it in items:
+            log('[dry-run]', pid, '→ MAX', base['max_chat_id'], '| картинка:', 'файл' if it.get('image_b64') or it.get('image_path') else ('ссылка' if it.get('image_url') else 'нет'),
+                '| знаков:', len(it['text']), '| ошибка:' if error else '', error or '')
+        return
+    if not error:
+        for it in items:
+            body = {'text': it['text'], 'format': 'html'}
+            try:
+                b64 = it.get('image_b64') or (repo_file_b64(it['image_path']) if it.get('image_path') else None)
+                if b64:
+                    body['attachments'] = [{'type': 'image', 'payload': upload_image(b64, it.get('mime'))}]
+                    time.sleep(CFG.get('after_upload_seconds', 3))
+                elif it.get('image_url'):
+                    body['attachments'] = [{'type': 'image', 'payload': {'url': it['image_url']}}]
+                r = send(base['max_chat_id'], body)
+            except Exception as e:
+                r = {'ok': False, 'error': str(e)[:500]}
+            if not r['ok']:
+                error = r['error'] + (' (до ошибки отправлено частей: %s)' % len(results) if results else '')
+                break
+            results.append(r); time.sleep(1)
+    stamp = now.strftime('%Y%m%dT%H%M')
+    if not error:
+        record = {**base, 'max_mid': results[-1]['max_mid'], 'max_url': results[-1]['max_url'],
+                  'parts': [{'max_mid': r['max_mid'], 'max_url': r['max_url'], 'attempts': r['attempts']} for r in results],
+                  'published_at': now.isoformat(), 'published_by': 'max-publisher (Россия)'}
+        m = {'id': pid, 'status': 'ok', 'pushed': False, 'gh_path': 'sent-max/' + pid + '.json',
+             'gh_record': record, 'gh_message': 'sent-max ' + pid + ' (ru)'}
+        log(pid, '→ MAX опубликован', results[-1].get('max_url') or results[-1].get('max_mid'))
+    else:
+        record = {**base, 'items': [{k: v for k, v in it.items() if k != 'image_b64'} for it in items],
+                  'failed_max': {'at': now.isoformat(), 'error': error, 'by': 'max-publisher (Россия)',
+                                 'hint': 'В Telegram пост уже вышел. В MAX его нет: опубликуйте вручную или удалите отметку на сервере и запустите заново.'}}
+        m = {'id': pid, 'status': 'failed', 'pushed': False, 'gh_path': 'failed-max/%s-%s.json' % (pid, stamp),
+             'gh_record': record, 'gh_message': 'failed-max ' + pid + ' (ru)'}
+        log(pid, '→ ошибка MAX:', error)
+        notify('MAX: пост не опубликован — %s\nПричина: %s\nTelegram: %s\nФайл в failed-max/.' % (pid, error[:300], notify_link or 'опубликован'))
+    mark(pid, m)                      # сначала локально — это защита от дубля
+    if gh_put(m['gh_path'], m['gh_record'], m['gh_message']):
+        m['pushed'] = True; mark(pid, m)
+    else:
+        log('GitHub не принял запись, повторю в следующий проход:', m['gh_path'])
+
+
+def parse_time(v, default):
+    try:
+        return dt.datetime.fromisoformat(str(v).replace('Z', '+00:00'))
+    except Exception:
+        return default
+
+
+def process_main(file, now):
+    """Каналы n8n (@chelovek_vs_ai, @ryadom_repetitor): sent/{id}.json + текст из истории outbox/."""
     pid = file[:-5]
     s, b = gh('GET', '/contents/sent/' + urllib.parse.quote(file), raw=True)
     if s != 200:
@@ -225,58 +296,49 @@ def process(file, now):
     max_chat = str((CFG.get('channels') or {}).get(rec.get('chat_id'), '')).strip()
     if not max_chat:
         mark(pid, {'id': pid, 'status': 'not-mapped', 'pushed': True}); return
-    pub = dt.datetime.fromisoformat(rec.get('published_at', '').replace('Z', '+00:00')) if rec.get('published_at') else now
     base = {'id': pid, 'channel': rec.get('channel'), 'tg_chat_id': rec.get('chat_id'), 'tg_link': rec.get('link'),
             'max_chat_id': max_chat, 'file': rec.get('file') or file}
     post = original_post(rec.get('file') or file)
     if post.get('max') is False:
         mark(pid, {'id': pid, 'status': 'max-false', 'pushed': True}); log(pid, '— "max": false, пропуск'); return
-    text = to_max_html(post.get('max_text_html') or post.get('text_html') or post.get('text') or '')
-    limit = CFG.get('text_limit', 4000)
-    error = None
-    if (now - pub).total_seconds() > CFG.get('max_lag_hours', 12) * 3600:
-        error = 'Опоздание: в Telegram пост вышел %s, позже %s ч. В MAX не отправлен, чтобы не выпускать пачку старых постов.' % (rec.get('published_at'), CFG.get('max_lag_hours', 12))
-    elif len(text) > limit:
-        error = 'Текст для MAX длиннее %s знаков (%s). Сократите или задайте max_text_html.' % (limit, len(text))
-    if DRY:
-        log('[dry-run]', pid, '→ MAX', max_chat, '| картинка:', 'файл' if post.get('image_base64') else ('ссылка' if post.get('img') else 'нет'),
-            '| знаков:', len(text), '| ошибка:' if error else '', error or '')
-        return
-    result = None
-    if not error:
-        body = {'text': text, 'format': 'html'}
-        try:
-            if post.get('image_base64'):
-                payload = upload_image(post['image_base64'], post.get('image_mime'))
-                body['attachments'] = [{'type': 'image', 'payload': payload}]
-                time.sleep(CFG.get('after_upload_seconds', 3))
-            elif post.get('img'):
-                body['attachments'] = [{'type': 'image', 'payload': {'url': post['img']}}]
-            result = send(max_chat, body)
-            if not result['ok']:
-                error = result['error']
-        except Exception as e:
-            error = str(e)[:500]
-    stamp = now.strftime('%Y%m%dT%H%M')
-    if not error:
-        record = {**base, 'max_mid': result['max_mid'], 'max_url': result['max_url'], 'attempts': result['attempts'],
-                  'published_at': now.isoformat(), 'published_by': 'max-publisher (Россия)'}
-        m = {'id': pid, 'status': 'ok', 'pushed': False, 'gh_path': 'sent-max/' + pid + '.json',
-             'gh_record': record, 'gh_message': 'sent-max ' + pid + ' (ru)'}
-        log(pid, '→ MAX опубликован', result.get('max_url') or result.get('max_mid'))
-    else:
-        light = {k: v for k, v in post.items() if k != 'image_base64'}
-        record = {**light, 'failed_max': {'at': now.isoformat(), 'error': error, 'max_chat_id': max_chat, 'tg_link': rec.get('link'),
-                  'by': 'max-publisher (Россия)', 'hint': 'В Telegram пост уже вышел. В MAX его нет: опубликуйте вручную или удалите отметку на сервере и запустите заново.'}}
-        m = {'id': pid, 'status': 'failed', 'pushed': False, 'gh_path': 'failed-max/%s-%s.json' % (pid, stamp),
-             'gh_record': record, 'gh_message': 'failed-max ' + pid + ' (ru)'}
-        log(pid, '→ ошибка MAX:', error)
-        notify('MAX: пост не опубликован — %s\nПричина: %s\nTelegram: %s\nФайл в failed-max/.' % (pid, error[:300], rec.get('link') or 'опубликован'))
-    mark(pid, m)                      # сначала локально — это защита от дубля
-    if gh_put(m['gh_path'], m['gh_record'], m['gh_message']):
-        m['pushed'] = True; mark(pid, m)
-    else:
-        log('GitHub не принял запись, повторю в следующий проход:', m['gh_path'])
+    it = {'text': to_max_html(post.get('max_text_html') or post.get('text_html') or post.get('text') or '')}
+    if post.get('image_base64'):
+        it.update(image_b64=post['image_base64'], mime=post.get('image_mime'))
+    elif post.get('img'):
+        it['image_url'] = post['img']
+    publish(pid, base, [it], parse_time(rec.get('published_at'), now), now, rec.get('link'))
+
+
+def process_ucp(file, now):
+    """Канал НППЦП (@nscspr): scheduled-ucp-done/{id}.json с текстом и путём к картинке.
+    Опросы в MAX не переносятся (в Bot API MAX их нет) — пост из одних опросов пропускается."""
+    pid = 'ucp-' + file[:-5]
+    max_chat = str((CFG.get('channels') or {}).get('@nscspr', '')).strip()
+    if not max_chat:
+        return                                   # канал не подключён — ничего не отмечаем, подключить можно позже
+    s, b = gh('GET', '/contents/scheduled-ucp-done/' + urllib.parse.quote(file), raw=True)
+    if s != 200:
+        raise RuntimeError('scheduled-ucp-done/%s: HTTP %s' % (file, s))
+    d = json.loads(b)
+    if d.get('max') is False:
+        mark(pid, {'id': pid, 'status': 'max-false', 'pushed': True}); log(pid, '— "max": false, пропуск'); return
+    res = d.get('results') or []
+    if not res or not all(r.get('ok') for r in res):
+        mark(pid, {'id': pid, 'status': 'tg-not-ok', 'pushed': True}); log(pid, '— в Telegram не вышел целиком, в MAX не дублируется'); return
+    items = []
+    for st in d.get('steps') or []:
+        if st.get('action') == 'photo':
+            items.append({'text': to_max_html(st.get('max_text_html') or st.get('text_html') or ''), 'image_path': st.get('image'),
+                          'mime': 'image/png' if str(st.get('image', '')).endswith('.png') else 'image/jpeg'})
+        elif st.get('action') in ('message', 'text'):
+            items.append({'text': to_max_html(st.get('max_text_html') or st.get('text_html') or st.get('text') or '')})
+    if not items:
+        mark(pid, {'id': pid, 'status': 'no-max-content', 'pushed': True}); log(pid, '— только опрос, в MAX не дублируется'); return
+    mid = (res[-1] or {}).get('message_id')
+    link = 'https://t.me/nscspr/%s' % mid if mid else None
+    base = {'id': pid, 'channel': 'НППЦП', 'tg_chat_id': '@nscspr', 'tg_link': link, 'max_chat_id': max_chat,
+            'file': 'scheduled-ucp-done/' + file}
+    publish(pid, base, items, parse_time(d.get('sent_at'), now), now, link)
 
 
 def check():
@@ -324,13 +386,16 @@ def main():
         push_pending()
     done = set(n[:-5] for n in gh_list('sent-max'))
     done |= set(re.sub(r'-\d{8}T\d{4}$', '', n[:-5]) for n in gh_list('failed-max'))
-    sent = sorted(n for n in gh_list('sent') if n.endswith('.json') and id_time(n) and id_time(n) >= start)
-    for n in sent:
-        pid = n[:-5]
+    queue = [(n[:-5], n, process_main) for n in gh_list('sent')
+             if n.endswith('.json') and id_time(n) and id_time(n) >= start]
+    if str((CFG.get('channels') or {}).get('@nscspr', '')).strip():
+        queue += [('ucp-' + n[:-5], n, process_ucp) for n in gh_list('scheduled-ucp-done')
+                  if n.endswith('.json') and id_time(n) and id_time(n) >= dt.datetime.fromisoformat(CFG.get('start_from_ucp') or CFG['start_from'])]
+    for pid, n, fn in sorted(queue, key=lambda q: q[1]):
         if pid in done or load_mark(pid):
             continue
         try:
-            process(n, now)
+            fn(n, now)
         except Exception as e:
             log(pid, '— пропуск в этот проход:', str(e)[:300])  # GitHub недоступен и т. п.: повторим через 2 минуты
         time.sleep(1)                                           # MAX: не больше 2 сообщений в секунду

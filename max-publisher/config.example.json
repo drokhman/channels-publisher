@@ -3,7 +3,8 @@
   "repo": "drokhman/channels-publisher",
   "channels": {
     "@chelovek_vs_ai": "",
-    "@ryadom_repetitor": ""
+    "@ryadom_repetitor": "",
+    "@nscspr": ""
   },
   "start_from": "2026-11-01T00:00",
   "max_lag_hours": 12,
@@ -11,5 +12,9 @@
   "admin_chat_id": "1073319162",
   "extra_ca": "/opt/max-publisher/russian_trusted_root_ca.pem",
   "state_dir": "/var/lib/max-publisher",
-  "committer": { "name": "max-publisher (Россия)", "email": "publisher@channels-publisher.local" }
+  "committer": {
+    "name": "max-publisher (Россия)",
+    "email": "publisher@channels-publisher.local"
+  },
+  "start_from_ucp": ""
 }
