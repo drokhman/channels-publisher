@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-01-0838-cvai-28-deloitte",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 109,
+  "text_message_id": 110,
+  "link": "https://t.me/chelovek_vs_ai/110",
+  "file": "2026-11-01-0838-cvai-28-deloitte.json",
+  "due_at": "2026-11-01T05:38:00.000Z",
+  "published_at": "2026-11-01T05:38:14.741Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
