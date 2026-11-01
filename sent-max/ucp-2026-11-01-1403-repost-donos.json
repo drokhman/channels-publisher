@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-01-1403-repost-donos",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/75",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-01-1403-repost-donos.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a196cc36cd5a95",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a196cc36cd5a95",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-01T11:08:41.808245+00:00",
+  "published_by": "max-publisher (Россия)"
+}
