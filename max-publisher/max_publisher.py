@@ -286,9 +286,21 @@ def check():
     s, r = max_req('GET', '/me')
     print('MAX /me:', ('OK, бот ' + str(r.get('name') or r.get('username'))) if s == 200 else 'ошибка HTTP %s %s' % (s, json.dumps(r, ensure_ascii=False)[:200])); ok &= s == 200
     if s == 200:
-        s, r = max_req('GET', '/chats?count=100')
-        for c in r.get('chats', []):
-            print('  чат: chat_id=%s type=%s title=%s' % (c.get('chat_id'), c.get('type'), c.get('title')))
+        # GET /chats отключён в июне 2026: chat_id теперь только из событий бота (bot_added и др.)
+        s, r = max_req('GET', '/updates?limit=100&timeout=0')
+        seen = {}
+        for u in r.get('updates', []):
+            cid = u.get('chat_id') or ((u.get('message') or {}).get('recipient') or {}).get('chat_id')
+            if cid and cid not in seen:
+                seen[cid] = (u.get('update_type'), (u.get('chat') or {}).get('title') or u.get('title') or '')
+        for cid, (t, title) in seen.items():
+            print('  событие: chat_id=%s %s %s' % (cid, t, title))
+        if not seen:
+            print('  событий нет: чтобы узнать chat_id, заново добавьте бота в канал и повторите --check')
+        for cid in (CFG.get('channels') or {}).values():
+            if str(cid).strip():
+                s2, c = max_req('GET', '/chats/' + str(cid).strip())
+                print('  канал из config.json %s:' % cid, ('OK, ' + str(c.get('title'))) if s2 == 200 else 'ошибка HTTP %s %s' % (s2, json.dumps(c, ensure_ascii=False)[:150]))
     if TG_TOKEN:
         s, _ = http('GET', TG_API + '/bot' + TG_TOKEN + '/getMe', timeout=15)
         print('Telegram (только для уведомлений):', 'OK' if s == 200 else 'недоступен, HTTP %s' % s)
