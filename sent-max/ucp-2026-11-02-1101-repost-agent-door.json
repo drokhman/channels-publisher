@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-02-1101-repost-agent-door",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/79",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-02-1101-repost-agent-door.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a19b48eb6400bd",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a19b48eb6400bd",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-02T08:03:23.564904+00:00",
+  "published_by": "max-publisher (Россия)"
+}
