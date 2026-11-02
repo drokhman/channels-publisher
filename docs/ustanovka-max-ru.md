@@ -161,3 +161,7 @@ outbox/ ──n8n (Нидерланды)──► Telegram ──► sent/{id}.j
 - Первая команда — оглавление @nscspr: `commands-max/2026-11-01-toc-nscspr.json`.
 
 Обновление сервера: скачать `max_publisher.py` (как в шаге 2) и выполнить один проход `max_publisher.py`. Откат: скачать файл с `?ref=` предыдущего коммита — команды в `commands-max/` старая версия просто не видит.
+
+## Опросы @nscspr в MAX (версия 1.1)
+
+В Bot API MAX опросов нет (вложения: image, video, audio, file, sticker, contact, inline_keyboard, location). Шаг `poll` из `scheduled-ucp-done/` уходит в MAX отдельным сообщением: «📊 Опрос», вопрос, варианты с номерами и кнопка «Ответить в Telegram» на сам опрос (`t.me/nscspr/{message_id}`). Свой текст карточки — поле `max_text_html` в шаге опроса. Разовые опросы из `commands-ucp/` в MAX по-прежнему не дублируются.

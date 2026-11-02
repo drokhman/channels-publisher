@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Публикатор MAX на российском сервере. Версия 1.1 (01.11.2026): разовые команды commands-max/.
+"""Публикатор MAX на российском сервере. Версия 1.1 (02.11.2026): разовые команды commands-max/, опросы @nscspr карточкой со ссылкой на Telegram.
 
 Берёт из GitHub посты, которые уже вышли в Telegram, и публикует тот же пост в канал MAX:
 - каналы n8n: sent/{id}.json, текст и картинка — из истории outbox/;
@@ -18,7 +18,7 @@ Telegram этот скрипт не трогает: его по-прежнему
          max_publisher.py --check    — проверить доступ к GitHub и MAX, вывести каналы бота
 Только стандартная библиотека Python, без pip.
 """
-import base64, datetime as dt, fcntl, json, os, re, ssl, sys, time, urllib.error, urllib.parse, urllib.request, uuid
+import base64, html, datetime as dt, fcntl, json, os, re, ssl, sys, time, urllib.error, urllib.parse, urllib.request, uuid
 
 HOME = os.path.dirname(os.path.abspath(__file__))
 CFG = json.load(open(os.environ.get('MAXPUB_CONFIG', os.path.join(HOME, 'config.json')), encoding='utf-8'))
@@ -262,6 +262,9 @@ def publish(pid, base, items, published_at, now, notify_link):
                     time.sleep(CFG.get('after_upload_seconds', 3))
                 elif it.get('image_url'):
                     body['attachments'] = [{'type': 'image', 'payload': {'url': it['image_url']}}]
+                if it.get('buttons'):
+                    body.setdefault('attachments', []).append({'type': 'inline_keyboard', 'payload': {'buttons': [
+                        [{'type': 'link', 'text': x['text'], 'url': x['url']} for x in row] for row in it['buttons']]}})
                 r = send(base['max_chat_id'], body)
             except Exception as e:
                 r = {'ok': False, 'error': str(e)[:500]}
@@ -324,7 +327,8 @@ def process_main(file, now):
 
 def process_ucp(file, now):
     """Канал НППЦП (@nscspr): scheduled-ucp-done/{id}.json с текстом и путём к картинке.
-    Опросы в MAX не переносятся (в Bot API MAX их нет) — пост из одних опросов пропускается."""
+    Опроса в Bot API MAX нет, поэтому опрос уходит карточкой: вопрос, варианты с номерами
+    и кнопка «Ответить в Telegram» на сам опрос (t.me/nscspr/{message_id})."""
     pid = 'ucp-' + file[:-5]
     max_chat = str((CFG.get('channels') or {}).get('@nscspr', '')).strip()
     if not max_chat:
@@ -339,12 +343,14 @@ def process_ucp(file, now):
     if not res or not all(r.get('ok') for r in res):
         mark(pid, {'id': pid, 'status': 'tg-not-ok', 'pushed': True}); log(pid, '— в Telegram не вышел целиком, в MAX не дублируется'); return
     items = []
-    for st in d.get('steps') or []:
+    for i, st in enumerate(d.get('steps') or []):
         if st.get('action') == 'photo':
             items.append({'text': to_max_html(st.get('max_text_html') or st.get('text_html') or ''), 'image_path': st.get('image'),
                           'mime': 'image/png' if str(st.get('image', '')).endswith('.png') else 'image/jpeg'})
         elif st.get('action') in ('message', 'text'):
             items.append({'text': to_max_html(st.get('max_text_html') or st.get('text_html') or st.get('text') or '')})
+        elif st.get('action') == 'poll':
+            items.append(poll_card(st, (res[i] if i < len(res) else {}).get('message_id')))
     if not items:
         mark(pid, {'id': pid, 'status': 'no-max-content', 'pushed': True}); log(pid, '— только опрос, в MAX не дублируется'); return
     mid = (res[-1] or {}).get('message_id')
@@ -352,6 +358,25 @@ def process_ucp(file, now):
     base = {'id': pid, 'channel': 'НППЦП', 'tg_chat_id': '@nscspr', 'tg_link': link, 'max_chat_id': max_chat,
             'file': 'scheduled-ucp-done/' + file}
     publish(pid, base, items, parse_time(d.get('sent_at'), now), now, link)
+
+
+
+NUM = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
+
+
+def poll_card(st, tg_mid, tg='nscspr'):
+    """Опрос Telegram → карточка MAX: вопрос, варианты, кнопка на опрос в Telegram."""
+    esc = lambda x: html.escape(str(x), quote=False)
+    opts = '\n'.join('%s %s' % (NUM[k] if k < len(NUM) else '•', esc(o)) for k, o in enumerate(st.get('options') or []))
+    how = 'можно выбрать несколько вариантов' if st.get('multiple') else 'один вариант'
+    text = '📊 <b>Опрос</b>\n\n<b>%s</b>\n\n%s\n\nГолосование идёт в Telegram-канале — %s%s. Итоги разберём в канале.' % (
+        esc(st.get('question', '')), opts, how, ', анонимно' if st.get('anonymous', True) else '')
+    if st.get('max_text_html'):
+        text = to_max_html(st['max_text_html'])
+    it = {'text': text}
+    if tg_mid:
+        it['buttons'] = [[{'text': 'Ответить в Telegram', 'url': 'https://t.me/%s/%s' % (tg, tg_mid)}]]
+    return it
 
 
 # ---------- разовые команды для каналов MAX ----------
