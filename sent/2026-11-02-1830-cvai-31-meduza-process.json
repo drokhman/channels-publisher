@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-02-1830-cvai-31-meduza-process",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 120,
+  "text_message_id": 121,
+  "link": "https://t.me/chelovek_vs_ai/121",
+  "file": "2026-11-02-1830-cvai-31-meduza-process.json",
+  "due_at": "2026-11-02T15:30:00.000Z",
+  "published_at": "2026-11-02T15:30:15.728Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
