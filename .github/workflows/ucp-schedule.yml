@@ -2,10 +2,8 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '22 10 2 11 *'   # 2026-11-02-1322-sale-trust-1111.json · пост
-    - cron: '47 10 2 11 *'   # 2026-11-02-1322-sale-trust-1111.json · страховка
-    - cron: '41 10 2 11 *'   # 2026-11-02-1341-wisdom-cost-per-ruble.json · пост
-    - cron: '6 11 2 11 *'   # 2026-11-02-1341-wisdom-cost-per-ruble.json · страховка
+    - cron: '40 11 2 11 *'   # 2026-11-02-1440-wisdom-cost-per-ruble.json · пост
+    - cron: '5 12 2 11 *'   # 2026-11-02-1440-wisdom-cost-per-ruble.json · страховка
     - cron: '53 11 2 11 *'   # 2026-11-02-1453-release-0533.json · пост
     - cron: '18 12 2 11 *'   # 2026-11-02-1453-release-0533.json · страховка
   workflow_dispatch:
