@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-02-0937-warehouse-wages",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/77",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-02-0937-warehouse-wages.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a19afb531a6ed5",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a19afb531a6ed5",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-02T06:38:37.854818+00:00",
+  "published_by": "max-publisher (Россия)"
+}
