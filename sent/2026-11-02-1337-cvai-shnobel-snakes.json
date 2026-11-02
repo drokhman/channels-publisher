@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-02-1337-cvai-shnobel-snakes",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": null,
+  "text_message_id": 119,
+  "link": "https://t.me/chelovek_vs_ai/119",
+  "file": "2026-11-02-1337-cvai-shnobel-snakes.json",
+  "due_at": "2026-11-02T10:37:00.000Z",
+  "published_at": "2026-11-02T10:38:14.038Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
