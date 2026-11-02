@@ -2,10 +2,18 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '40 11 2 11 *'   # 2026-11-02-1440-wisdom-cost-per-ruble.json · пост
-    - cron: '5 12 2 11 *'   # 2026-11-02-1440-wisdom-cost-per-ruble.json · страховка
-    - cron: '53 11 2 11 *'   # 2026-11-02-1453-release-0533.json · пост
-    - cron: '18 12 2 11 *'   # 2026-11-02-1453-release-0533.json · страховка
+    - cron: '13 5 3 11 *'   # 2026-11-03-0813-rzd-october.json · пост
+    - cron: '38 5 3 11 *'   # 2026-11-03-0813-rzd-october.json · страховка
+    - cron: '17 6 3 11 *'   # 2026-11-03-0917-fas-undersupply.json · пост
+    - cron: '42 6 3 11 *'   # 2026-11-03-0917-fas-undersupply.json · страховка
+    - cron: '45 7 3 11 *'   # 2026-11-03-1045-repost-deloitte.json · пост
+    - cron: '10 8 3 11 *'   # 2026-11-03-1045-repost-deloitte.json · страховка
+    - cron: '12 9 3 11 *'   # 2026-11-03-1212-bp-fpy.json · пост
+    - cron: '37 9 3 11 *'   # 2026-11-03-1212-bp-fpy.json · страховка
+    - cron: '28 10 3 11 *'   # 2026-11-03-1328-book-ohno.json · пост
+    - cron: '53 10 3 11 *'   # 2026-11-03-1328-book-ohno.json · страховка
+    - cron: '48 11 3 11 *'   # 2026-11-03-1448-kpi-otif.json · пост
+    - cron: '13 12 3 11 *'   # 2026-11-03-1448-kpi-otif.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
