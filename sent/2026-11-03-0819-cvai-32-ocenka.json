@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-03-0819-cvai-32-ocenka",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 122,
+  "text_message_id": 123,
+  "link": "https://t.me/chelovek_vs_ai/123",
+  "file": "2026-11-03-0819-cvai-32-ocenka.json",
+  "due_at": "2026-11-03T05:19:00.000Z",
+  "published_at": "2026-11-03T05:20:14.531Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
