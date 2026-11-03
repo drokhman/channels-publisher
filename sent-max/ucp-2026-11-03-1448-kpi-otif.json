@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-03-1448-kpi-otif",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/93",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-03-1448-kpi-otif.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1a13e925160da",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1a13e925160da",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-03T11:49:48.465145+00:00",
+  "published_by": "max-publisher (Россия)"
+}
