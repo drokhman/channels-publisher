@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-03-0917-fas-undersupply",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/88",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-03-0917-fas-undersupply.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1a00f880b3068",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1a00f880b3068",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-03T06:18:48.496477+00:00",
+  "published_by": "max-publisher (Россия)"
+}
