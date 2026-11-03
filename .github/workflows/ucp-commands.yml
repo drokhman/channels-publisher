@@ -11,10 +11,10 @@ concurrency:
   cancel-in-progress: false
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Выполнить команды
         env:
           UCP_BOT_TOKEN: ${{ secrets.UCP_BOT_TOKEN }}
