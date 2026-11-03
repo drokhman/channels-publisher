@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-03-1827-cvai-33-novabev",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 124,
+  "text_message_id": 125,
+  "link": "https://t.me/chelovek_vs_ai/125",
+  "file": "2026-11-03-1827-cvai-33-novabev.json",
+  "due_at": "2026-11-03T15:27:00.000Z",
+  "published_at": "2026-11-03T15:28:14.565Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
