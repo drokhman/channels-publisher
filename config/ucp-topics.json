@@ -8,52 +8,62 @@
     {
       "key": "news",
       "name": "1️⃣ Новости рынка",
-      "icon_color": 7322096
+      "icon_color": 7322096,
+      "thread_id": 3
     },
     {
       "key": "retail",
       "name": "2️⃣ Работа с торговыми сетями",
-      "icon_color": 16766590
+      "icon_color": 16766590,
+      "thread_id": 4
     },
     {
       "key": "logistics",
       "name": "3️⃣ Логистика: наука и практика",
-      "icon_color": 9367192
+      "icon_color": 9367192,
+      "thread_id": 5
     },
     {
       "key": "bp",
       "name": "4️⃣ Бизнес-процессы",
-      "icon_color": 13338331
+      "icon_color": 13338331,
+      "thread_id": 6
     },
     {
       "key": "wisdom",
       "name": "5️⃣ У тебя ж опыта больше",
-      "icon_color": 16478047
+      "icon_color": 16478047,
+      "thread_id": 7
     },
     {
       "key": "hr",
       "name": "6️⃣ Управление, HR и навыки",
-      "icon_color": 9367192
+      "icon_color": 9367192,
+      "thread_id": 8
     },
     {
       "key": "ai",
       "name": "7️⃣ ИИ и цифровизация",
-      "icon_color": 7322096
+      "icon_color": 7322096,
+      "thread_id": 9
     },
     {
       "key": "polls",
       "name": "8️⃣ Опросы и исследования",
-      "icon_color": 16749490
+      "icon_color": 16749490,
+      "thread_id": 10
     },
     {
       "key": "platform",
       "name": "9️⃣ Новости платформы",
-      "icon_color": 13338331
+      "icon_color": 13338331,
+      "thread_id": 11
     },
     {
       "key": "other",
       "name": "🔟 Вне рубрик",
-      "icon_color": 16766590
+      "icon_color": 16766590,
+      "thread_id": 12
     }
   ],
   "rules": [
