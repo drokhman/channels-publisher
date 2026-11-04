@@ -5,5 +5,16 @@
       "image": "commands-ucp-media/img-walmart04.jpg",
       "text_html": "<b>Walmart вложит $6 млрд в роботизацию 25 распределительных центров</b>\n\n1️⃣ Walmart расширил соглашение с Symbotic: автоматизация придёт в 25 региональных РЦ в США. Первоначальное обязательство — около $6 млрд на несколько лет.\n2️⃣ В сумму входят покупка систем Symbotic и финансирование разработок, ещё $125 млн — на новое поколение стеллажей и технологий учёта запасов.\n3️⃣ Партнёрство началось больше десяти лет назад с одного продукта, сейчас это комплексное решение для всей цепи, сказал гендиректор Symbotic Рик Коэн.\n\nКрупнейший ритейлер мира автоматизирует не магазины, а РЦ: там скорость и точность всей цепи.\n\n<b>Что сделать</b>\n1️⃣ Посчитать, какая операция РЦ съедает больше всего часов на коробку — с неё начинается любая автоматизация.\n2️⃣ Проверить, готова ли ваша учётная система к роботу: точные остатки по ячейкам, габариты и вес каждой позиции.\n\nДанные: <a href=\"https://www.reuters.com/technology/walmart-commits-6-billion-expand-symbotic-deal-2026-10-29/\">Reuters</a>, <a href=\"https://www.supplychaindive.com/news/walmart-commits-6b-to-up-distribution-center-automation-with-symbotic/873356/\">Supply Chain Dive</a>, <a href=\"https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/8563782/symbotic-expands-walmart-automation-partnership-and-backlog/\">The Globe and Mail</a>.\n\n#НППЦП #склад #цифровизация"
     }
+  ],
+  "due": "2026-11-04T11:43:00+03:00",
+  "sent_at": "2026-11-04T11:43:19.208274+03:00",
+  "late_min": 0,
+  "results": [
+    {
+      "action": "photo",
+      "ok": true,
+      "message_id": 100,
+      "description": null
+    }
   ]
 }
