@@ -1,0 +1,21 @@
+{
+  "action": "updates",
+  "result": {
+    "ok": true,
+    "chats": [
+      {
+        "id": -1003972792581,
+        "title": "Национальная платформа поддержки ЦП Chat",
+        "is_forum": null,
+        "status": "administrator"
+      },
+      {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "status": "administrator"
+      }
+    ]
+  },
+  "at": "2026-11-04T08:29:16Z"
+}
