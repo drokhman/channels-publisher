@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-04-0831-cvai-34-doverie",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 126,
+  "text_message_id": 127,
+  "link": "https://t.me/chelovek_vs_ai/127",
+  "file": "2026-11-04-0831-cvai-34-doverie.json",
+  "due_at": "2026-11-04T05:31:00.000Z",
+  "published_at": "2026-11-04T05:32:14.291Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
