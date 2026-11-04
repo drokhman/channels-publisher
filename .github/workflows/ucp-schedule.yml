@@ -2,18 +2,18 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '3 5 4 11 *'   # 2026-11-04-0803-rspp-logistics-index.json · пост
-    - cron: '28 5 4 11 *'   # 2026-11-04-0803-rspp-logistics-index.json · страховка
-    - cron: '19 6 4 11 *'   # 2026-11-04-0919-bts-regions.json · пост
-    - cron: '44 6 4 11 *'   # 2026-11-04-0919-bts-regions.json · страховка
-    - cron: '36 7 4 11 *'   # 2026-11-04-1036-repost-novabev-osa.json · пост
-    - cron: '1 8 4 11 *'   # 2026-11-04-1036-repost-novabev-osa.json · страховка
-    - cron: '43 8 4 11 *'   # 2026-11-04-1143-walmart-symbotic.json · пост
-    - cron: '8 9 4 11 *'   # 2026-11-04-1143-walmart-symbotic.json · страховка
-    - cron: '10 10 4 11 *'   # 2026-11-04-1310-wisdom-logistics-in-price.json · пост
-    - cron: '35 10 4 11 *'   # 2026-11-04-1310-wisdom-logistics-in-price.json · страховка
-    - cron: '31 11 4 11 *'   # 2026-11-04-1431-release-0557.json · пост
-    - cron: '56 11 4 11 *'   # 2026-11-04-1431-release-0557.json · страховка
+    - cron: '41 5 5 11 *'   # 2026-11-05-0841-retail-traffic-down.json · пост
+    - cron: '6 6 5 11 *'   # 2026-11-05-0841-retail-traffic-down.json · страховка
+    - cron: '44 6 5 11 *'   # 2026-11-05-0944-bp-process-mining.json · пост
+    - cron: '9 7 5 11 *'   # 2026-11-05-0944-bp-process-mining.json · страховка
+    - cron: '3 8 5 11 *'   # 2026-11-05-1103-repost-doverie.json · пост
+    - cron: '28 8 5 11 *'   # 2026-11-05-1103-repost-doverie.json · страховка
+    - cron: '4 9 5 11 *'   # 2026-11-05-1204-ai-data-incidents.json · пост
+    - cron: '29 9 5 11 *'   # 2026-11-05-1204-ai-data-incidents.json · страховка
+    - cron: '12 10 5 11 *'   # 2026-11-05-1312-little-law.json · пост
+    - cron: '37 10 5 11 *'   # 2026-11-05-1312-little-law.json · страховка
+    - cron: '36 11 5 11 *'   # 2026-11-05-1436-chz-outage.json · пост
+    - cron: '1 12 5 11 *'   # 2026-11-05-1436-chz-outage.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
