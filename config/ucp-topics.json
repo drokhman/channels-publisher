@@ -1,0 +1,137 @@
+{
+  "enabled": true,
+  "group_chat_id": -1003972792581,
+  "source_channel": "@nscspr",
+  "mode": "forward",
+  "min_message_id": 8,
+  "topics": [
+    {
+      "key": "news",
+      "name": "1️⃣ Новости рынка",
+      "icon_color": 7322096
+    },
+    {
+      "key": "retail",
+      "name": "2️⃣ Работа с торговыми сетями",
+      "icon_color": 16766590
+    },
+    {
+      "key": "logistics",
+      "name": "3️⃣ Логистика: наука и практика",
+      "icon_color": 9367192
+    },
+    {
+      "key": "bp",
+      "name": "4️⃣ Бизнес-процессы",
+      "icon_color": 13338331
+    },
+    {
+      "key": "wisdom",
+      "name": "5️⃣ У тебя ж опыта больше",
+      "icon_color": 16478047
+    },
+    {
+      "key": "hr",
+      "name": "6️⃣ Управление, HR и навыки",
+      "icon_color": 9367192
+    },
+    {
+      "key": "ai",
+      "name": "7️⃣ ИИ и цифровизация",
+      "icon_color": 7322096
+    },
+    {
+      "key": "polls",
+      "name": "8️⃣ Опросы и исследования",
+      "icon_color": 16749490
+    },
+    {
+      "key": "platform",
+      "name": "9️⃣ Новости платформы",
+      "icon_color": 13338331
+    },
+    {
+      "key": "other",
+      "name": "🔟 Вне рубрик",
+      "icon_color": 16766590
+    }
+  ],
+  "rules": [
+    [
+      "-release-",
+      "platform"
+    ],
+    [
+      "-repost-",
+      "ai"
+    ],
+    [
+      "-wisdom-",
+      "wisdom"
+    ],
+    [
+      "-bp-",
+      "bp"
+    ],
+    [
+      "-book-",
+      "other"
+    ],
+    [
+      "-events-",
+      "other"
+    ],
+    [
+      "-holiday-",
+      "other"
+    ],
+    [
+      "-hr-",
+      "hr"
+    ],
+    [
+      "-retail-",
+      "retail"
+    ],
+    [
+      "-kpi-",
+      "logistics"
+    ]
+  ],
+  "default_topic": "news",
+  "polls_copy_to": "polls",
+  "manual": {
+    "msg-8": "news",
+    "2026-10-25-10-epd": "news",
+    "2026-10-25-11-rzd": "news",
+    "2026-10-25-12-fuel": "news",
+    "2026-10-25-13-cong-photo": "other",
+    "2026-10-25-14-cong-text": "other",
+    "2026-10-25-21-poll": "polls",
+    "2026-10-25-40-c1": "other",
+    "2026-10-25-41-c2": "other",
+    "2026-10-25-42-c3": "other",
+    "2026-10-25-43-c4": "other",
+    "2026-10-25-44-p1": "platform",
+    "2026-10-25-45-p2": "platform",
+    "2026-10-25-50-outstaff-photo": "hr",
+    "2026-10-25-51-outstaff-text": "hr",
+    "2026-10-25-52-outstaff-poll": "hr",
+    "2026-10-26-x5": "retail",
+    "2026-10-27-30-scor-a-photo": "bp",
+    "2026-10-27-30-scor-b-text": "bp",
+    "2026-10-28-1216-staff-shortage": "hr",
+    "2026-11-02-0937-warehouse-wages": "hr",
+    "2026-10-30-0800-lenta-remi-remote-qc": "retail",
+    "2026-10-30-0904-returns-bill": "retail",
+    "2026-11-02-0834-kb-third-truck": "retail",
+    "2026-11-02-1322-sale-trust-1111": "retail",
+    "2026-11-03-0917-fas-undersupply": "retail",
+    "2026-10-30-1139-bullwhip": "logistics",
+    "2026-11-03-1448-kpi-otif": "logistics"
+  },
+  "skip": [
+    "2026-10-27-test",
+    "2026-10-25-20-nav"
+  ]
+}

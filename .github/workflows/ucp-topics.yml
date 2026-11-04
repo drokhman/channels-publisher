@@ -1,0 +1,33 @@
+name: УЦП рубрикатор
+on:
+  push:
+    branches: [main]
+    paths: ['scheduled-ucp-done/*.json', 'commands-ucp-done/*.json', 'config/ucp-topics.json']
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ucp-topics
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Разложить посты по темам
+        env:
+          UCP_BOT_TOKEN: ${{ secrets.UCP_BOT_TOKEN }}
+        run: python3 bot/ucp_topics.py
+      - name: Сохранить результат
+        if: always()
+        run: |
+          git config user.name "ucp-topics (GitHub Actions)"
+          git config user.email "actions@users.noreply.github.com"
+          git add topics-ucp config/ucp-topics.json
+          git diff --cached --quiet || (git commit -m "УЦП: рубрикатор" && git pull --rebase && git push)
