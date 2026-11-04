@@ -23,7 +23,7 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v5
         with:
@@ -38,3 +38,13 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add -A scheduled-ucp*
           git diff --cached --quiet || (git commit -m "УЦП: пост по расписанию" && git pull --rebase && git push)
+      - name: Разложить вышедшее по темам библиотеки
+        if: always()
+        continue-on-error: true
+        env:
+          UCP_BOT_TOKEN: ${{ secrets.UCP_BOT_TOKEN }}
+          UCP_TOPICS_MAX: "10"
+        run: |
+          python3 bot/ucp_topics.py || true
+          git add -A -- topics-ucp config/ucp-topics.json
+          git diff --cached --quiet || (git commit -m "УЦП: рубрикатор" && git pull --rebase && git push)
