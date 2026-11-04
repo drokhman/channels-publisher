@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Публикатор MAX на российском сервере. Версия 1.1 (02.11.2026): разовые команды commands-max/, опросы @nscspr карточкой со ссылкой на Telegram.
+"""Публикатор MAX на российском сервере. Версия 1.2 (04.11.2026): разовые команды commands-max/ (в т. ч. обложка канала set_icon), опросы @nscspr карточкой со ссылкой на Telegram.
 
 Берёт из GitHub посты, которые уже вышли в Telegram, и публикует тот же пост в канал MAX:
 - каналы n8n: sent/{id}.json, текст и картинка — из истории outbox/;
@@ -385,7 +385,8 @@ def process_command(file, now):
     исправить, закрепить, удалить. Пример: {"channel": "@nscspr", "steps": [
       {"action": "send", "key": "toc", "text_html": "...", "buttons": [[{"text": "...", "url": "..."}]], "pin": true},
       {"action": "edit", "key": "toc", "text_html": "...", "buttons": [...]},
-      {"action": "pin", "key": "toc"}, {"action": "delete", "key": "toc"}]}
+      {"action": "pin", "key": "toc"}, {"action": "delete", "key": "toc"},
+      {"action": "set_icon", "image": "commands-ucp-media/img-channel-avatar.jpg"}]}
     key — имя сообщения: по нему потом можно исправить или закрепить его (связка key → mid в commands-max/keys.json).
     Результат: commands-max-done/{имя}.json или commands-max-failed/{имя}-{время}.json."""
     pid = 'cmd-' + file[:-5]
@@ -437,6 +438,13 @@ def process_command(file, now):
             if s2 != 200 or not rr.get('success'):
                 error = 'pin: HTTP %s %s' % (s2, json.dumps(rr, ensure_ascii=False)[:200]); break
             r['pinned'] = True
+        if a == 'set_icon':   # {"action": "set_icon", "image": "commands-ucp-media/x.jpg"} — обложка канала
+            icon = upload_image(repo_file_b64(st['image']), 'image/png' if st['image'].endswith('.png') else 'image/jpeg')
+            time.sleep(CFG.get('after_upload_seconds', 3))
+            s2, rr = max_req('PATCH', '/chats/%s' % chat, {'icon': icon, 'notify': False})
+            if s2 != 200 or not (rr.get('chat_id') or rr.get('success')):
+                error = 'set_icon: HTTP %s %s' % (s2, json.dumps(rr, ensure_ascii=False)[:200]); break
+            r['icon'] = True
         if a == 'delete':
             s2, rr = max_req('DELETE', '/messages?message_id=' + urllib.parse.quote(mid or ''))
             if s2 != 200 or not rr.get('success'):
