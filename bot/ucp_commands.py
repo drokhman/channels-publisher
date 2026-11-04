@@ -10,13 +10,14 @@
   {"action":"photo","image":"commands-ucp-media/x.jpg","text_html":"..."}  # фото + подпись
   {"action":"check"}                                            # права бота в канале
   {"action":"chat"}                                             # сведения о канале и привязанном чате
+  {"action":"updates"}                                          # группы, куда недавно добавили бота
 Поле chat_id необязательно (по умолчанию @nscspr), разрешены только каналы из ALLOWED.
 Результат: commands-ucp-done/ или commands-ucp-failed/, команда удаляется.
 """
 import json, os, pathlib, sys, time, urllib.request, urllib.error
 
 TOKEN = os.environ.get("UCP_BOT_TOKEN", "")
-ALLOWED = ["@nscspr"]
+ALLOWED = ["@nscspr"]  # chat_id групп рубрикатора добавлять сюда
 DEFAULT_CHAT = "@nscspr"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC, DONE, FAIL = ROOT / "commands-ucp", ROOT / "commands-ucp-done", ROOT / "commands-ucp-failed"
@@ -94,6 +95,18 @@ def run(c):
         if m.get("ok"):
             m["bot"] = me["result"].get("username")
         return m
+    if a == "updates":   # найти группы, куда добавили бота (id для рубрикатора)
+        u = tg("getUpdates", {"allowed_updates": ["my_chat_member", "message"], "limit": 100})
+        if not u.get("ok"):
+            return u
+        chats = {}
+        for x in u["result"]:
+            m = x.get("my_chat_member") or x.get("message") or {}
+            c = m.get("chat") or {}
+            if c.get("type") in ("group", "supergroup"):
+                chats[c["id"]] = {"id": c["id"], "title": c.get("title"), "is_forum": c.get("is_forum"),
+                                  "status": (m.get("new_chat_member") or {}).get("status")}
+        return {"ok": True, "chats": list(chats.values())}
     if a == "chat":
         c = tg("getChat", {"chat_id": chat})
         lid = c.get("result", {}).get("linked_chat_id")
