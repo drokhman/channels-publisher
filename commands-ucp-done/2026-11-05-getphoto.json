@@ -1,0 +1,9 @@
+{
+  "action": "get_photo",
+  "result": {
+    "ok": true,
+    "saved": "commands-ucp-media/avatar-nscspr.jpg",
+    "size": 26151
+  },
+  "at": "2026-11-04T16:08:48Z"
+}
