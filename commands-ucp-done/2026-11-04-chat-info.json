@@ -1,0 +1,173 @@
+{
+  "action": "chat",
+  "result": {
+    "ok": true,
+    "result": {
+      "id": -1003919114874,
+      "title": "Национальная платформа поддержки ЦП",
+      "username": "nscspr",
+      "type": "channel",
+      "active_usernames": [
+        "nscspr"
+      ],
+      "description": "Национальная платформа поддержки цепей поставок: сообщество руководителей направлений цепей поставок компаний. Практики, кейсы, встречи советов. Присоединяйтесь 👉 https://t.me/nscspr",
+      "invite_link": "https://t.me/+b1HXnpErRAQyYzgy",
+      "can_send_gift": true,
+      "has_visible_history": true,
+      "linked_chat_id": -1003972792581,
+      "can_send_paid_media": true,
+      "accepted_gift_types": {
+        "unlimited_gifts": true,
+        "limited_gifts": true,
+        "unique_gifts": true,
+        "premium_subscription": true,
+        "gifts_from_channels": true
+      },
+      "photo": {
+        "small_file_id": "AQADAgAD3yBrG-3A8UoACAIAA4b9wUEW____01kXoXu-wes9BA",
+        "small_file_unique_id": "AQAD3yBrG-3A8UoAAQ",
+        "big_file_id": "AQADAgAD3yBrG-3A8UoACAMAA4b9wUEW____01kXoXu-wes9BA",
+        "big_file_unique_id": "AQAD3yBrG-3A8UoB"
+      },
+      "pinned_message": {
+        "message_id": 14,
+        "sender_chat": {
+          "id": -1003919114874,
+          "title": "Национальная платформа поддержки ЦП",
+          "username": "nscspr",
+          "type": "channel"
+        },
+        "chat": {
+          "id": -1003919114874,
+          "title": "Национальная платформа поддержки ЦП",
+          "username": "nscspr",
+          "type": "channel"
+        },
+        "date": 1792948916,
+        "edit_date": 1792951592,
+        "text": "Навигатор канала · неделя 19–25 октября\n\nКоллеги, главное за неделю — коротко, подробности по ссылкам.\n\n1️⃣ Фура +21% за год, закупочная цена — прежняя — ставки FTL и переговоры поставщика с сетью\n2️⃣ ЭПД: 62 млн документов, подпись — у 16% перевозчиков — что контролировать грузоотправителю\n3️⃣ Погрузка РЖД −1,2% — рынок ждёт ухудшения в IV квартале, что пересчитать производителю\n4️⃣ ДТ +21,4% с начала года — скидки по топливным картам и себестоимость рейса\n5️⃣ 13-й Конгресс руководителей цепей поставок — обзор программы\n\nКонгресс по трекам\n— ИИ и цифровизация\n— Планирование и закупки\n— ЭПД, ВЭД и риски\n— Логистика, склад, люди\n\nВпереди\n19 ноября — финал студенческого чемпионата Logus Nova (СПЦП).\n\nПлатформа НППЦП\n— Функции рабочей группы\n— Инструменты для практики\n\n#НППЦП #логистика #цепипоставок",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 39,
+            "type": "bold"
+          },
+          {
+            "offset": 108,
+            "length": 43,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/8"
+          },
+          {
+            "offset": 201,
+            "length": 52,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/9"
+          },
+          {
+            "offset": 296,
+            "length": 18,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/10"
+          },
+          {
+            "offset": 387,
+            "length": 23,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/11"
+          },
+          {
+            "offset": 466,
+            "length": 42,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/13"
+          },
+          {
+            "offset": 528,
+            "length": 18,
+            "type": "bold"
+          },
+          {
+            "offset": 549,
+            "length": 17,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/17"
+          },
+          {
+            "offset": 569,
+            "length": 22,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/18"
+          },
+          {
+            "offset": 594,
+            "length": 16,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/19"
+          },
+          {
+            "offset": 613,
+            "length": 22,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/20"
+          },
+          {
+            "offset": 637,
+            "length": 7,
+            "type": "bold"
+          },
+          {
+            "offset": 700,
+            "length": 4,
+            "type": "text_link",
+            "url": "https://scmpro.ru/"
+          },
+          {
+            "offset": 708,
+            "length": 15,
+            "type": "bold"
+          },
+          {
+            "offset": 726,
+            "length": 22,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/21"
+          },
+          {
+            "offset": 751,
+            "length": 24,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/22"
+          },
+          {
+            "offset": 777,
+            "length": 6,
+            "type": "hashtag"
+          },
+          {
+            "offset": 784,
+            "length": 10,
+            "type": "hashtag"
+          },
+          {
+            "offset": 795,
+            "length": 13,
+            "type": "hashtag"
+          }
+        ],
+        "link_preview_options": {
+          "is_disabled": true
+        }
+      },
+      "available_reactions": [],
+      "max_reaction_count": 11,
+      "accent_color_id": 3
+    },
+    "linked": {
+      "ok": false,
+      "error_code": 403,
+      "description": "Forbidden: bot is not a member of the supergroup chat"
+    }
+  },
+  "at": "2026-11-04T08:07:50Z"
+}
