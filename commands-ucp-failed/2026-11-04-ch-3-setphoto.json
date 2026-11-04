@@ -1,0 +1,10 @@
+{
+  "action": "set_photo",
+  "image": "commands-ucp-media/img-channel-avatar.jpg",
+  "result": {
+    "ok": false,
+    "error_code": 400,
+    "description": "Bad Request: not enough rights to change chat photo"
+  },
+  "at": "2026-11-04T08:55:10Z"
+}
