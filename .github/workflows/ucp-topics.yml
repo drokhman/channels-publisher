@@ -29,5 +29,5 @@ jobs:
         run: |
           git config user.name "ucp-topics (GitHub Actions)"
           git config user.email "actions@users.noreply.github.com"
-          git add topics-ucp config/ucp-topics.json
+          git add -A -- topics-ucp config/ucp-topics.json
           git diff --cached --quiet || (git commit -m "УЦП: рубрикатор" && git pull --rebase && git push)
