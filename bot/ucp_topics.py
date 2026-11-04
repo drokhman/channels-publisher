@@ -71,6 +71,8 @@ def main():
     if not TOKEN:
         print("Нет секрета UCP_BOT_TOKEN"); return 1
     chat, src = cfg["group_chat_id"], cfg["source_channel"]
+    os.makedirs(DONE_DIR, exist_ok=True)
+    open(os.path.join(DONE_DIR, ".keep"), "a").close()
     changed = False
     for t in cfg["topics"]:
         if t.get("thread_id"):
