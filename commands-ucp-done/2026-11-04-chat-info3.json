@@ -1,0 +1,327 @@
+{
+  "action": "chat",
+  "result": {
+    "ok": true,
+    "result": {
+      "id": -1003919114874,
+      "title": "Национальная платформа поддержки ЦП",
+      "username": "nscspr",
+      "type": "channel",
+      "active_usernames": [
+        "nscspr"
+      ],
+      "description": "Национальная платформа поддержки цепей поставок: сообщество руководителей направлений цепей поставок компаний. Практики, кейсы, встречи советов. Присоединяйтесь 👉 https://t.me/nscspr",
+      "invite_link": "https://t.me/+b1HXnpErRAQyYzgy",
+      "can_send_gift": true,
+      "has_visible_history": true,
+      "linked_chat_id": -1003972792581,
+      "can_send_paid_media": true,
+      "accepted_gift_types": {
+        "unlimited_gifts": true,
+        "limited_gifts": true,
+        "unique_gifts": true,
+        "premium_subscription": true,
+        "gifts_from_channels": true
+      },
+      "photo": {
+        "small_file_id": "AQADAgAD3yBrG-3A8UoACAIAA4b9wUEW____01kXoXu-wes9BA",
+        "small_file_unique_id": "AQAD3yBrG-3A8UoAAQ",
+        "big_file_id": "AQADAgAD3yBrG-3A8UoACAMAA4b9wUEW____01kXoXu-wes9BA",
+        "big_file_unique_id": "AQAD3yBrG-3A8UoB"
+      },
+      "pinned_message": {
+        "message_id": 14,
+        "sender_chat": {
+          "id": -1003919114874,
+          "title": "Национальная платформа поддержки ЦП",
+          "username": "nscspr",
+          "type": "channel"
+        },
+        "chat": {
+          "id": -1003919114874,
+          "title": "Национальная платформа поддержки ЦП",
+          "username": "nscspr",
+          "type": "channel"
+        },
+        "date": 1792948916,
+        "edit_date": 1792951592,
+        "text": "Навигатор канала · неделя 19–25 октября\n\nКоллеги, главное за неделю — коротко, подробности по ссылкам.\n\n1️⃣ Фура +21% за год, закупочная цена — прежняя — ставки FTL и переговоры поставщика с сетью\n2️⃣ ЭПД: 62 млн документов, подпись — у 16% перевозчиков — что контролировать грузоотправителю\n3️⃣ Погрузка РЖД −1,2% — рынок ждёт ухудшения в IV квартале, что пересчитать производителю\n4️⃣ ДТ +21,4% с начала года — скидки по топливным картам и себестоимость рейса\n5️⃣ 13-й Конгресс руководителей цепей поставок — обзор программы\n\nКонгресс по трекам\n— ИИ и цифровизация\n— Планирование и закупки\n— ЭПД, ВЭД и риски\n— Логистика, склад, люди\n\nВпереди\n19 ноября — финал студенческого чемпионата Logus Nova (СПЦП).\n\nПлатформа НППЦП\n— Функции рабочей группы\n— Инструменты для практики\n\n#НППЦП #логистика #цепипоставок",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 39,
+            "type": "bold"
+          },
+          {
+            "offset": 108,
+            "length": 43,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/8"
+          },
+          {
+            "offset": 201,
+            "length": 52,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/9"
+          },
+          {
+            "offset": 296,
+            "length": 18,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/10"
+          },
+          {
+            "offset": 387,
+            "length": 23,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/11"
+          },
+          {
+            "offset": 466,
+            "length": 42,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/13"
+          },
+          {
+            "offset": 528,
+            "length": 18,
+            "type": "bold"
+          },
+          {
+            "offset": 549,
+            "length": 17,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/17"
+          },
+          {
+            "offset": 569,
+            "length": 22,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/18"
+          },
+          {
+            "offset": 594,
+            "length": 16,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/19"
+          },
+          {
+            "offset": 613,
+            "length": 22,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/20"
+          },
+          {
+            "offset": 637,
+            "length": 7,
+            "type": "bold"
+          },
+          {
+            "offset": 700,
+            "length": 4,
+            "type": "text_link",
+            "url": "https://scmpro.ru/"
+          },
+          {
+            "offset": 708,
+            "length": 15,
+            "type": "bold"
+          },
+          {
+            "offset": 726,
+            "length": 22,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/21"
+          },
+          {
+            "offset": 751,
+            "length": 24,
+            "type": "text_link",
+            "url": "https://t.me/nscspr/22"
+          },
+          {
+            "offset": 777,
+            "length": 6,
+            "type": "hashtag"
+          },
+          {
+            "offset": 784,
+            "length": 10,
+            "type": "hashtag"
+          },
+          {
+            "offset": 795,
+            "length": 13,
+            "type": "hashtag"
+          }
+        ],
+        "link_preview_options": {
+          "is_disabled": true
+        }
+      },
+      "available_reactions": [],
+      "max_reaction_count": 11,
+      "accent_color_id": 3
+    },
+    "linked": {
+      "ok": true,
+      "result": {
+        "id": -1003972792581,
+        "title": "Национальная платформа поддержки ЦП Chat",
+        "type": "supergroup",
+        "description": "Чат по темам.",
+        "invite_link": "https://t.me/+aFoSUxn-xytiYjc6",
+        "has_visible_history": true,
+        "permissions": {
+          "can_send_messages": true,
+          "can_send_media_messages": true,
+          "can_send_audios": true,
+          "can_send_documents": true,
+          "can_send_photos": true,
+          "can_send_videos": true,
+          "can_send_video_notes": true,
+          "can_send_voice_notes": true,
+          "can_send_polls": true,
+          "can_send_other_messages": true,
+          "can_add_web_page_previews": true,
+          "can_react_to_messages": true,
+          "can_edit_tag": false,
+          "can_change_info": false,
+          "can_invite_users": false,
+          "can_pin_messages": false,
+          "can_manage_topics": true
+        },
+        "linked_chat_id": -1003919114874,
+        "accepted_gift_types": {
+          "unlimited_gifts": false,
+          "limited_gifts": false,
+          "unique_gifts": false,
+          "premium_subscription": false,
+          "gifts_from_channels": false
+        },
+        "photo": {
+          "small_file_id": "AQADAgADBh5rG_MUWEsACAIAA_vujj4W____oKI1_clP9N89BA",
+          "small_file_unique_id": "AQADBh5rG_MUWEsAAQ",
+          "big_file_id": "AQADAgADBh5rG_MUWEsACAMAA_vujj4W____oKI1_clP9N89BA",
+          "big_file_unique_id": "AQADBh5rG_MUWEsB"
+        },
+        "pinned_message": {
+          "message_id": 90,
+          "from": {
+            "id": 777000,
+            "is_bot": false,
+            "first_name": "Telegram"
+          },
+          "sender_chat": {
+            "id": -1003919114874,
+            "title": "Национальная платформа поддержки ЦП",
+            "username": "nscspr",
+            "type": "channel"
+          },
+          "chat": {
+            "id": -1003972792581,
+            "title": "Национальная платформа поддержки ЦП Chat",
+            "type": "supergroup"
+          },
+          "date": 1793777796,
+          "edit_date": 1793777796,
+          "forward_origin": {
+            "type": "channel",
+            "chat": {
+              "id": -1003919114874,
+              "title": "Национальная платформа поддержки ЦП",
+              "username": "nscspr",
+              "type": "channel"
+            },
+            "message_id": 97,
+            "date": 1793777790
+          },
+          "is_automatic_forward": true,
+          "forward_from_chat": {
+            "id": -1003919114874,
+            "title": "Национальная платформа поддержки ЦП",
+            "username": "nscspr",
+            "type": "channel"
+          },
+          "forward_from_message_id": 97,
+          "forward_date": 1793777790,
+          "photo": [
+            {
+              "file_id": "AgACAgIAAyEGAATpmPJ6AANhaurgfYZE76wEtBLusJNrcY4QhKYAAsoZaxtOIFhLt3PHhqLbrEwBAAMCAANzAAM9BA",
+              "file_unique_id": "AQADyhlrG04gWEt4",
+              "file_size": 1764,
+              "width": 90,
+              "height": 60
+            },
+            {
+              "file_id": "AgACAgIAAyEGAATpmPJ6AANhaurgfYZE76wEtBLusJNrcY4QhKYAAsoZaxtOIFhLt3PHhqLbrEwBAAMCAANtAAM9BA",
+              "file_unique_id": "AQADyhlrG04gWEty",
+              "file_size": 26302,
+              "width": 320,
+              "height": 213
+            },
+            {
+              "file_id": "AgACAgIAAyEGAATpmPJ6AANhaurgfYZE76wEtBLusJNrcY4QhKYAAsoZaxtOIFhLt3PHhqLbrEwBAAMCAAN4AAM9BA",
+              "file_unique_id": "AQADyhlrG04gWEt9",
+              "file_size": 118258,
+              "width": 800,
+              "height": 533
+            },
+            {
+              "file_id": "AgACAgIAAyEGAATpmPJ6AANhaurgfYZE76wEtBLusJNrcY4QhKYAAsoZaxtOIFhLt3PHhqLbrEwBAAMCAAN5AAM9BA",
+              "file_unique_id": "AQADyhlrG04gWEt-",
+              "file_size": 250842,
+              "width": 1280,
+              "height": 853
+            },
+            {
+              "file_id": "AgACAgIAAyEGAATpmPJ6AANhaurgfYZE76wEtBLusJNrcY4QhKYAAsoZaxtOIFhLt3PHhqLbrEwBAAMCAAN3AAM9BA",
+              "file_unique_id": "AQADyhlrG04gWEt8",
+              "file_size": 325290,
+              "width": 1536,
+              "height": 1024
+            }
+          ],
+          "caption": "Товар в остатках, продаж ноль\n\nПо системе товар в магазине есть, а продаж неделями нет. NOVABEV GROUP поручила искать такие точки ИИ-помощнику, и доступность товара, по данным компании, выросла. Почему человек эти магазины не видит и как найти их у себя за неделю — читайте в разборе.\n\nПодписывайтесь на канал «Человек VS ИИ» — об ИИ в работе руководителя.\n\n#НППЦП #цифровизация #цепипоставок",
+          "caption_entities": [
+            {
+              "offset": 0,
+              "length": 29,
+              "type": "bold"
+            },
+            {
+              "offset": 266,
+              "length": 17,
+              "type": "text_link",
+              "url": "https://t.me/chelovek_vs_ai/125"
+            },
+            {
+              "offset": 310,
+              "length": 15,
+              "type": "text_link",
+              "url": "https://t.me/chelovek_vs_ai"
+            },
+            {
+              "offset": 358,
+              "length": 6,
+              "type": "hashtag"
+            },
+            {
+              "offset": 365,
+              "length": 13,
+              "type": "hashtag"
+            },
+            {
+              "offset": 379,
+              "length": 13,
+              "type": "hashtag"
+            }
+          ]
+        },
+        "max_reaction_count": 11,
+        "accent_color_id": 2
+      }
+    }
+  },
+  "at": "2026-11-04T08:17:41Z"
+}
