@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-04-1836-cvai-35-zapros",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 128,
+  "text_message_id": 129,
+  "link": "https://t.me/chelovek_vs_ai/129",
+  "file": "2026-11-04-1836-cvai-35-zapros.json",
+  "due_at": "2026-11-04T15:36:00.000Z",
+  "published_at": "2026-11-04T15:36:14.383Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
