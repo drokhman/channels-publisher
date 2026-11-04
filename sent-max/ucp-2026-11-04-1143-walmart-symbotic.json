@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-04-1143-walmart-symbotic",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/100",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-04-1143-walmart-symbotic.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1a5bbea43070f",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1a5bbea43070f",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-04T08:45:12.222019+00:00",
+  "published_by": "max-publisher (Россия)"
+}
