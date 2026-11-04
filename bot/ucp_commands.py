@@ -117,6 +117,18 @@ def run(c):
         return tg("createChatInviteLink", {"chat_id": chat, "name": c.get("name", "Канал НППЦП")})
     if a == "set_photo":   # {"action":"set_photo","chat_id":"-100…","image":"commands-ucp-media/x.jpg"}
         return tg_upload("setChatPhoto", chat, "photo", ROOT / c["image"])
+    if a == "get_photo":   # скачать аватар чата в commands-ucp-media/avatar-<chat>.jpg
+        g = tg("getChat", {"chat_id": chat})
+        fid = ((g.get("result") or {}).get("photo") or {}).get("big_file_id")
+        if not fid:
+            return {"ok": False, "description": "У чата нет аватара", "raw": g}
+        f = tg("getFile", {"file_id": fid})
+        if not f.get("ok"):
+            return f
+        out = ROOT / "commands-ucp-media" / f"avatar-{chat.strip('@-')}.jpg"
+        with urllib.request.urlopen(f"https://api.telegram.org/file/bot{TOKEN}/{f['result']['file_path']}", timeout=60) as r:
+            out.write_bytes(r.read())
+        return {"ok": True, "saved": str(out.relative_to(ROOT)), "size": out.stat().st_size}
     if a == "updates":   # найти группы, куда добавили бота (id для рубрикатора)
         u = tg("getUpdates", {"allowed_updates": ["my_chat_member", "message"], "limit": 100})
         if not u.get("ok"):
