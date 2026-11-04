@@ -17,7 +17,7 @@
 import json, os, pathlib, sys, time, urllib.request, urllib.error
 
 TOKEN = os.environ.get("UCP_BOT_TOKEN", "")
-ALLOWED = ["@nscspr"]  # chat_id групп рубрикатора добавлять сюда
+ALLOWED = ["@nscspr", "-1004303710880"]  # канал и группа-библиотека «Библиотека платформы»
 DEFAULT_CHAT = "@nscspr"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC, DONE, FAIL = ROOT / "commands-ucp", ROOT / "commands-ucp-done", ROOT / "commands-ucp-failed"
@@ -47,6 +47,24 @@ def tg_photo(chat, path, caption):
     parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"photo\"; filename=\"{path.name}\"\r\nContent-Type: image/jpeg\r\n\r\n".encode() + data + b"\r\n")
     parts.append(f"--{b}--\r\n".encode())
     req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/sendPhoto", data=b"".join(parts),
+                                 headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        try:
+            return json.load(e)
+        except Exception:
+            return {"ok": False, "description": f"HTTP {e.code}"}
+
+
+def tg_upload(method, chat, field, path):
+    import uuid
+    b = uuid.uuid4().hex
+    parts = [f"--{b}\r\nContent-Disposition: form-data; name=\"chat_id\"\r\n\r\n{chat}\r\n".encode(),
+             f"--{b}\r\nContent-Disposition: form-data; name=\"{field}\"; filename=\"{path.name}\"\r\nContent-Type: image/jpeg\r\n\r\n".encode()
+             + path.read_bytes() + b"\r\n", f"--{b}--\r\n".encode()]
+    req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/{method}", data=b"".join(parts),
                                  headers={"Content-Type": f"multipart/form-data; boundary={b}"})
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
@@ -95,6 +113,10 @@ def run(c):
         if m.get("ok"):
             m["bot"] = me["result"].get("username")
         return m
+    if a == "invite":   # {"action":"invite","chat_id":"-100…","name":"…"} — постоянная ссылка-приглашение
+        return tg("createChatInviteLink", {"chat_id": chat, "name": c.get("name", "Канал НППЦП")})
+    if a == "set_photo":   # {"action":"set_photo","chat_id":"-100…","image":"commands-ucp-media/x.jpg"}
+        return tg_upload("setChatPhoto", chat, "photo", ROOT / c["image"])
     if a == "updates":   # найти группы, куда добавили бота (id для рубрикатора)
         u = tg("getUpdates", {"allowed_updates": ["my_chat_member", "message"], "limit": 100})
         if not u.get("ok"):
