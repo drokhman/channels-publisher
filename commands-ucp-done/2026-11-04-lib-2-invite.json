@@ -1,0 +1,22 @@
+{
+  "action": "invite",
+  "chat_id": "-1004303710880",
+  "name": "Закреп канала НППЦП",
+  "result": {
+    "ok": true,
+    "result": {
+      "invite_link": "https://t.me/+eeQ6vFzW6EliNTYy",
+      "name": "Закреп канала НППЦП",
+      "creator": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "creates_join_request": false,
+      "is_primary": false,
+      "is_revoked": false
+    }
+  },
+  "at": "2026-11-04T08:34:45Z"
+}
