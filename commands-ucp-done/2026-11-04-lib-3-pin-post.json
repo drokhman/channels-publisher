@@ -1,0 +1,125 @@
+{
+  "action": "photo",
+  "image": "commands-ucp-media/img-library.jpg",
+  "text_html": "<b>📚 Библиотека канала по рубрикам</b>\n\nКоллеги, все посты канала разложены по 10 темам: нужное находится за пару касаний, без пролистывания ленты.\n\n👉 <a href=\"https://t.me/+eeQ6vFzW6EliNTYy\">Вступить в библиотеку</a>\n\n<b>Темы</b>\n1️⃣ Новости рынка  2️⃣ Торговые сети  3️⃣ Логистика: наука и практика  4️⃣ Бизнес-процессы  5️⃣ У тебя ж опыта больше  6️⃣ Управление и HR  7️⃣ ИИ и цифровизация  8️⃣ Опросы  9️⃣ Новости платформы  🔟 Вне рубрик\n\nНовый пост попадает в свою тему в течение получаса после выхода.\n\n<b>Что ещё есть</b>\n— комментарии под каждым постом: вопросы и несогласие приветствуются\n— опросы 2–3 раза в неделю, итоги разбираем в постах\n— <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#expert\">Вопрос эксперту</a>: ответ подтверждает живой эксперт\n— <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#bpd\">Дизайн БП</a>: опишите процесс и получите схему и регламенты\n— <a href=\"https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#extrisk\">Прогноз внешних рисков</a> цепи поставок\n— каждый день лучшее для бизнеса из <a href=\"https://t.me/chelovek_vs_ai\">«Человек VS ИИ»</a>\n\n#НППЦП #цепипоставок #логистика",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 98,
+      "sender_chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1003919114874,
+        "title": "Национальная платформа поддержки ЦП",
+        "username": "nscspr",
+        "type": "channel"
+      },
+      "date": 1793781331,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AANiauruUy9U7T2G0KwPM9W3yvssenYAAiAaaxtOIFhLgVtL_S-2eMABAAMCAANzAAM9BA",
+          "file_unique_id": "AQADIBprG04gWEt4",
+          "file_size": 845,
+          "width": 90,
+          "height": 51
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AANiauruUy9U7T2G0KwPM9W3yvssenYAAiAaaxtOIFhLgVtL_S-2eMABAAMCAANtAAM9BA",
+          "file_unique_id": "AQADIBprG04gWEty",
+          "file_size": 6084,
+          "width": 320,
+          "height": 180
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AANiauruUy9U7T2G0KwPM9W3yvssenYAAiAaaxtOIFhLgVtL_S-2eMABAAMCAAN4AAM9BA",
+          "file_unique_id": "AQADIBprG04gWEt9",
+          "file_size": 18923,
+          "width": 800,
+          "height": 450
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AANiauruUy9U7T2G0KwPM9W3yvssenYAAiAaaxtOIFhLgVtL_S-2eMABAAMCAAN5AAM9BA",
+          "file_unique_id": "AQADIBprG04gWEt-",
+          "file_size": 35304,
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "file_id": "AgACAgIAAyEGAATpmPJ6AANiauruUy9U7T2G0KwPM9W3yvssenYAAiAaaxtOIFhLgVtL_S-2eMABAAMCAAN3AAM9BA",
+          "file_unique_id": "AQADIBprG04gWEt8",
+          "file_size": 42594,
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "caption": "📚 Библиотека канала по рубрикам\n\nКоллеги, все посты канала разложены по 10 темам: нужное находится за пару касаний, без пролистывания ленты.\n\n👉 Вступить в библиотеку\n\nТемы\n1️⃣ Новости рынка  2️⃣ Торговые сети  3️⃣ Логистика: наука и практика  4️⃣ Бизнес-процессы  5️⃣ У тебя ж опыта больше  6️⃣ Управление и HR  7️⃣ ИИ и цифровизация  8️⃣ Опросы  9️⃣ Новости платформы  🔟 Вне рубрик\n\nНовый пост попадает в свою тему в течение получаса после выхода.\n\nЧто ещё есть\n— комментарии под каждым постом: вопросы и несогласие приветствуются\n— опросы 2–3 раза в неделю, итоги разбираем в постах\n— Вопрос эксперту: ответ подтверждает живой эксперт\n— Дизайн БП: опишите процесс и получите схему и регламенты\n— Прогноз внешних рисков цепи поставок\n— каждый день лучшее для бизнеса из «Человек VS ИИ»\n\n#НППЦП #цепипоставок #логистика",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 32,
+          "type": "bold"
+        },
+        {
+          "offset": 146,
+          "length": 21,
+          "type": "text_link",
+          "url": "https://t.me/+eeQ6vFzW6EliNTYy"
+        },
+        {
+          "offset": 169,
+          "length": 4,
+          "type": "bold"
+        },
+        {
+          "offset": 453,
+          "length": 12,
+          "type": "bold"
+        },
+        {
+          "offset": 590,
+          "length": 15,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#expert"
+        },
+        {
+          "offset": 642,
+          "length": 9,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#bpd"
+        },
+        {
+          "offset": 701,
+          "length": 22,
+          "type": "text_link",
+          "url": "https://d5doa9319pf2c8a02njn.764nr5vy.apigw.yandexcloud.net/#extrisk"
+        },
+        {
+          "offset": 774,
+          "length": 15,
+          "type": "text_link",
+          "url": "https://t.me/chelovek_vs_ai"
+        },
+        {
+          "offset": 791,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 798,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 812,
+          "length": 10,
+          "type": "hashtag"
+        }
+      ]
+    }
+  },
+  "at": "2026-11-04T08:35:31Z"
+}
