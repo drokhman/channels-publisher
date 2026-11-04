@@ -9,6 +9,7 @@
   {"action":"send","text_html":"..."}
   {"action":"photo","image":"commands-ucp-media/x.jpg","text_html":"..."}  # фото + подпись
   {"action":"check"}                                            # права бота в канале
+  {"action":"chat"}                                             # сведения о канале и привязанном чате
 Поле chat_id необязательно (по умолчанию @nscspr), разрешены только каналы из ALLOWED.
 Результат: commands-ucp-done/ или commands-ucp-failed/, команда удаляется.
 """
@@ -93,6 +94,12 @@ def run(c):
         if m.get("ok"):
             m["bot"] = me["result"].get("username")
         return m
+    if a == "chat":
+        c = tg("getChat", {"chat_id": chat})
+        lid = c.get("result", {}).get("linked_chat_id")
+        if lid:
+            c["linked"] = tg("getChat", {"chat_id": lid})
+        return c
     return {"ok": False, "description": f"Неизвестное действие: {a}"}
 
 
