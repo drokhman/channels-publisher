@@ -1,6 +1,6 @@
 {
-  "enabled": false,
-  "group_chat_id": null,
+  "enabled": true,
+  "group_chat_id": -1004303710880,
   "source_channel": "@nscspr",
   "mode": "forward",
   "min_message_id": 8,
