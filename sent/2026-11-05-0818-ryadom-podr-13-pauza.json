@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-05-0818-ryadom-podr-13-pauza",
+  "channel": "Он рядом",
+  "chat_id": "@ryadom_repetitor",
+  "photo_message_id": 244,
+  "text_message_id": 245,
+  "link": "https://t.me/ryadom_repetitor/245",
+  "file": "2026-11-05-0818-ryadom-podr-13-pauza.json",
+  "due_at": "2026-11-05T05:18:00.000Z",
+  "published_at": "2026-11-05T05:18:14.619Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
