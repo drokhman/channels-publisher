@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-05-1821-ryadom-podr-14-proverka",
+  "channel": "Он рядом",
+  "chat_id": "@ryadom_repetitor",
+  "photo_message_id": 247,
+  "text_message_id": 248,
+  "link": "https://t.me/ryadom_repetitor/248",
+  "file": "2026-11-05-1821-ryadom-podr-14-proverka.json",
+  "due_at": "2026-11-05T15:21:00.000Z",
+  "published_at": "2026-11-05T15:22:15.640Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
