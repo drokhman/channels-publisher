@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-05-0824-cvai-36-mif-vremya",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 130,
+  "text_message_id": 131,
+  "link": "https://t.me/chelovek_vs_ai/131",
+  "file": "2026-11-05-0824-cvai-36-mif-vremya.json",
+  "due_at": "2026-11-05T05:24:00.000Z",
+  "published_at": "2026-11-05T05:24:14.329Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
