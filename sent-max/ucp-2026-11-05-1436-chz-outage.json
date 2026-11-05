@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-05-1436-chz-outage",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/112",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-05-1436-chz-outage.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1ab802a2c1774",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1ab802a2c1774",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-05T11:37:39.219026+00:00",
+  "published_by": "max-publisher (Россия)"
+}
