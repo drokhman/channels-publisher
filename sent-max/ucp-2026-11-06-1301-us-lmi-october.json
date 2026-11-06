@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-06-1301-us-lmi-october",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/122",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-06-1301-us-lmi-october.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1b04f9c674877",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1b04f9c674877",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-06T10:02:43.180514+00:00",
+  "published_by": "max-publisher (Россия)"
+}
