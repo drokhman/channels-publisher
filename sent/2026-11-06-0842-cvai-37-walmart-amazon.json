@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-06-0842-cvai-37-walmart-amazon",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 135,
+  "text_message_id": 136,
+  "link": "https://t.me/chelovek_vs_ai/136",
+  "file": "2026-11-06-0842-cvai-37-walmart-amazon.json",
+  "due_at": "2026-11-06T05:42:00.000Z",
+  "published_at": "2026-11-06T05:42:14.201Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
