@@ -1,0 +1,98 @@
+{
+  "action": "video",
+  "chat_id": "-1004303710880",
+  "thread_id": 11,
+  "video": "commands-ucp-media/avatar-biblioteka-anim-v2.mp4",
+  "caption": "<b>Заставка «Библиотека» — версия 2</b>\n\nПервый и последний кадр — полный логотип\n\n#НППЦП #цифровизация #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 118,
+      "from": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "chat": {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "type": "supergroup"
+      },
+      "date": 1793953320,
+      "message_thread_id": 11,
+      "reply_to_message": {
+        "message_id": 11,
+        "from": {
+          "id": 8867441036,
+          "is_bot": true,
+          "first_name": "УЦП публикация",
+          "username": "ucp_publisher_bot"
+        },
+        "chat": {
+          "id": -1004303710880,
+          "title": "Библиотека платформы",
+          "is_forum": true,
+          "type": "supergroup"
+        },
+        "date": 1793781004,
+        "message_thread_id": 11,
+        "forum_topic_created": {
+          "name": "9️⃣ Новости платформы",
+          "icon_color": 13338331
+        },
+        "is_topic_message": true
+      },
+      "video": {
+        "duration": 7,
+        "width": 800,
+        "height": 800,
+        "file_name": "avatar-biblioteka-anim-v2.mp4",
+        "mime_type": "video/mp4",
+        "thumbnail": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADdmrtjijiQU5XVUE2-iTu2gABFoP30AACkrAAAtSvaEt2henckD2gFAEAB20AAz0E",
+          "file_unique_id": "AQADkrAAAtSvaEty",
+          "file_size": 10087,
+          "width": 320,
+          "height": 320
+        },
+        "thumb": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADdmrtjijiQU5XVUE2-iTu2gABFoP30AACkrAAAtSvaEt2henckD2gFAEAB20AAz0E",
+          "file_unique_id": "AQADkrAAAtSvaEty",
+          "file_size": 10087,
+          "width": 320,
+          "height": 320
+        },
+        "file_id": "BAACAgIAAyEGAAMBAAGFaqAAA3Zq7Y4o4kFOV1VBNvok7toAARaD99AAApKwAALUr2hLdoXp3JA9oBQ9BA",
+        "file_unique_id": "AgADkrAAAtSvaEs",
+        "file_size": 84164
+      },
+      "caption": "Заставка «Библиотека» — версия 2\n\nПервый и последний кадр — полный логотип\n\n#НППЦП #цифровизация #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 32,
+          "type": "bold"
+        },
+        {
+          "offset": 76,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 83,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 97,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ],
+      "is_topic_message": true
+    }
+  },
+  "at": "2026-11-06T08:22:01Z"
+}

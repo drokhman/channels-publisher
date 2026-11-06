@@ -1,0 +1,98 @@
+{
+  "action": "video",
+  "chat_id": "-1004303710880",
+  "thread_id": 11,
+  "video": "commands-ucp-media/avatar-platforma-anim-v2.mp4",
+  "caption": "<b>Заставка «Платформа» — версия 2</b>\n\nПервый и последний кадр — полный логотип, обложка не будет пустой\n\n#НППЦП #цифровизация #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 119,
+      "from": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "chat": {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "type": "supergroup"
+      },
+      "date": 1793953322,
+      "message_thread_id": 11,
+      "reply_to_message": {
+        "message_id": 11,
+        "from": {
+          "id": 8867441036,
+          "is_bot": true,
+          "first_name": "УЦП публикация",
+          "username": "ucp_publisher_bot"
+        },
+        "chat": {
+          "id": -1004303710880,
+          "title": "Библиотека платформы",
+          "is_forum": true,
+          "type": "supergroup"
+        },
+        "date": 1793781004,
+        "message_thread_id": 11,
+        "forum_topic_created": {
+          "name": "9️⃣ Новости платформы",
+          "icon_color": 13338331
+        },
+        "is_topic_message": true
+      },
+      "video": {
+        "duration": 7,
+        "width": 800,
+        "height": 800,
+        "file_name": "avatar-platforma-anim-v2.mp4",
+        "mime_type": "video/mp4",
+        "thumbnail": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADd2rtjio0A1YWMWo4dzSKiOdTCXCjAAKTsAAC1K9oS5BWoRi2f9FLAQAHbQADPQQ",
+          "file_unique_id": "AQADk7AAAtSvaEty",
+          "file_size": 9881,
+          "width": 320,
+          "height": 320
+        },
+        "thumb": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADd2rtjio0A1YWMWo4dzSKiOdTCXCjAAKTsAAC1K9oS5BWoRi2f9FLAQAHbQADPQQ",
+          "file_unique_id": "AQADk7AAAtSvaEty",
+          "file_size": 9881,
+          "width": 320,
+          "height": 320
+        },
+        "file_id": "BAACAgIAAyEGAAMBAAGFaqAAA3dq7Y4qNANWFjFqOHc0iojnUwlwowACk7AAAtSvaEuQVqEYtn_RSz0E",
+        "file_unique_id": "AgADk7AAAtSvaEs",
+        "file_size": 84020
+      },
+      "caption": "Заставка «Платформа» — версия 2\n\nПервый и последний кадр — полный логотип, обложка не будет пустой\n\n#НППЦП #цифровизация #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 31,
+          "type": "bold"
+        },
+        {
+          "offset": 100,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 107,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 121,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ],
+      "is_topic_message": true
+    }
+  },
+  "at": "2026-11-06T08:22:02Z"
+}
