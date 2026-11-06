@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-06-1822-cvai-38-struktura",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 141,
+  "text_message_id": 142,
+  "link": "https://t.me/chelovek_vs_ai/142",
+  "file": "2026-11-06-1822-cvai-38-struktura.json",
+  "due_at": "2026-11-06T15:22:00.000Z",
+  "published_at": "2026-11-06T15:22:14.650Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
