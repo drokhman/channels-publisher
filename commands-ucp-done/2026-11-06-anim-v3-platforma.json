@@ -1,0 +1,98 @@
+{
+  "action": "video",
+  "chat_id": "-1004303710880",
+  "thread_id": 11,
+  "video": "commands-ucp-media/avatar-platforma-anim-v3.mp4",
+  "caption": "<b>Заставка «Платформа» — версия 3</b>\n\nЛоготип уменьшен, вокруг поля, пиксели квадратные — в кружке не растягивается и не обрезается\n\n#НППЦП #цифровизация #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 124,
+      "from": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "chat": {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "type": "supergroup"
+      },
+      "date": 1793953587,
+      "message_thread_id": 11,
+      "reply_to_message": {
+        "message_id": 11,
+        "from": {
+          "id": 8867441036,
+          "is_bot": true,
+          "first_name": "УЦП публикация",
+          "username": "ucp_publisher_bot"
+        },
+        "chat": {
+          "id": -1004303710880,
+          "title": "Библиотека платформы",
+          "is_forum": true,
+          "type": "supergroup"
+        },
+        "date": 1793781004,
+        "message_thread_id": 11,
+        "forum_topic_created": {
+          "name": "9️⃣ Новости платформы",
+          "icon_color": 13338331
+        },
+        "is_topic_message": true
+      },
+      "video": {
+        "duration": 7,
+        "width": 800,
+        "height": 800,
+        "file_name": "avatar-platforma-anim-v3.mp4",
+        "mime_type": "video/mp4",
+        "thumbnail": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADfGrtjzIkqd1j1JKO8JKMBCF9avPXAAKlsAAC1K9oS__aH8ErJFQYAQAHbQADPQQ",
+          "file_unique_id": "AQADpbAAAtSvaEty",
+          "file_size": 7406,
+          "width": 320,
+          "height": 320
+        },
+        "thumb": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADfGrtjzIkqd1j1JKO8JKMBCF9avPXAAKlsAAC1K9oS__aH8ErJFQYAQAHbQADPQQ",
+          "file_unique_id": "AQADpbAAAtSvaEty",
+          "file_size": 7406,
+          "width": 320,
+          "height": 320
+        },
+        "file_id": "BAACAgIAAyEGAAMBAAGFaqAAA3xq7Y8yJKndY9SSjvCSjAQhfWrz1wACpbAAAtSvaEv_2h_BKyRUGD0E",
+        "file_unique_id": "AgADpbAAAtSvaEs",
+        "file_size": 68746
+      },
+      "caption": "Заставка «Платформа» — версия 3\n\nЛоготип уменьшен, вокруг поля, пиксели квадратные — в кружке не растягивается и не обрезается\n\n#НППЦП #цифровизация #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 31,
+          "type": "bold"
+        },
+        {
+          "offset": 128,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 135,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 149,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ],
+      "is_topic_message": true
+    }
+  },
+  "at": "2026-11-06T08:26:27Z"
+}
