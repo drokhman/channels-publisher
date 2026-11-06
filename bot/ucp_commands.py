@@ -115,6 +115,21 @@ def run(c):
         return m
     if a == "invite":   # {"action":"invite","chat_id":"-100…","name":"…"} — постоянная ссылка-приглашение
         return tg("createChatInviteLink", {"chat_id": chat, "name": c.get("name", "Канал НППЦП")})
+    if a == "video":   # {"action":"video","chat_id":"-100…","video":"commands-ucp-media/x.mp4","caption":"…"}
+        import uuid
+        b = uuid.uuid4().hex; path = ROOT / c["video"]
+        parts = [f"--{b}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode()
+                 for k, v in (("chat_id", chat), ("caption", c.get("caption", "")), ("parse_mode", "HTML"),
+                              ("width", "800"), ("height", "800"), ("supports_streaming", "true"))]
+        parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"video\"; filename=\"{path.name}\"\r\nContent-Type: video/mp4\r\n\r\n".encode() + path.read_bytes() + b"\r\n")
+        parts.append(f"--{b}--\r\n".encode())
+        req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/sendVideo", data=b"".join(parts),
+                                     headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            return json.load(e)
     if a == "set_photo":   # {"action":"set_photo","chat_id":"-100…","image":"commands-ucp-media/x.jpg"}
         return tg_upload("setChatPhoto", chat, "photo", ROOT / c["image"])
     if a == "get_photo":   # скачать аватар чата в commands-ucp-media/avatar-<chat>.jpg
