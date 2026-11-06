@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-06",
+  "period": "30 октября – 6 ноября",
+  "digests": {
+    "chelovek_vs_ai": {
+      "message_id": 137,
+      "url": "https://t.me/chelovek_vs_ai/137",
+      "pinned": true
+    },
+    "ryadom_repetitor": {
+      "message_id": 252,
+      "url": "https://t.me/ryadom_repetitor/252",
+      "pinned": true
+    }
+  },
+  "navigators": {
+    "chelovek_vs_ai": {
+      "message_id": 139,
+      "url": "https://t.me/chelovek_vs_ai/139",
+      "pinned": true
+    },
+    "ryadom_repetitor": {
+      "message_id": 254,
+      "url": "https://t.me/ryadom_repetitor/254",
+      "pinned": true
+    }
+  },
+  "previous_digests_unpinned": [
+    "@chelovek_vs_ai/99",
+    "@ryadom_repetitor/213"
+  ],
+  "old_navigators_unpinned_not_deletable": [
+    "@chelovek_vs_ai/101",
+    "@ryadom_repetitor/215"
+  ]
+}
