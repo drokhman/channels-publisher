@@ -1,0 +1,51 @@
+{
+  "action": "video",
+  "chat_id": "-1004303710880",
+  "video": "commands-ucp-media/avatar-biblioteka-anim.mp4",
+  "caption": "Анимированная заставка библиотеки. ⋯ → «Сохранить в галерею», затем в группе: название → «Изменить» → «Выбрать фото или видео».",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 114,
+      "from": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "chat": {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "type": "supergroup"
+      },
+      "date": 1793952780,
+      "video": {
+        "duration": 6,
+        "width": 800,
+        "height": 800,
+        "file_name": "avatar-biblioteka-anim.mp4",
+        "mime_type": "video/mp4",
+        "thumbnail": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADcmrtjAy06gjKz7efmAI47Y-Ua20_AAJ1sAAC1K9oS4pbTbshg9vPAQAHbQADPQQ",
+          "file_unique_id": "AQADdbAAAtSvaEty",
+          "file_size": 1045,
+          "width": 320,
+          "height": 320
+        },
+        "thumb": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADcmrtjAy06gjKz7efmAI47Y-Ua20_AAJ1sAAC1K9oS4pbTbshg9vPAQAHbQADPQQ",
+          "file_unique_id": "AQADdbAAAtSvaEty",
+          "file_size": 1045,
+          "width": 320,
+          "height": 320
+        },
+        "file_id": "BAACAgIAAyEGAAMBAAGFaqAAA3Jq7YwMtOoIys-3n5gCOO2PlGttPwACdbAAAtSvaEuKW027IYPbzz0E",
+        "file_unique_id": "AgADdbAAAtSvaEs",
+        "file_size": 67676
+      },
+      "caption": "Анимированная заставка библиотеки. ⋯ → «Сохранить в галерею», затем в группе: название → «Изменить» → «Выбрать фото или видео»."
+    }
+  },
+  "at": "2026-11-06T08:13:00Z"
+}
