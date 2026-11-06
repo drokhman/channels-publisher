@@ -2,18 +2,16 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '59 5 6 11 *'   # 2026-11-06-0859-south-rates.json · пост
-    - cron: '24 6 6 11 *'   # 2026-11-06-0859-south-rates.json · страховка
-    - cron: '20 7 6 11 *'   # 2026-11-06-1020-retail-ymarket-fby.json · пост
-    - cron: '45 7 6 11 *'   # 2026-11-06-1020-retail-ymarket-fby.json · страховка
-    - cron: '36 8 6 11 *'   # 2026-11-06-1136-repost-mif-vremya.json · пост
-    - cron: '1 9 6 11 *'   # 2026-11-06-1136-repost-mif-vremya.json · страховка
-    - cron: '1 10 6 11 *'   # 2026-11-06-1301-us-lmi-october.json · пост
-    - cron: '26 10 6 11 *'   # 2026-11-06-1301-us-lmi-october.json · страховка
-    - cron: '17 11 6 11 *'   # 2026-11-06-1417-release-0563.json · пост
-    - cron: '42 11 6 11 *'   # 2026-11-06-1417-release-0563.json · страховка
-    - cron: '40 12 6 11 *'   # 2026-11-06-1540-autostore-logiqs.json · пост
-    - cron: '5 13 6 11 *'   # 2026-11-06-1540-autostore-logiqs.json · страховка
+    - cron: '31 5 7 11 *'   # 2026-11-07-0831-sklady-vacancy-q3.json · пост
+    - cron: '56 5 7 11 *'   # 2026-11-07-0831-sklady-vacancy-q3.json · страховка
+    - cron: '52 6 7 11 *'   # 2026-11-07-0952-wisdom-smirnova-salary.json · пост
+    - cron: '17 7 7 11 *'   # 2026-11-07-0952-wisdom-smirnova-salary.json · страховка
+    - cron: '53 7 7 11 *'   # 2026-11-07-1053-repost-walmart-amazon.json · пост
+    - cron: '18 8 7 11 *'   # 2026-11-07-1053-repost-walmart-amazon.json · страховка
+    - cron: '21 9 7 11 *'   # 2026-11-07-1221-china-containers-november.json · пост
+    - cron: '46 9 7 11 *'   # 2026-11-07-1221-china-containers-november.json · страховка
+    - cron: '29 10 7 11 *'   # 2026-11-07-1329-retail-magnit-tomatoes.json · пост
+    - cron: '54 10 7 11 *'   # 2026-11-07-1329-retail-magnit-tomatoes.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
