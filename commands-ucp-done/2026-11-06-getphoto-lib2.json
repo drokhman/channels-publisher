@@ -1,0 +1,10 @@
+{
+  "action": "get_photo",
+  "chat_id": "-1004303710880",
+  "result": {
+    "ok": true,
+    "saved": "commands-ucp-media/avatar-1004303710880.jpg",
+    "size": 26402
+  },
+  "at": "2026-11-06T08:27:41Z"
+}
