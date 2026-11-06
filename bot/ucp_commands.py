@@ -120,7 +120,8 @@ def run(c):
         b = uuid.uuid4().hex; path = ROOT / c["video"]
         parts = [f"--{b}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode()
                  for k, v in (("chat_id", chat), ("caption", c.get("caption", "")), ("parse_mode", "HTML"),
-                              ("width", "800"), ("height", "800"), ("supports_streaming", "true"))]
+                              ("width", "800"), ("height", "800"), ("supports_streaming", "true"))
+                              + ((("message_thread_id", str(c["thread_id"])),) if c.get("thread_id") else ())]
         parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"video\"; filename=\"{path.name}\"\r\nContent-Type: video/mp4\r\n\r\n".encode() + path.read_bytes() + b"\r\n")
         parts.append(f"--{b}--\r\n".encode())
         req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/sendVideo", data=b"".join(parts),
