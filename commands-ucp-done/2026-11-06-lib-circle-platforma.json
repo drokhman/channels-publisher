@@ -1,0 +1,104 @@
+{
+  "action": "photo",
+  "chat_id": "-1004303710880",
+  "thread_id": 11,
+  "image": "commands-ucp-media/img-channel-avatar-circle.jpg",
+  "text_html": "<b>Обложка «Платформа» — под круг</b>\n\nЛоготип с надписью целиком помещается в круглую аватарку\n\n#НППЦП #цифровизация #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 128,
+      "from": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "chat": {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "type": "supergroup"
+      },
+      "date": 1793954049,
+      "message_thread_id": 11,
+      "reply_to_message": {
+        "message_id": 11,
+        "from": {
+          "id": 8867441036,
+          "is_bot": true,
+          "first_name": "УЦП публикация",
+          "username": "ucp_publisher_bot"
+        },
+        "chat": {
+          "id": -1004303710880,
+          "title": "Библиотека платформы",
+          "is_forum": true,
+          "type": "supergroup"
+        },
+        "date": 1793781004,
+        "message_thread_id": 11,
+        "forum_topic_created": {
+          "name": "9️⃣ Новости платформы",
+          "icon_color": 13338331
+        },
+        "is_topic_message": true
+      },
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAAMBAAGFaqAAA4Bq7ZEBKhDGtb70X66BMawNybTE-QACrB5rG9SvaEsdwFQ-xDZIHAEAAwIAA3MAAz0E",
+          "file_unique_id": "AQADrB5rG9SvaEt4",
+          "file_size": 1108,
+          "width": 90,
+          "height": 90
+        },
+        {
+          "file_id": "AgACAgIAAyEGAAMBAAGFaqAAA4Bq7ZEBKhDGtb70X66BMawNybTE-QACrB5rG9SvaEsdwFQ-xDZIHAEAAwIAA20AAz0E",
+          "file_unique_id": "AQADrB5rG9SvaEty",
+          "file_size": 8718,
+          "width": 320,
+          "height": 320
+        },
+        {
+          "file_id": "AgACAgIAAyEGAAMBAAGFaqAAA4Bq7ZEBKhDGtb70X66BMawNybTE-QACrB5rG9SvaEsdwFQ-xDZIHAEAAwIAA3gAAz0E",
+          "file_unique_id": "AQADrB5rG9SvaEt9",
+          "file_size": 26440,
+          "width": 800,
+          "height": 800
+        },
+        {
+          "file_id": "AgACAgIAAyEGAAMBAAGFaqAAA4Bq7ZEBKhDGtb70X66BMawNybTE-QACrB5rG9SvaEsdwFQ-xDZIHAEAAwIAA3kAAz0E",
+          "file_unique_id": "AQADrB5rG9SvaEt-",
+          "file_size": 35126,
+          "width": 1024,
+          "height": 1024
+        }
+      ],
+      "caption": "Обложка «Платформа» — под круг\n\nЛоготип с надписью целиком помещается в круглую аватарку\n\n#НППЦП #цифровизация #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 30,
+          "type": "bold"
+        },
+        {
+          "offset": 90,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 97,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 111,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ],
+      "is_topic_message": true
+    }
+  },
+  "at": "2026-11-06T08:34:09Z"
+}
