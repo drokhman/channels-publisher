@@ -1,0 +1,11 @@
+{
+  "action": "set_photo",
+  "chat_id": "@nscspr",
+  "image": "commands-ucp-media/img-channel-avatar-circle.jpg",
+  "result": {
+    "ok": false,
+    "error_code": 400,
+    "description": "Bad Request: not enough rights to change chat photo"
+  },
+  "at": "2026-11-06T08:32:00Z"
+}
