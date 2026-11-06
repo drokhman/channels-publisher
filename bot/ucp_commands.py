@@ -37,12 +37,13 @@ def tg(method, payload):
             return {"ok": False, "description": f"HTTP {e.code}"}
 
 
-def tg_photo(chat, path, caption):
+def tg_photo(chat, path, caption, thread=None):
     import uuid
     b = uuid.uuid4().hex
     data = path.read_bytes()
     parts = []
-    for k, v in (("chat_id", chat), ("caption", caption), ("parse_mode", "HTML")):
+    fields = [("chat_id", chat), ("caption", caption), ("parse_mode", "HTML")] + ([("message_thread_id", str(thread))] if thread else [])
+    for k, v in fields:
         parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode())
     parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"photo\"; filename=\"{path.name}\"\r\nContent-Type: image/jpeg\r\n\r\n".encode() + data + b"\r\n")
     parts.append(f"--{b}--\r\n".encode())
@@ -104,7 +105,7 @@ def run(c):
                                   "link_preview_options": {"is_disabled": not c.get("preview", False)}, **html})
     if a == "photo":
         # {"action":"photo","image":"commands-ucp-media/x.jpg","text_html":"..."} — подпись до 1024 видимых символов
-        return tg_photo(chat, ROOT / c["image"], c.get("text_html", ""))
+        return tg_photo(chat, ROOT / c["image"], c.get("text_html", ""), c.get("thread_id"))
     if a == "check":
         me = tg("getMe", {})
         if not me.get("ok"):
