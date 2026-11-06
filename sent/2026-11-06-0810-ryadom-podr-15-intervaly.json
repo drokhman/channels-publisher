@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-06-0810-ryadom-podr-15-intervaly",
+  "channel": "Он рядом",
+  "chat_id": "@ryadom_repetitor",
+  "photo_message_id": 249,
+  "text_message_id": 250,
+  "link": "https://t.me/ryadom_repetitor/250",
+  "file": "2026-11-06-0810-ryadom-podr-15-intervaly.json",
+  "due_at": "2026-11-06T05:10:00.000Z",
+  "published_at": "2026-11-06T05:10:14.364Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
