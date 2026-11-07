@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-07-1833-cvai-40-chrobinson",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 145,
+  "text_message_id": 146,
+  "link": "https://t.me/chelovek_vs_ai/146",
+  "file": "2026-11-07-1833-cvai-40-chrobinson.json",
+  "due_at": "2026-11-07T15:33:00.000Z",
+  "published_at": "2026-11-07T15:34:14.444Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
