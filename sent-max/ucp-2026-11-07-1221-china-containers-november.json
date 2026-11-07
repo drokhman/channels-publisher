@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-07-1221-china-containers-november",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/129",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-07-1221-china-containers-november.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1b5508d241e55",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1b5508d241e55",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-07T09:21:50.910002+00:00",
+  "published_by": "max-publisher (Россия)"
+}
