@@ -1,0 +1,20 @@
+{
+  "steps": [
+    {
+      "action": "photo",
+      "image": "commands-ucp-media/img-sklady07.jpg",
+      "text_html": "<b>Свободных складов в Московском регионе — 4,8%</b>\n\nВесной было 7,7%, к концу сентября — 4,8%, минимум за год. Это данные <a href=\"https://core-xp.ru/research/skladskaya-nedvizhimost-moskovskogo-regiona-3-kv-2026/\">CORE.XP за III квартал</a>.\n\n1️⃣ Доступное предложение за квартал сократилось на 36%, до 1,2 млн м². Субаренды стало в 1,7 раза меньше: 289 тыс. м² против 486 тыс.\n2️⃣ Сделок за девять месяцев — 1,59 млн м², на 51% больше, чем год назад. Только за III квартал — 892 тыс. м².\n3️⃣ Ставки впервые за шесть кварталов пошли вверх: 10 069 ₽/м² в год на готовые объекты (+0,5%) и 10 995 ₽ на строящиеся (+2,6%).\n\nКоллеги, окно дешёвой аренды закрывается.\n\n<b>Что сделать</b>\n1️⃣ Проверить, когда заканчиваются ваши договоры аренды и есть ли в них опцион на продление.\n2️⃣ Пиковые объёмы декабря и марта закрыть заранее — субаренды почти не осталось.\n\nДанные: <a href=\"https://core-xp.ru/research/skladskaya-nedvizhimost-moskovskogo-regiona-3-kv-2026/\">CORE.XP</a>, <a href=\"https://www.vedomosti.ru/gorod/economics/news/dolya-svobodnih-skladov\">«Ведомости»</a>, <a href=\"https://www.interfax-russia.ru/realty/news/dolya-svobodnyh-skladov-v-podmoskove-snizilas-do-4-8\">«Интерфакс»</a>.\n\n#НППЦП #склад #логистика"
+    }
+  ],
+  "due": "2026-11-07T08:31:00+03:00",
+  "sent_at": "2026-11-07T08:31:29.417874+03:00",
+  "late_min": 0,
+  "results": [
+    {
+      "action": "photo",
+      "ok": true,
+      "message_id": 125,
+      "description": null
+    }
+  ]
+}
