@@ -47,6 +47,9 @@ def collect():
         d = json.load(open(f, encoding="utf-8"))
         if d.get("action") not in POST_ACTIONS:
             continue
+        # только сообщения канала: служебные отправки прямо в группу библиотеки не пересылаем
+        if str(d.get("chat_id", "@nscspr")) not in ("@nscspr", ""):
+            continue
         res = (d.get("result") or {}).get("result")
         if isinstance(res, dict) and res.get("message_id"):
             out.append((os.path.basename(f)[:-5], d.get("rubric"), [(res["message_id"], d["action"])]))
