@@ -2,16 +2,16 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '31 5 7 11 *'   # 2026-11-07-0831-sklady-vacancy-q3.json · пост
-    - cron: '56 5 7 11 *'   # 2026-11-07-0831-sklady-vacancy-q3.json · страховка
-    - cron: '52 6 7 11 *'   # 2026-11-07-0952-wisdom-smirnova-salary.json · пост
-    - cron: '17 7 7 11 *'   # 2026-11-07-0952-wisdom-smirnova-salary.json · страховка
-    - cron: '53 7 7 11 *'   # 2026-11-07-1053-repost-walmart-amazon.json · пост
-    - cron: '18 8 7 11 *'   # 2026-11-07-1053-repost-walmart-amazon.json · страховка
-    - cron: '21 9 7 11 *'   # 2026-11-07-1221-china-containers-november.json · пост
-    - cron: '46 9 7 11 *'   # 2026-11-07-1221-china-containers-november.json · страховка
-    - cron: '29 10 7 11 *'   # 2026-11-07-1329-retail-magnit-tomatoes.json · пост
-    - cron: '54 10 7 11 *'   # 2026-11-07-1329-retail-magnit-tomatoes.json · страховка
+    - cron: '37 5 8 11 *'   # 2026-11-08-0837-apple-memory-commitments.json · пост
+    - cron: '2 6 8 11 *'   # 2026-11-08-0837-apple-memory-commitments.json · страховка
+    - cron: '51 6 8 11 *'   # 2026-11-08-0951-kpi-abc-xyz.json · пост
+    - cron: '16 7 8 11 *'   # 2026-11-08-0951-kpi-abc-xyz.json · страховка
+    - cron: '56 7 8 11 *'   # 2026-11-08-1056-repost-chrobinson-rates.json · пост
+    - cron: '21 8 8 11 *'   # 2026-11-08-1056-repost-chrobinson-rates.json · страховка
+    - cron: '9 9 8 11 *'   # 2026-11-08-1209-release-0565-domain.json · пост
+    - cron: '34 9 8 11 *'   # 2026-11-08-1209-release-0565-domain.json · страховка
+    - cron: '25 10 8 11 *'   # 2026-11-08-1325-book-christopher.json · пост
+    - cron: '50 10 8 11 *'   # 2026-11-08-1325-book-christopher.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
