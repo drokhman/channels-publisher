@@ -1,0 +1,100 @@
+{
+  "action": "video",
+  "chat_id": "-1004303710880",
+  "thread_id": 11,
+  "video": "commands-ucp-media/avatar-cvai-anim-v7-169.mp4",
+  "width": 1920,
+  "height": 1080,
+  "caption": "<b>Заставка «Человек VS ИИ» — версия 7, горизонтальная</b>\n\nТот же объёмный конь в кадре 16:9. Квадрат под круг выбирается в редакторе аватарки — так iPhone не сплющивает ролик\n\n#НППЦП #цифровизация #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 148,
+      "from": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "chat": {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "type": "supergroup"
+      },
+      "date": 1794164260,
+      "message_thread_id": 11,
+      "reply_to_message": {
+        "message_id": 11,
+        "from": {
+          "id": 8867441036,
+          "is_bot": true,
+          "first_name": "УЦП публикация",
+          "username": "ucp_publisher_bot"
+        },
+        "chat": {
+          "id": -1004303710880,
+          "title": "Библиотека платформы",
+          "is_forum": true,
+          "type": "supergroup"
+        },
+        "date": 1793781004,
+        "message_thread_id": 11,
+        "forum_topic_created": {
+          "name": "9️⃣ Новости платформы",
+          "icon_color": 13338331
+        },
+        "is_topic_message": true
+      },
+      "video": {
+        "duration": 8,
+        "width": 1920,
+        "height": 1080,
+        "file_name": "avatar-cvai-anim-v7-169.mp4",
+        "mime_type": "video/mp4",
+        "thumbnail": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADlGrwxiOAXurBJa9Nnwu-xvFSSmBKAAKqrQACrgKJS2umL5Rco4UCAQAHbQADPQQ",
+          "file_unique_id": "AQADqq0AAq4CiUty",
+          "file_size": 4345,
+          "width": 320,
+          "height": 180
+        },
+        "thumb": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADlGrwxiOAXurBJa9Nnwu-xvFSSmBKAAKqrQACrgKJS2umL5Rco4UCAQAHbQADPQQ",
+          "file_unique_id": "AQADqq0AAq4CiUty",
+          "file_size": 4345,
+          "width": 320,
+          "height": 180
+        },
+        "file_id": "BAACAgIAAyEGAAMBAAGFaqAAA5Rq8MYjgF7qwSWvTZ8LvsbxUkpgSgACqq0AAq4CiUtrpi-UXKOFAj0E",
+        "file_unique_id": "AgADqq0AAq4CiUs",
+        "file_size": 2323877
+      },
+      "caption": "Заставка «Человек VS ИИ» — версия 7, горизонтальная\n\nТот же объёмный конь в кадре 16:9. Квадрат под круг выбирается в редакторе аватарки — так iPhone не сплющивает ролик\n\n#НППЦП #цифровизация #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 51,
+          "type": "bold"
+        },
+        {
+          "offset": 171,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 178,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 192,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ],
+      "is_topic_message": true
+    }
+  },
+  "at": "2026-11-08T18:57:40Z"
+}
