@@ -17,13 +17,30 @@ def api(method, payload):
         with urllib.request.urlopen(req, timeout=30) as r: return json.load(r)
     except urllib.error.HTTPError as e: return json.load(e)
 
+def download_photo(chat, name):
+    """Скачать статичный аватар чата (маленький и большой) в commands-cvai-done/."""
+    g = api("getChat", {"chat_id": chat})
+    ph = (g.get("result") or {}).get("photo") or {}
+    if not ph: return {"ok": False, "description": "У чата нет аватара"}
+    saved = {}
+    for kind in ("small", "big"):
+        f = api("getFile", {"file_id": ph[kind + "_file_id"]})
+        if not f.get("ok"): return f
+        out = os.path.join(ROOT, "commands-cvai-done", f"{name}-{kind}.jpg")
+        with urllib.request.urlopen(f"https://api.telegram.org/file/bot{TOKEN}/{f['result']['file_path']}", timeout=60) as r:
+            open(out, "wb").write(r.read())
+        saved[kind] = os.path.relpath(out, ROOT)
+    return {"ok": True, "saved": saved, "photo": ph}
+
 def main():
     if not TOKEN: print("Нет CVAI_BOT_TOKEN"); return 1
     bad = 0
     for f in sorted(glob.glob(os.path.join(ROOT, "commands-cvai", "*.json"))):
         cmd = json.load(open(f, encoding="utf-8"))
         m, p = cmd.get("method"), cmd.get("payload", {})
-        if m not in ALLOWED_METHODS or p.get("chat_id") not in ALLOWED_CHATS:
+        if m == "downloadChatPhoto" and p.get("chat_id") in ALLOWED_CHATS:
+            r = download_photo(p["chat_id"], os.path.splitext(os.path.basename(f))[0])
+        elif m not in ALLOWED_METHODS or p.get("chat_id") not in ALLOWED_CHATS:
             r = {"ok": False, "description": "запрещено правилами"}
         else:
             r = api(m, p)
