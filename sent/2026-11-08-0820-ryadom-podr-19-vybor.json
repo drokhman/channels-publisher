@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-08-0820-ryadom-podr-19-vybor",
+  "channel": "Он рядом",
+  "chat_id": "@ryadom_repetitor",
+  "photo_message_id": 263,
+  "text_message_id": 264,
+  "link": "https://t.me/ryadom_repetitor/264",
+  "file": "2026-11-08-0820-ryadom-podr-19-vybor.json",
+  "due_at": "2026-11-08T05:20:00.000Z",
+  "published_at": "2026-11-08T05:20:14.050Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
