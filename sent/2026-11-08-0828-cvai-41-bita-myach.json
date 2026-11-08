@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-08-0828-cvai-41-bita-myach",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 147,
+  "text_message_id": 148,
+  "link": "https://t.me/chelovek_vs_ai/148",
+  "file": "2026-11-08-0828-cvai-41-bita-myach.json",
+  "due_at": "2026-11-08T05:28:00.000Z",
+  "published_at": "2026-11-08T05:28:14.338Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
