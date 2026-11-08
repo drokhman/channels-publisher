@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-08-1825-cvai-42-shipstation",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 151,
+  "text_message_id": 152,
+  "link": "https://t.me/chelovek_vs_ai/152",
+  "file": "2026-11-08-1825-cvai-42-shipstation.json",
+  "due_at": "2026-11-08T15:25:00.000Z",
+  "published_at": "2026-11-08T15:26:14.991Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
