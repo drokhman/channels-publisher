@@ -1,0 +1,19 @@
+{
+  "method": "downloadChatPhoto",
+  "payload": {
+    "chat_id": "@chelovek_vs_ai"
+  },
+  "result": {
+    "ok": true,
+    "saved": {
+      "small": "commands-cvai-done/2026-11-08-cvai-avatar-small.jpg",
+      "big": "commands-cvai-done/2026-11-08-cvai-avatar-big.jpg"
+    },
+    "photo": {
+      "small_file_id": "AQADAgADox9rG10RiUsACAIAA5f_AT0W____7ZKvUDFUw9g9BA",
+      "small_file_unique_id": "AQADox9rG10RiUsAAQ",
+      "big_file_id": "AQADAgADox9rG10RiUsACAMAA5f_AT0W____7ZKvUDFUw9g9BA",
+      "big_file_unique_id": "AQADox9rG10RiUsB"
+    }
+  }
+}
