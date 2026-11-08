@@ -1,0 +1,98 @@
+{
+  "action": "video",
+  "chat_id": "-1004303710880",
+  "thread_id": 11,
+  "video": "commands-ucp-media/avatar-cvai-anim-v6-3d.mp4",
+  "caption": "<b>Заставка «Человек VS ИИ» — версия 6</b>\n\nОбъёмный конь: ход буквой Г и поворот на 360°. Квадрат 800×800, 8 секунд — для видеоаватарки канала\n\n#НППЦП #цифровизация #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 147,
+      "from": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "chat": {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "type": "supergroup"
+      },
+      "date": 1794163869,
+      "message_thread_id": 11,
+      "reply_to_message": {
+        "message_id": 11,
+        "from": {
+          "id": 8867441036,
+          "is_bot": true,
+          "first_name": "УЦП публикация",
+          "username": "ucp_publisher_bot"
+        },
+        "chat": {
+          "id": -1004303710880,
+          "title": "Библиотека платформы",
+          "is_forum": true,
+          "type": "supergroup"
+        },
+        "date": 1793781004,
+        "message_thread_id": 11,
+        "forum_topic_created": {
+          "name": "9️⃣ Новости платформы",
+          "icon_color": 13338331
+        },
+        "is_topic_message": true
+      },
+      "video": {
+        "duration": 8,
+        "width": 800,
+        "height": 800,
+        "file_name": "avatar-cvai-anim-v6-3d.mp4",
+        "mime_type": "video/mp4",
+        "thumbnail": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADk2rwxJ3EsQZftZ3s1N6lGchjzs3sAAKXrQACrgKJS8RPyD8IljaXAQAHbQADPQQ",
+          "file_unique_id": "AQADl60AAq4CiUty",
+          "file_size": 9062,
+          "width": 320,
+          "height": 320
+        },
+        "thumb": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADk2rwxJ3EsQZftZ3s1N6lGchjzs3sAAKXrQACrgKJS8RPyD8IljaXAQAHbQADPQQ",
+          "file_unique_id": "AQADl60AAq4CiUty",
+          "file_size": 9062,
+          "width": 320,
+          "height": 320
+        },
+        "file_id": "BAACAgIAAyEGAAMBAAGFaqAAA5Nq8MSdxLEGX7Wd7NTepRnIY87N7AACl60AAq4CiUvET8g_CJY2lz0E",
+        "file_unique_id": "AgADl60AAq4CiUs",
+        "file_size": 1410564
+      },
+      "caption": "Заставка «Человек VS ИИ» — версия 6\n\nОбъёмный конь: ход буквой Г и поворот на 360°. Квадрат 800×800, 8 секунд — для видеоаватарки канала\n\n#НППЦП #цифровизация #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 35,
+          "type": "bold"
+        },
+        {
+          "offset": 138,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 145,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 159,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ],
+      "is_topic_message": true
+    }
+  },
+  "at": "2026-11-08T18:51:09Z"
+}
