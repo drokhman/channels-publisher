@@ -1,0 +1,98 @@
+{
+  "action": "video",
+  "chat_id": "-1004303710880",
+  "thread_id": 11,
+  "video": "commands-ucp-media/avatar-platforma-anim-v4.mp4",
+  "caption": "<b>Заставка «Платформа» — версия 4</b>\n\nКвадрат 800×800, логотип занимает около 60% кадра, поля со всех сторон. Без B-кадров, профиль Main — для пробы видеоаватарки на iPhone\n\n#НППЦП #цифровизация #цепипоставок",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 145,
+      "from": {
+        "id": 8867441036,
+        "is_bot": true,
+        "first_name": "УЦП публикация",
+        "username": "ucp_publisher_bot"
+      },
+      "chat": {
+        "id": -1004303710880,
+        "title": "Библиотека платформы",
+        "is_forum": true,
+        "type": "supergroup"
+      },
+      "date": 1794162421,
+      "message_thread_id": 11,
+      "reply_to_message": {
+        "message_id": 11,
+        "from": {
+          "id": 8867441036,
+          "is_bot": true,
+          "first_name": "УЦП публикация",
+          "username": "ucp_publisher_bot"
+        },
+        "chat": {
+          "id": -1004303710880,
+          "title": "Библиотека платформы",
+          "is_forum": true,
+          "type": "supergroup"
+        },
+        "date": 1793781004,
+        "message_thread_id": 11,
+        "forum_topic_created": {
+          "name": "9️⃣ Новости платформы",
+          "icon_color": 13338331
+        },
+        "is_topic_message": true
+      },
+      "video": {
+        "duration": 7,
+        "width": 800,
+        "height": 800,
+        "file_name": "avatar-platforma-anim-v4.mp4",
+        "mime_type": "video/mp4",
+        "thumbnail": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADkWrwvvUaZreEX24F77suUNw3grO7AAL8rAACrgKJSzVLOApS3kL5AQAHbQADPQQ",
+          "file_unique_id": "AQAD_KwAAq4CiUty",
+          "file_size": 6432,
+          "width": 320,
+          "height": 320
+        },
+        "thumb": {
+          "file_id": "AAMCAgADIQYAAwEAAYVqoAADkWrwvvUaZreEX24F77suUNw3grO7AAL8rAACrgKJSzVLOApS3kL5AQAHbQADPQQ",
+          "file_unique_id": "AQAD_KwAAq4CiUty",
+          "file_size": 6432,
+          "width": 320,
+          "height": 320
+        },
+        "file_id": "BAACAgIAAyEGAAMBAAGFaqAAA5Fq8L71Gma3hF9uBe-7LlDcN4KzuwAC_KwAAq4CiUs1SzgKUt5C-T0E",
+        "file_unique_id": "AgAD_KwAAq4CiUs",
+        "file_size": 137560
+      },
+      "caption": "Заставка «Платформа» — версия 4\n\nКвадрат 800×800, логотип занимает около 60% кадра, поля со всех сторон. Без B-кадров, профиль Main — для пробы видеоаватарки на iPhone\n\n#НППЦП #цифровизация #цепипоставок",
+      "caption_entities": [
+        {
+          "offset": 0,
+          "length": 31,
+          "type": "bold"
+        },
+        {
+          "offset": 169,
+          "length": 6,
+          "type": "hashtag"
+        },
+        {
+          "offset": 176,
+          "length": 13,
+          "type": "hashtag"
+        },
+        {
+          "offset": 190,
+          "length": 13,
+          "type": "hashtag"
+        }
+      ],
+      "is_topic_message": true
+    }
+  },
+  "at": "2026-11-08T18:27:01Z"
+}
