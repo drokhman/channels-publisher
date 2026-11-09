@@ -2,18 +2,18 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '42 5 9 11 *'   # 2026-11-09-0842-retail-cosmetics-assortment.json · пост
-    - cron: '7 6 9 11 *'   # 2026-11-09-0842-retail-cosmetics-assortment.json · страховка
-    - cron: '3 7 9 11 *'   # 2026-11-09-1003-wisdom-polyakov-peak.json · пост
-    - cron: '28 7 9 11 *'   # 2026-11-09-1003-wisdom-polyakov-peak.json · страховка
-    - cron: '6 8 9 11 *'   # 2026-11-09-1106-repost-shipstation-agents.json · пост
-    - cron: '31 8 9 11 *'   # 2026-11-09-1106-repost-shipstation-agents.json · страховка
-    - cron: '24 9 9 11 *'   # 2026-11-09-1224-bp-reglament-observe.json · пост
-    - cron: '49 9 9 11 *'   # 2026-11-09-1224-bp-reglament-observe.json · страховка
-    - cron: '37 10 9 11 *'   # 2026-11-09-1337-spb-containers.json · пост
-    - cron: '2 11 9 11 *'   # 2026-11-09-1337-spb-containers.json · страховка
-    - cron: '54 11 9 11 *'   # 2026-11-09-1454-marking-dairy-oil.json · пост
-    - cron: '19 12 9 11 *'   # 2026-11-09-1454-marking-dairy-oil.json · страховка
+    - cron: '54 5 10 11 *'   # 2026-11-10-0854-rates-peak-down.json · пост
+    - cron: '19 6 10 11 *'   # 2026-11-10-0854-rates-peak-down.json · страховка
+    - cron: '13 7 10 11 *'   # 2026-11-10-1013-wisdom-koroy-backup-route.json · пост
+    - cron: '38 7 10 11 *'   # 2026-11-10-1013-wisdom-koroy-backup-route.json · страховка
+    - cron: '29 8 10 11 *'   # 2026-11-10-1129-repost-gartner-rehire.json · пост
+    - cron: '54 8 10 11 *'   # 2026-11-10-1129-repost-gartner-rehire.json · страховка
+    - cron: '46 9 10 11 *'   # 2026-11-10-1246-release-0572-projects-diagnostics.json · пост
+    - cron: '11 10 10 11 *'   # 2026-11-10-1246-release-0572-projects-diagnostics.json · страховка
+    - cron: '7 11 10 11 *'   # 2026-11-10-1407-retail-hr-deficit.json · пост
+    - cron: '32 11 10 11 *'   # 2026-11-10-1407-retail-hr-deficit.json · страховка
+    - cron: '24 12 10 11 *'   # 2026-11-10-1524-bp-order-before-ai.json · пост
+    - cron: '49 12 10 11 *'   # 2026-11-10-1524-bp-order-before-ai.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
