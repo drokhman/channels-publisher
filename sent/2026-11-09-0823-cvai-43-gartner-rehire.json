@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-09-0823-cvai-43-gartner-rehire",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 156,
+  "text_message_id": 157,
+  "link": "https://t.me/chelovek_vs_ai/157",
+  "file": "2026-11-09-0823-cvai-43-gartner-rehire.json",
+  "due_at": "2026-11-09T05:23:00.000Z",
+  "published_at": "2026-11-09T05:24:14.569Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
