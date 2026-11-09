@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-09-1106-repost-shipstation-agents",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/140",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-09-1106-repost-shipstation-agents.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1bf5954fb5fd1",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1bf5954fb5fd1",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-09T08:07:38.915730+00:00",
+  "published_by": "max-publisher (Россия)"
+}
