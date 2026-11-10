@@ -68,7 +68,8 @@
     {
       "key": "theory",
       "name": "1️⃣1️⃣ Теория для практика",
-      "icon_color": 16749490
+      "icon_color": 16749490,
+      "thread_id": 157
     }
   ],
   "rules": [
