@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-10-1832-cvai-45-x5-dogovory",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 163,
+  "text_message_id": 164,
+  "link": "https://t.me/chelovek_vs_ai/164",
+  "file": "2026-11-10-1832-cvai-45-x5-dogovory.json",
+  "due_at": "2026-11-10T15:32:00.000Z",
+  "published_at": "2026-11-10T15:32:14.919Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
