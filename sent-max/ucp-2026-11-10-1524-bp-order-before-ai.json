@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-10-1524-bp-order-before-ai",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/154",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-10-1524-bp-order-before-ai.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1c56beb0c1645",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1c56beb0c1645",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-10T12:25:39.669029+00:00",
+  "published_by": "max-publisher (Россия)"
+}
