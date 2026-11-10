@@ -14,6 +14,10 @@ on:
     - cron: '32 11 10 11 *'   # 2026-11-10-1407-retail-hr-deficit.json · страховка
     - cron: '24 12 10 11 *'   # 2026-11-10-1524-bp-order-before-ai.json · пост
     - cron: '49 12 10 11 *'   # 2026-11-10-1524-bp-order-before-ai.json · страховка
+    - cron: '37 13 10 11 *'   # 2026-11-10-1637-theory-anons.json · пост
+    - cron: '2 14 10 11 *'   # 2026-11-10-1637-theory-anons.json · страховка
+    - cron: '24 6 11 11 *'   # 2026-11-11-0924-theory-games-01-dilemma.json · пост
+    - cron: '49 6 11 11 *'   # 2026-11-11-0924-theory-games-01-dilemma.json · страховка
   workflow_dispatch:
 permissions:
   contents: write

@@ -64,9 +64,18 @@
       "name": "🔟 Вне рубрик",
       "icon_color": 16766590,
       "thread_id": 12
+    },
+    {
+      "key": "theory",
+      "name": "1️⃣1️⃣ Теория для практика",
+      "icon_color": 16749490
     }
   ],
   "rules": [
+    [
+      "-theory-",
+      "theory"
+    ],
     [
       "-release-",
       "platform"
