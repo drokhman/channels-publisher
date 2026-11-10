@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-10-1013-wisdom-koroy-backup-route",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/148",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-10-1013-wisdom-koroy-backup-route.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1c44ec06b1976",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1c44ec06b1976",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-10T07:14:11.196960+00:00",
+  "published_by": "max-publisher (Россия)"
+}
