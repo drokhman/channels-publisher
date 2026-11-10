@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-10-1246-release-0572-projects-diagnostics",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/150",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-10-1246-release-0572-projects-diagnostics.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1c4dbab85192a",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1c4dbab85192a",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-10T09:48:06.577078+00:00",
+  "published_by": "max-publisher (Россия)"
+}
