@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-10-0816-cvai-44-rezume",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 161,
+  "text_message_id": 162,
+  "link": "https://t.me/chelovek_vs_ai/162",
+  "file": "2026-11-10-0816-cvai-44-rezume.json",
+  "due_at": "2026-11-10T05:16:00.000Z",
+  "published_at": "2026-11-10T05:16:15.736Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
