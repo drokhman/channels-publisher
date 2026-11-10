@@ -1,0 +1,22 @@
+{
+ "steps": [
+  {
+   "action": "photo",
+   "image": "commands-ucp-media/img-ym-cdek-logo11.jpg",
+   "text_html": "<b>«Яндекс Маркет» и СДЭК откроют друг другу свои ПВЗ</b>\n\nКомпании подписали соглашение о мультибрендовых пунктах выдачи (<a href=\"https://tass.ru/ekonomika/28301849\">ТАСС</a>).\n\n1️⃣ Пункт СДЭК получит 2,5% от стоимости выданного заказа «Маркета», ПВЗ «Маркета» — 40 ₽ за заказ СДЭК.\n2️⃣ Второй сервис подключают без первоначальных вложений. Формат «Вместе» позволяет открыть пункт внутри магазина или мастерской без отдельной аренды и персонала, брендинг — за 1 ₽ (<a href=\"https://www.retail.ru/news/pvz-yandeks-marketa-i-sdek-nachnut-vydavat-zakazy-obeikh-kompaniy-10-noyabrya-2026-284225/\">Retail.ru</a>).\n3️⃣ СДЭК: «Пункт выдачи перестает быть точкой одного бренда и становится сервисной точкой района».\n\nДля продавца это больше точек рядом с покупателем. Для сетей — сигнал: ПВЗ в торговом зале становится нормой.\n\nДанные: <a href=\"https://tass.ru/ekonomika/28301849\">ТАСС</a>, <a href=\"https://www.retail.ru/news/pvz-yandeks-marketa-i-sdek-nachnut-vydavat-zakazy-obeikh-kompaniy-10-noyabrya-2026-284225/\">Retail.ru</a>, <a href=\"https://www.sostav.ru/publication/yandeks-market-i-sdek-dogovorilis-i-razvitii-multibrendovykh-pvz-88449.html\">Sostav</a>.\n\n#НППЦП #логистика #склад"
+  },
+  {
+   "action": "poll",
+   "question": "Есть ли в ваших магазинах пункты выдачи чужих заказов?",
+   "options": [
+    "Да, одного сервиса",
+    "Да, нескольких",
+    "Планируем",
+    "Нет и не планируем",
+    "Не работаю в рознице"
+   ],
+   "anonymous": true,
+   "multiple": false
+  }
+ ]
+}
