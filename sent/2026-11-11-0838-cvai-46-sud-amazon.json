@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-11-0838-cvai-46-sud-amazon",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 165,
+  "text_message_id": 166,
+  "link": "https://t.me/chelovek_vs_ai/166",
+  "file": "2026-11-11-0838-cvai-46-sud-amazon.json",
+  "due_at": "2026-11-11T05:38:00.000Z",
+  "published_at": "2026-11-11T05:38:14.589Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
