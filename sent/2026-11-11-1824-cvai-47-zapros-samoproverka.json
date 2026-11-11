@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-11-1824-cvai-47-zapros-samoproverka",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 167,
+  "text_message_id": 168,
+  "link": "https://t.me/chelovek_vs_ai/168",
+  "file": "2026-11-11-1824-cvai-47-zapros-samoproverka.json",
+  "due_at": "2026-11-11T15:24:00.000Z",
+  "published_at": "2026-11-11T15:24:14.884Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
