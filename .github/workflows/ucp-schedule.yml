@@ -2,18 +2,18 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '1 5 11 11 *'   # 2026-11-11-0801-retail-fas-discrimination.json · пост
-    - cron: '26 5 11 11 *'   # 2026-11-11-0801-retail-fas-discrimination.json · страховка
-    - cron: '24 6 11 11 *'   # 2026-11-11-0924-theory-games-01-dilemma.json · пост
-    - cron: '49 6 11 11 *'   # 2026-11-11-0924-theory-games-01-dilemma.json · страховка
-    - cron: '54 7 11 11 *'   # 2026-11-11-1054-repost-x5-contracts-agent.json · пост
-    - cron: '19 8 11 11 *'   # 2026-11-11-1054-repost-x5-contracts-agent.json · страховка
-    - cron: '58 8 11 11 *'   # 2026-11-11-1158-marking-fake-producers.json · пост
-    - cron: '23 9 11 11 *'   # 2026-11-11-1158-marking-fake-producers.json · страховка
-    - cron: '59 9 11 11 *'   # 2026-11-11-1259-drewry-suez-return.json · пост
-    - cron: '24 10 11 11 *'   # 2026-11-11-1259-drewry-suez-return.json · страховка
-    - cron: '23 11 11 11 *'   # 2026-11-11-1423-pvz-ymarket-cdek.json · пост
-    - cron: '48 11 11 11 *'   # 2026-11-11-1423-pvz-ymarket-cdek.json · страховка
+    - cron: '44 5 12 11 *'   # 2026-11-12-0844-epd-first-results.json · пост
+    - cron: '9 6 12 11 *'   # 2026-11-12-0844-epd-first-results.json · страховка
+    - cron: '9 7 12 11 *'   # 2026-11-12-1009-theory-bias-01-bat-ball.json · пост
+    - cron: '34 7 12 11 *'   # 2026-11-12-1009-theory-bias-01-bat-ball.json · страховка
+    - cron: '30 8 12 11 *'   # 2026-11-12-1130-repost-ai-hiring.json · пост
+    - cron: '55 8 12 11 *'   # 2026-11-12-1130-repost-ai-hiring.json · страховка
+    - cron: '58 9 12 11 *'   # 2026-11-12-1258-release-0593-open-search-bpmn.json · пост
+    - cron: '23 10 12 11 *'   # 2026-11-12-1258-release-0593-open-search-bpmn.json · страховка
+    - cron: '19 11 12 11 *'   # 2026-11-12-1419-wisdom-myakin-meetings.json · пост
+    - cron: '44 11 12 11 *'   # 2026-11-12-1419-wisdom-myakin-meetings.json · страховка
+    - cron: '41 12 12 11 *'   # 2026-11-12-1541-bp-five-whys.json · пост
+    - cron: '6 13 12 11 *'   # 2026-11-12-1541-bp-five-whys.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
