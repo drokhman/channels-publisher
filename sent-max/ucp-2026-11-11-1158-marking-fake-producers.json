@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-11-1158-marking-fake-producers",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/162",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-11-1158-marking-fake-producers.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1c9d57fd32607",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1c9d57fd32607",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-11T08:59:28.254280+00:00",
+  "published_by": "max-publisher (Россия)"
+}
