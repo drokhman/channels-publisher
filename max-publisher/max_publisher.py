@@ -347,7 +347,9 @@ def process_ucp(file, now):
         if st.get('action') == 'photo':
             items.append({'text': to_max_html(st.get('max_text_html') or st.get('text_html') or ''), 'image_path': st.get('image'),
                           'mime': 'image/png' if str(st.get('image', '')).endswith('.png') else 'image/jpeg'})
-        elif st.get('action') in ('message', 'text'):
+        elif st.get('action') in ('message', 'text', 'send'):
+            if st.get('max_skip'):
+                continue                         # текст уже ушёл подписью к фото (max_text_html)
             items.append({'text': to_max_html(st.get('max_text_html') or st.get('text_html') or st.get('text') or '')})
         elif st.get('action') == 'poll':
             items.append(poll_card(st, (res[i] if i < len(res) else {}).get('message_id')))

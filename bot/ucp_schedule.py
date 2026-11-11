@@ -50,6 +50,14 @@ def main():
     rec = {**post, "due": when.isoformat(), "sent_at": dt.datetime.now(MSK).isoformat(), "late_min": round((now - when).total_seconds() / 60), "results": results}
     for st in rec.get("steps", []):
         st.pop("image_base64", None)
+    # MAX: фото без подписи + отдельный send — в MAX текст кладём к картинке (max_text_html), иначе там только фото
+    sts = rec.get("steps", [])
+    for i, st in enumerate(sts[:-1]):
+        nx = sts[i + 1]
+        if st.get("action") == "photo" and not (st.get("text_html") or "").strip() and not st.get("max_text_html") \
+                and nx.get("action") == "send" and nx.get("text_html"):
+            st["max_text_html"] = nx["text_html"]
+            nx["max_skip"] = True
     (dest / p.name).write_text(json.dumps(rec, ensure_ascii=False, indent=2), encoding="utf-8")
     p.unlink()
     print(p.name, "OK" if ok else "FAIL", results)
