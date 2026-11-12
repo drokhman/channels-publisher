@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-12-1048-webinar-dbp-series",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/173",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-12-1048-webinar-dbp-series.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1cebcfaa11d94",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1cebcfaa11d94",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-12T07:50:47.147288+00:00",
+  "published_by": "max-publisher (Россия)"
+}
