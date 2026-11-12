@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-12-0844-epd-first-results",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/170",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-12-0844-epd-first-results.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1ce49fd1e6ab5",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1ce49fd1e6ab5",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-12T05:45:11.294975+00:00",
+  "published_by": "max-publisher (Россия)"
+}
