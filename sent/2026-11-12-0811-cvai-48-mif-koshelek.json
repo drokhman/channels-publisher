@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-12-0811-cvai-48-mif-koshelek",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 169,
+  "text_message_id": 170,
+  "link": "https://t.me/chelovek_vs_ai/170",
+  "file": "2026-11-12-0811-cvai-48-mif-koshelek.json",
+  "due_at": "2026-11-12T05:11:00.000Z",
+  "published_at": "2026-11-12T05:12:14.159Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
