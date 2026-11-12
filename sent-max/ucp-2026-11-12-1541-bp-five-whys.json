@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-12-1541-bp-five-whys",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/179",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-12-1541-bp-five-whys.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1cfc76c072622",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1cfc76c072622",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-12T12:41:48.466025+00:00",
+  "published_by": "max-publisher (Россия)"
+}
