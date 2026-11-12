@@ -2,12 +2,8 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '15 17 11 11 *'   # 2026-11-11-2015-webinar-ai-tool.json · пост
-    - cron: '40 17 11 11 *'   # 2026-11-11-2015-webinar-ai-tool.json · страховка
-    - cron: '44 5 12 11 *'   # 2026-11-12-0844-epd-first-results.json · пост
-    - cron: '9 6 12 11 *'   # 2026-11-12-0844-epd-first-results.json · страховка
-    - cron: '9 7 12 11 *'   # 2026-11-12-1009-theory-bias-01-bat-ball.json · пост
-    - cron: '34 7 12 11 *'   # 2026-11-12-1009-theory-bias-01-bat-ball.json · страховка
+    - cron: '48 7 12 11 *'   # 2026-11-12-1048-webinar-dbp-series.json · пост
+    - cron: '13 8 12 11 *'   # 2026-11-12-1048-webinar-dbp-series.json · страховка
     - cron: '30 8 12 11 *'   # 2026-11-12-1130-repost-ai-hiring.json · пост
     - cron: '55 8 12 11 *'   # 2026-11-12-1130-repost-ai-hiring.json · страховка
     - cron: '58 9 12 11 *'   # 2026-11-12-1258-release-0593-open-search-bpmn.json · пост
