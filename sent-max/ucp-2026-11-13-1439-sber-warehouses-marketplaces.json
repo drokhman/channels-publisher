@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-13-1439-sber-warehouses-marketplaces",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/189",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-13-1439-sber-warehouses-marketplaces.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1d4b6073a314c",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1d4b6073a314c",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-13T11:40:55.177752+00:00",
+  "published_by": "max-publisher (Россия)"
+}
