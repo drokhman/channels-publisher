@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-13-0827-cvai-50-spor-hr",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 173,
+  "text_message_id": 174,
+  "link": "https://t.me/chelovek_vs_ai/174",
+  "file": "2026-11-13-0827-cvai-50-spor-hr.json",
+  "due_at": "2026-11-13T05:27:00.000Z",
+  "published_at": "2026-11-13T05:28:14.610Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
