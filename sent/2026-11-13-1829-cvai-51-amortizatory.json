@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-13-1829-cvai-51-amortizatory",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 177,
+  "text_message_id": 178,
+  "link": "https://t.me/chelovek_vs_ai/178",
+  "file": "2026-11-13-1829-cvai-51-amortizatory.json",
+  "due_at": "2026-11-13T15:29:00.000Z",
+  "published_at": "2026-11-13T15:30:18.777Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
