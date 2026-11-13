@@ -2,18 +2,18 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '19 5 13 11 *'   # 2026-11-13-0819-ozon-fbs-fines.json · пост
-    - cron: '44 5 13 11 *'   # 2026-11-13-0819-ozon-fbs-fines.json · страховка
-    - cron: '31 6 13 11 *'   # 2026-11-13-0931-theory-stat-01-sample.json · пост
-    - cron: '56 6 13 11 *'   # 2026-11-13-0931-theory-stat-01-sample.json · страховка
-    - cron: '38 7 13 11 *'   # 2026-11-13-1038-rspp-logistics-index.json · пост
-    - cron: '3 8 13 11 *'   # 2026-11-13-1038-rspp-logistics-index.json · страховка
-    - cron: '0 9 13 11 *'   # 2026-11-13-1200-repost-ai-agent-wallet.json · пост
-    - cron: '25 9 13 11 *'   # 2026-11-13-1200-repost-ai-agent-wallet.json · страховка
-    - cron: '26 10 13 11 *'   # 2026-11-13-1326-tech-fee-electronics.json · пост
-    - cron: '51 10 13 11 *'   # 2026-11-13-1326-tech-fee-electronics.json · страховка
-    - cron: '39 11 13 11 *'   # 2026-11-13-1439-sber-warehouses-marketplaces.json · пост
-    - cron: '4 12 13 11 *'   # 2026-11-13-1439-sber-warehouses-marketplaces.json · страховка
+    - cron: '6 5 14 11 *'   # 2026-11-14-0806-sklady-record-deals.json · пост
+    - cron: '31 5 14 11 *'   # 2026-11-14-0806-sklady-record-deals.json · страховка
+    - cron: '32 6 14 11 *'   # 2026-11-14-0932-theory-games-02-two-thirds.json · пост
+    - cron: '57 6 14 11 *'   # 2026-11-14-0932-theory-games-02-two-thirds.json · страховка
+    - cron: '50 7 14 11 *'   # 2026-11-14-1050-marking-autoparts.json · пост
+    - cron: '15 8 14 11 *'   # 2026-11-14-1050-marking-autoparts.json · страховка
+    - cron: '13 9 14 11 *'   # 2026-11-14-1213-repost-manager-shock-absorber.json · пост
+    - cron: '38 9 14 11 *'   # 2026-11-14-1213-repost-manager-shock-absorber.json · страховка
+    - cron: '40 10 14 11 *'   # 2026-11-14-1340-release-05100-planogram-projects.json · пост
+    - cron: '5 11 14 11 *'   # 2026-11-14-1340-release-05100-planogram-projects.json · страховка
+    - cron: '0 12 14 11 *'   # 2026-11-14-1500-drewry-blank-sailings.json · пост
+    - cron: '25 12 14 11 *'   # 2026-11-14-1500-drewry-blank-sailings.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
