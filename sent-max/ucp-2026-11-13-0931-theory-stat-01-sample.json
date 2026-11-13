@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-13-0931-theory-stat-01-sample",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/183",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-13-0931-theory-stat-01-sample.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1d39c134529b0",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1d39c134529b0",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-13T06:32:56.883641+00:00",
+  "published_by": "max-publisher (Россия)"
+}
