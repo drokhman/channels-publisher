@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-13-1332-cvai-shnobel-nose",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": null,
+  "text_message_id": 176,
+  "link": "https://t.me/chelovek_vs_ai/176",
+  "file": "2026-11-13-1332-cvai-shnobel-nose.json",
+  "due_at": "2026-11-13T10:32:00.000Z",
+  "published_at": "2026-11-13T10:32:13.946Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
