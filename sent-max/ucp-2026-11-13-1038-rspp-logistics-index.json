@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-13-1038-rspp-logistics-index",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/184",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-13-1038-rspp-logistics-index.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1d3d8611e452a",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1d3d8611e452a",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-13T07:38:48.477975+00:00",
+  "published_by": "max-publisher (Россия)"
+}
