@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-14-1823-cvai-53-penske",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 185,
+  "text_message_id": 186,
+  "link": "https://t.me/chelovek_vs_ai/186",
+  "file": "2026-11-14-1823-cvai-53-penske.json",
+  "due_at": "2026-11-14T15:23:00.000Z",
+  "published_at": "2026-11-14T15:24:14.681Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
