@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-14-0844-cvai-52-sprint",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 179,
+  "text_message_id": 180,
+  "link": "https://t.me/chelovek_vs_ai/180",
+  "file": "2026-11-14-0844-cvai-52-sprint.json",
+  "due_at": "2026-11-14T05:44:00.000Z",
+  "published_at": "2026-11-14T05:44:14.897Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
