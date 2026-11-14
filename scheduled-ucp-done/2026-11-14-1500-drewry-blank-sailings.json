@@ -1,0 +1,20 @@
+{
+  "steps": [
+    {
+      "action": "photo",
+      "image": "commands-ucp-media/img-ship14.jpg",
+      "text_html": "<b>Фрахт дешевеет третью неделю, перевозчики отменяют рейсы</b>\n\nИндекс Drewry WCI на 12 ноября — $4 305 за 40-футовый контейнер, −2% за неделю. 29 октября было $4 429 (<a href=\"https://www.trasportoeuropa.it/english/container-freight-rates-fall-for-third-consecutive-week-in-november-2026/\">Trasporto Europa</a>).\n\n1️⃣ Шанхай — Роттердам $3 504 (−3%), Шанхай — Генуя $4 168 (без изменений), Шанхай — Лос-Анджелес $7 416 (−2%), Шанхай — Нью-Йорк $9 020 (−3%) (<a href=\"https://www.forwardernews.com/news/2026-11-12-drewry-wci-falls-blank-sailings-double\">Forwarder News</a>).\n2️⃣ Перевозчики удваивают отмену рейсов: на Транспацифике — 8 на следующей неделе против 4, на Азия — Европа — 8 против 5.\n3️⃣ Ожидание причала в Шанхае выросло с 36 до 49 часов. 11 недель до этого оно сокращалось.\n\nDrewry ждёт дальнейшего снижения ставок на следующей неделе.\n\n<b>Что сделать</b>\n1️⃣ Запрашивать декабрьские спот-ставки сейчас и сравнивать с контрактными.\n2️⃣ Закладывать риск переноса груза на следующий рейс из Шанхая.\n\nДанные: <a href=\"https://www.trasportoeuropa.it/english/container-freight-rates-fall-for-third-consecutive-week-in-november-2026/\">Trasporto Europa</a>, <a href=\"https://www.forwardernews.com/news/2026-11-12-drewry-wci-falls-blank-sailings-double\">Forwarder News</a>.\n\n#НППЦП #ВЭД #логистика"
+    }
+  ],
+  "due": "2026-11-14T15:00:00+03:00",
+  "sent_at": "2026-11-14T15:00:38.657220+03:00",
+  "late_min": 1,
+  "results": [
+    {
+      "action": "photo",
+      "ok": true,
+      "message_id": 199,
+      "description": null
+    }
+  ]
+}
