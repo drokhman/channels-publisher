@@ -1,0 +1,32 @@
+{
+  "steps": [
+    {
+      "action": "photo",
+      "image": "commands-ucp-media/img-auto14.jpg",
+      "text_html": "",
+      "max_text_html": "<b>Колодки, фильтры, свечи и стёкла: маркировка с 1 апреля 2027 года</b>\n\nКоллеги, Минпромторг доработал проект постановления о маркировке автокомпонентов и 2 ноября направил его на оценку регулирующего воздействия (<a href=\"https://ppt.ru/news/markirovka-tovarov/filtry-svechi-i-tormoznye-kolodki-nachnut-markirovat-s-aprelya-2027\">PPT.ru</a>). Это пока проект, даты могут сдвинуться.\n\n1️⃣ Что маркируют: фильтры и свечи зажигания (по кодам из перечня), безопасные стёкла, тормозные диски и колодки, колёсные диски, колёса в сборе.\n2️⃣ С 1 марта 2027 года — регистрация в «Честном знаке», с 1 апреля — нанесение кодов производителями и импортёрами.\n3️⃣ С 1 октября 2027 года планируют запретить оборот немаркированного товара между компаниями, с 1 апреля 2028 года — передавать каждую розничную продажу и работать по ЭДО (<a href=\"https://markirovka.ru/knowledge/tovarnye-gruppy/avtomobilnye-zapchasti/etapy-markirovki-otdelnykh-vidov-komponentov-transportnykh-sredstv-i-ustroystv-s-dvigatelem-vnutrenn\">«Честный знак»</a>).\n4️⃣ Остатки на 1 апреля 2027 года можно промаркировать до 31 мая 2028 года.\n\n<b>Что сделать</b>\n1️⃣ Дистрибьютору и рознице — посчитать остатки этих групп и оборачиваемость: что не продастся до весны 2028 года, придётся маркировать.\n2️⃣ Закупщику — включить готовность к маркировке в требования к поставщикам.\n3️⃣ Внести риск в <a href=\"https://npscs.ru/#extrisk\">каталог внешних рисков</a>.\n\nДанные: <a href=\"https://ppt.ru/news/markirovka-tovarov/filtry-svechi-i-tormoznye-kolodki-nachnut-markirovat-s-aprelya-2027\">PPT.ru</a>, <a href=\"https://markirovka.ru/knowledge/tovarnye-gruppy/avtomobilnye-zapchasti/etapy-markirovki-otdelnykh-vidov-komponentov-transportnykh-sredstv-i-ustroystv-s-dvigatelem-vnutrenn\">«Честный знак»</a>.\n\n#НППЦП #закупки #склад"
+    },
+    {
+      "action": "send",
+      "text_html": "<b>Колодки, фильтры, свечи и стёкла: маркировка с 1 апреля 2027 года</b>\n\nКоллеги, Минпромторг доработал проект постановления о маркировке автокомпонентов и 2 ноября направил его на оценку регулирующего воздействия (<a href=\"https://ppt.ru/news/markirovka-tovarov/filtry-svechi-i-tormoznye-kolodki-nachnut-markirovat-s-aprelya-2027\">PPT.ru</a>). Это пока проект, даты могут сдвинуться.\n\n1️⃣ Что маркируют: фильтры и свечи зажигания (по кодам из перечня), безопасные стёкла, тормозные диски и колодки, колёсные диски, колёса в сборе.\n2️⃣ С 1 марта 2027 года — регистрация в «Честном знаке», с 1 апреля — нанесение кодов производителями и импортёрами.\n3️⃣ С 1 октября 2027 года планируют запретить оборот немаркированного товара между компаниями, с 1 апреля 2028 года — передавать каждую розничную продажу и работать по ЭДО (<a href=\"https://markirovka.ru/knowledge/tovarnye-gruppy/avtomobilnye-zapchasti/etapy-markirovki-otdelnykh-vidov-komponentov-transportnykh-sredstv-i-ustroystv-s-dvigatelem-vnutrenn\">«Честный знак»</a>).\n4️⃣ Остатки на 1 апреля 2027 года можно промаркировать до 31 мая 2028 года.\n\n<b>Что сделать</b>\n1️⃣ Дистрибьютору и рознице — посчитать остатки этих групп и оборачиваемость: что не продастся до весны 2028 года, придётся маркировать.\n2️⃣ Закупщику — включить готовность к маркировке в требования к поставщикам.\n3️⃣ Внести риск в <a href=\"https://npscs.ru/#extrisk\">каталог внешних рисков</a>.\n\nДанные: <a href=\"https://ppt.ru/news/markirovka-tovarov/filtry-svechi-i-tormoznye-kolodki-nachnut-markirovat-s-aprelya-2027\">PPT.ru</a>, <a href=\"https://markirovka.ru/knowledge/tovarnye-gruppy/avtomobilnye-zapchasti/etapy-markirovki-otdelnykh-vidov-komponentov-transportnykh-sredstv-i-ustroystv-s-dvigatelem-vnutrenn\">«Честный знак»</a>.\n\n#НППЦП #закупки #склад",
+      "max_skip": true
+    }
+  ],
+  "due": "2026-11-14T10:50:00+03:00",
+  "sent_at": "2026-11-14T10:50:30.086567+03:00",
+  "late_min": 0,
+  "results": [
+    {
+      "action": "photo",
+      "ok": true,
+      "message_id": 195,
+      "description": null
+    },
+    {
+      "action": "send",
+      "ok": true,
+      "message_id": 196,
+      "description": null
+    }
+  ]
+}
