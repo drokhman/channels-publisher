@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-15-0805-rzd-containers-record",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/200",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-15-0805-rzd-containers-record.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1dd9ac6ac457c",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1dd9ac6ac457c",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-15T05:07:44.133682+00:00",
+  "published_by": "max-publisher (Россия)"
+}
