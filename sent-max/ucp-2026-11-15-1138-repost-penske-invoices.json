@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-15-1138-repost-penske-invoices",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/206",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-15-1138-repost-penske-invoices.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1de5cee5f116a",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1de5cee5f116a",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-15T08:39:48.460658+00:00",
+  "published_by": "max-publisher (Россия)"
+}
