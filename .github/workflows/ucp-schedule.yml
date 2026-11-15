@@ -2,16 +2,18 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '24 6 15 11 *'   # 2026-11-15-0924-retail-lenta-lifi.json · пост
-    - cron: '49 6 15 11 *'   # 2026-11-15-0924-retail-lenta-lifi.json · страховка
-    - cron: '35 7 15 11 *'   # 2026-11-15-1035-south-rates-cooling.json · пост
-    - cron: '0 8 15 11 *'   # 2026-11-15-1035-south-rates-cooling.json · страховка
-    - cron: '38 8 15 11 *'   # 2026-11-15-1138-repost-penske-invoices.json · пост
-    - cron: '3 9 15 11 *'   # 2026-11-15-1138-repost-penske-invoices.json · страховка
-    - cron: '48 9 15 11 *'   # 2026-11-15-1248-vats-law.json · пост
-    - cron: '13 10 15 11 *'   # 2026-11-15-1248-vats-law.json · страховка
-    - cron: '8 11 15 11 *'   # 2026-11-15-1408-book-goldratt-goal.json · пост
-    - cron: '33 11 15 11 *'   # 2026-11-15-1408-book-goldratt-goal.json · страховка
+    - cron: '7 5 16 11 *'   # 2026-11-16-0807-baltic-port-costs.json · пост
+    - cron: '32 5 16 11 *'   # 2026-11-16-0807-baltic-port-costs.json · страховка
+    - cron: '20 6 16 11 *'   # 2026-11-16-0920-theory-stat-02-average.json · пост
+    - cron: '45 6 16 11 *'   # 2026-11-16-0920-theory-stat-02-average.json · страховка
+    - cron: '47 7 16 11 *'   # 2026-11-16-1047-release-05101-event-bot.json · пост
+    - cron: '12 8 16 11 *'   # 2026-11-16-1047-release-05101-event-bot.json · страховка
+    - cron: '6 9 16 11 *'   # 2026-11-16-1206-repost-zalando-returns.json · пост
+    - cron: '31 9 16 11 *'   # 2026-11-16-1206-repost-zalando-returns.json · страховка
+    - cron: '21 10 16 11 *'   # 2026-11-16-1321-wisdom-vinogradova-hiring.json · пост
+    - cron: '46 10 16 11 *'   # 2026-11-16-1321-wisdom-vinogradova-hiring.json · страховка
+    - cron: '44 11 16 11 *'   # 2026-11-16-1444-bp-sipoc.json · пост
+    - cron: '9 12 16 11 *'   # 2026-11-16-1444-bp-sipoc.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
