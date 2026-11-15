@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-15-1035-south-rates-cooling",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/205",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-15-1035-south-rates-cooling.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1de22c78d3eae",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1de22c78d3eae",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-15T07:36:17.268913+00:00",
+  "published_by": "max-publisher (Россия)"
+}
