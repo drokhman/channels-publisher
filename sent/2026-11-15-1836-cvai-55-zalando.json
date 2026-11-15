@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-15-1836-cvai-55-zalando",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 193,
+  "text_message_id": 194,
+  "link": "https://t.me/chelovek_vs_ai/194",
+  "file": "2026-11-15-1836-cvai-55-zalando.json",
+  "due_at": "2026-11-15T15:36:00.000Z",
+  "published_at": "2026-11-15T15:36:15.051Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
