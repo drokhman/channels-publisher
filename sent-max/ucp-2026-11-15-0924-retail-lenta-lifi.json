@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-15-0924-retail-lenta-lifi",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/204",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-15-0924-retail-lenta-lifi.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1dde156107066",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1dde156107066",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-15T06:24:48.461318+00:00",
+  "published_by": "max-publisher (Россия)"
+}
