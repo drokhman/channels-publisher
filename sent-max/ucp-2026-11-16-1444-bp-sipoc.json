@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-16-1444-bp-sipoc",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/220",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-16-1444-bp-sipoc.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1e42e80a91716",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1e42e80a91716",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-16T11:46:46.290409+00:00",
+  "published_by": "max-publisher (Россия)"
+}
