@@ -2,18 +2,18 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '7 5 16 11 *'   # 2026-11-16-0807-baltic-port-costs.json · пост
-    - cron: '32 5 16 11 *'   # 2026-11-16-0807-baltic-port-costs.json · страховка
-    - cron: '20 6 16 11 *'   # 2026-11-16-0920-theory-stat-02-average.json · пост
-    - cron: '45 6 16 11 *'   # 2026-11-16-0920-theory-stat-02-average.json · страховка
-    - cron: '47 7 16 11 *'   # 2026-11-16-1047-release-05101-event-bot.json · пост
-    - cron: '12 8 16 11 *'   # 2026-11-16-1047-release-05101-event-bot.json · страховка
-    - cron: '6 9 16 11 *'   # 2026-11-16-1206-repost-zalando-returns.json · пост
-    - cron: '31 9 16 11 *'   # 2026-11-16-1206-repost-zalando-returns.json · страховка
-    - cron: '21 10 16 11 *'   # 2026-11-16-1321-wisdom-vinogradova-hiring.json · пост
-    - cron: '46 10 16 11 *'   # 2026-11-16-1321-wisdom-vinogradova-hiring.json · страховка
-    - cron: '44 11 16 11 *'   # 2026-11-16-1444-bp-sipoc.json · пост
-    - cron: '9 12 16 11 *'   # 2026-11-16-1444-bp-sipoc.json · страховка
+    - cron: '47 5 17 11 *'   # 2026-11-17-0847-magnit-cpfr-pilot.json · пост
+    - cron: '12 6 17 11 *'   # 2026-11-17-0847-magnit-cpfr-pilot.json · страховка
+    - cron: '57 6 17 11 *'   # 2026-11-17-0957-theory-games-03-median-voter.json · пост
+    - cron: '22 7 17 11 *'   # 2026-11-17-0957-theory-games-03-median-voter.json · страховка
+    - cron: '0 8 17 11 *'   # 2026-11-17-1100-zabaikalsk-queue.json · пост
+    - cron: '25 8 17 11 *'   # 2026-11-17-1100-zabaikalsk-queue.json · страховка
+    - cron: '5 9 17 11 *'   # 2026-11-17-1205-repost-gxo-humanoids.json · пост
+    - cron: '30 9 17 11 *'   # 2026-11-17-1205-repost-gxo-humanoids.json · страховка
+    - cron: '35 10 17 11 *'   # 2026-11-17-1335-wisdom-ryzhenkov-shipper.json · пост
+    - cron: '0 11 17 11 *'   # 2026-11-17-1335-wisdom-ryzhenkov-shipper.json · страховка
+    - cron: '56 11 17 11 *'   # 2026-11-17-1456-north-supply-list.json · пост
+    - cron: '21 12 17 11 *'   # 2026-11-17-1456-north-supply-list.json · страховка
   workflow_dispatch:
 permissions:
   contents: write

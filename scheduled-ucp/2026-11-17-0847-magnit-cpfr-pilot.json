@@ -1,0 +1,25 @@
+{
+ "steps": [
+  {
+   "action": "photo",
+   "image": "commands-ucp-media/img-magnit17.jpg",
+   "text_html": ""
+  },
+  {
+   "action": "send",
+   "text_html": "<b>«Магнит» и девять поставщиков планируют спрос вместе</b>\n\nКоллеги, сеть запустила пилот CPFR — совместного прогноза, планирования поставок и запасов (<a href=\"https://www.magnit.com/ru/media/press-releases/magnit-i-postavshchiki-zapustili-sovmestnoe-planirovanie-sprosa-i-postavok/\">пресс-релиз «Магнита»</a>).\n\n1️⃣ Участники — девять поставщиков: молочка, мясо птицы, напитки, кондитерка, ходовой нон-фуд. Первый этап — до начала 2027 года.\n2️⃣ Стороны обмениваются продажами, остатками, прогнозами и графиками поставок (<a href=\"https://new-retail.ru/novosti/retail/magnit_zapustil_pilotnyy_proekt_sovmestnogo_planirovaniya_s_postavshchikami/\">New Retail</a>). Данные системы прогнозирования и пополнения F&R «Магнита» объединяют с данными поставщиков.\n3️⃣ Охват — вся цепочка: прогноз спроса, план производства, доставка на РЦ, пополнение магазинов. Отдельно — точность прогноза промо.\n4️⃣ Итог оценят по продажам, доступности на полке, потерям и запасам. Целевых цифр компания не публикует.\n\nДальше сеть планирует подключить других поставщиков и инструменты ИИ для прогноза.\n\n<b>Что сделать поставщику</b>\n1️⃣ Проверить, есть ли у вас свой прогноз по SKU и сети, который не стыдно положить рядом с прогнозом ритейлера.\n2️⃣ Назначить одного ответственного за сверку прогнозов и отклонений.\n3️⃣ Завести общий <a href=\"https://npscs.ru/#plan\">план поставок</a> с ключевым клиентом хотя бы по промо.\n\nДанные: <a href=\"https://www.magnit.com/ru/media/press-releases/magnit-i-postavshchiki-zapustili-sovmestnoe-planirovanie-sprosa-i-postavok/\">«Магнит»</a>, <a href=\"https://new-retail.ru/novosti/retail/magnit_zapustil_pilotnyy_proekt_sovmestnogo_planirovaniya_s_postavshchikami/\">New Retail</a>.\n\n#НППЦП #планирование #цепипоставок"
+  },
+  {
+   "action": "poll",
+   "question": "Коллеги, вы сверяете прогноз спроса с сетью или поставщиком?",
+   "options": [
+    "Да, регулярно",
+    "Только по промо",
+    "Нет, каждый планирует сам",
+    "Пробовали, не пошло"
+   ],
+   "anonymous": true,
+   "multiple": false
+  }
+ ]
+}
