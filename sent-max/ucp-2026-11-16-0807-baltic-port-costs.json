@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-16-0807-baltic-port-costs",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/211",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-16-0807-baltic-port-costs.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1e2c10db17077",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1e2c10db17077",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-16T05:07:38.463171+00:00",
+  "published_by": "max-publisher (Россия)"
+}
