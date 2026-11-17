@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-17-1100-zabaikalsk-queue",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/227",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-17-1100-zabaikalsk-queue.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1e887ee8a4c81",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1e887ee8a4c81",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-17T08:02:57.971187+00:00",
+  "published_by": "max-publisher (Россия)"
+}
