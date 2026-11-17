@@ -2,18 +2,18 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '47 5 17 11 *'   # 2026-11-17-0847-magnit-cpfr-pilot.json · пост
-    - cron: '12 6 17 11 *'   # 2026-11-17-0847-magnit-cpfr-pilot.json · страховка
-    - cron: '57 6 17 11 *'   # 2026-11-17-0957-theory-games-03-median-voter.json · пост
-    - cron: '22 7 17 11 *'   # 2026-11-17-0957-theory-games-03-median-voter.json · страховка
-    - cron: '0 8 17 11 *'   # 2026-11-17-1100-zabaikalsk-queue.json · пост
-    - cron: '25 8 17 11 *'   # 2026-11-17-1100-zabaikalsk-queue.json · страховка
-    - cron: '5 9 17 11 *'   # 2026-11-17-1205-repost-gxo-humanoids.json · пост
-    - cron: '30 9 17 11 *'   # 2026-11-17-1205-repost-gxo-humanoids.json · страховка
-    - cron: '35 10 17 11 *'   # 2026-11-17-1335-wisdom-ryzhenkov-shipper.json · пост
-    - cron: '0 11 17 11 *'   # 2026-11-17-1335-wisdom-ryzhenkov-shipper.json · страховка
-    - cron: '56 11 17 11 *'   # 2026-11-17-1456-north-supply-list.json · пост
-    - cron: '21 12 17 11 *'   # 2026-11-17-1456-north-supply-list.json · страховка
+    - cron: '4 5 18 11 *'   # 2026-11-18-0804-far-east-container-imbalance.json · пост
+    - cron: '29 5 18 11 *'   # 2026-11-18-0804-far-east-container-imbalance.json · страховка
+    - cron: '10 6 18 11 *'   # 2026-11-18-0910-theory-bias-03-substitution.json · пост
+    - cron: '35 6 18 11 *'   # 2026-11-18-0910-theory-bias-03-substitution.json · страховка
+    - cron: '37 7 18 11 *'   # 2026-11-18-1037-retail-innov-amazon-just-walk-out.json · пост
+    - cron: '2 8 18 11 *'   # 2026-11-18-1037-retail-innov-amazon-just-walk-out.json · страховка
+    - cron: '57 8 18 11 *'   # 2026-11-18-1157-repost-flowwow-agent.json · пост
+    - cron: '22 9 18 11 *'   # 2026-11-18-1157-repost-flowwow-agent.json · страховка
+    - cron: '19 10 18 11 *'   # 2026-11-18-1319-release-05113-tools-steps.json · пост
+    - cron: '44 10 18 11 *'   # 2026-11-18-1319-release-05113-tools-steps.json · страховка
+    - cron: '30 11 18 11 *'   # 2026-11-18-1430-bp-value-stream-map.json · пост
+    - cron: '55 11 18 11 *'   # 2026-11-18-1430-bp-value-stream-map.json · страховка
   workflow_dispatch:
 permissions:
   contents: write
