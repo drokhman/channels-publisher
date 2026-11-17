@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-17-1205-repost-gxo-humanoids",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/228",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-17-1205-repost-gxo-humanoids.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1e8c22edf1d62",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1e8c22edf1d62",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-17T09:06:36.123301+00:00",
+  "published_by": "max-publisher (Россия)"
+}
