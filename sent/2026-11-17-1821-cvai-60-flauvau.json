@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-17-1821-cvai-60-flauvau",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 202,
+  "text_message_id": 203,
+  "link": "https://t.me/chelovek_vs_ai/203",
+  "file": "2026-11-17-1821-cvai-60-flauvau.json",
+  "due_at": "2026-11-17T15:21:00.000Z",
+  "published_at": "2026-11-17T15:22:14.671Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
