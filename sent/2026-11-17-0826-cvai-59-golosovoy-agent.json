@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-17-0826-cvai-59-golosovoy-agent",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 200,
+  "text_message_id": 201,
+  "link": "https://t.me/chelovek_vs_ai/201",
+  "file": "2026-11-17-0826-cvai-59-golosovoy-agent.json",
+  "due_at": "2026-11-17T05:26:00.000Z",
+  "published_at": "2026-11-17T05:26:14.927Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
