@@ -3,8 +3,7 @@ on:
   push:
     branches: [main]
     paths: ['sent/*cvai*.json', 'config/cvai-topics.json']
-  schedule:
-    - cron: '*/30 * * * *'
+  # Без расписания: запуск по факту выхода поста (push в sent/); пропущенное подхватит следующий запуск.
   workflow_dispatch:
 permissions:
   contents: write

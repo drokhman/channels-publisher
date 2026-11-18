@@ -3,8 +3,7 @@ on:
   push:
     branches: [main]
     paths: ['scheduled-ucp-done/*.json', 'commands-ucp-done/*.json', 'config/ucp-topics.json']
-  schedule:
-    - cron: '17,47 * * * *'
+  # Без расписания: рубрикатор уже встроен в «УЦП расписание» и идёт после каждого поста.
   workflow_dispatch:
 permissions:
   contents: write

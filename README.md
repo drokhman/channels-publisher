@@ -82,6 +82,6 @@
 
 - Очередь: `scheduled-ucp/ГГГГ-ММ-ДД-ЧЧММ-slug.json` (время московское), формат `{"steps":[{"action":"photo"|"send"|"poll", ...}]}` — действия как в `bot/ucp_commands.py`.
 - Время постов: `python3 bot/ucp_times.py ДАТА [5|6] [ЧЧММ]` — 5–6 постов, шаг 60–90 мин, 08:00–18:45, время дня не повторяется (журнал `scheduled-ucp/used-times.txt`).
-- После добавления файлов: `python3 bot/ucp_cron.py` — пересчитывает cron в `.github/workflows/ucp-schedule.yml` (пост + страховка через 25 мин). Пушить с токеном, у которого есть scope `workflow`.
+- После добавления файлов: `python3 bot/ucp_cron.py` — пересчитывает cron в `.github/workflows/ucp-schedule.yml` (один запуск на пост; страховка убрана ради минут Actions). Пушить с токеном, у которого есть scope `workflow`.
 - Публикует `bot/ucp_schedule.py`: один пост за запуск, результат — `scheduled-ucp-done/` или `scheduled-ucp-failed/` (message_id, late_min).
 - Удалить или исправить вышедший пост — команда в `commands-ucp/` (delete, edit, edit_caption).

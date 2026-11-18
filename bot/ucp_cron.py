@@ -1,8 +1,8 @@
 """Пишет строки cron в .github/workflows/ucp-schedule.yml по очереди scheduled-ucp/.
 
 Запуск: python3 bot/ucp_cron.py. Для каждого поста — свой запуск в его минуту (UTC = Москва − 3 ч),
-плюс страховочный запуск через 25 минут: если GitHub пропустил основной, пост уйдёт со страховочным.
-Так минут GitHub Actions уходит мало (2 коротких запуска на пост), а время выхода у каждого поста своё.
+Основной запуск в минуту поста делает внешний вызов workflow_dispatch; cron здесь — второй путь.
+Страховка через 25 минут убрана 2026-11-18 (экономия минут GitHub Actions).
 """
 import pathlib, re, datetime as dt
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -16,7 +16,7 @@ for p in sorted((ROOT / "scheduled-ucp").glob("*.json")):
         continue
     y, mo, d, h, mi = map(int, m.groups())
     t = dt.datetime(y, mo, d, h, mi, tzinfo=dt.timezone(dt.timedelta(hours=3))).astimezone(dt.timezone.utc)
-    for k, tt in (("пост", t), ("страховка", t + dt.timedelta(minutes=25))):
+    for k, tt in (("пост", t),):
         if tt > now - dt.timedelta(hours=1):
             lines.append(f"    - cron: '{tt.minute} {tt.hour} {tt.day} {tt.month} *'   # {p.name} · {k}")
 if not lines:
