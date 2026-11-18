@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-18-1157-repost-flowwow-agent",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/239",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-18-1157-repost-flowwow-agent.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1ede1f7f61599",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1ede1f7f61599",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-18T08:59:17.839718+00:00",
+  "published_by": "max-publisher (Россия)"
+}
