@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-18-1430-bp-value-stream-map",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/242",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-18-1430-bp-value-stream-map.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1ee6c9fd817c9",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1ee6c9fd817c9",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-18T11:30:49.738651+00:00",
+  "published_by": "max-publisher (Россия)"
+}
