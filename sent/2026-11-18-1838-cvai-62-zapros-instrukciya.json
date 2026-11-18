@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-18-1838-cvai-62-zapros-instrukciya",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 206,
+  "text_message_id": 207,
+  "link": "https://t.me/chelovek_vs_ai/207",
+  "file": "2026-11-18-1838-cvai-62-zapros-instrukciya.json",
+  "due_at": "2026-11-18T15:38:00.000Z",
+  "published_at": "2026-11-18T15:38:15.196Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
