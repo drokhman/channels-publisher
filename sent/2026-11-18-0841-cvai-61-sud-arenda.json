@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-18-0841-cvai-61-sud-arenda",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 204,
+  "text_message_id": 205,
+  "link": "https://t.me/chelovek_vs_ai/205",
+  "file": "2026-11-18-0841-cvai-61-sud-arenda.json",
+  "due_at": "2026-11-18T05:41:00.000Z",
+  "published_at": "2026-11-18T05:42:14.679Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
