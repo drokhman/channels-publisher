@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Публикатор MAX на российском сервере. Версия 1.2 (04.11.2026): разовые команды commands-max/ (в т. ч. обложка канала set_icon), опросы @nscspr карточкой со ссылкой на Telegram.
+"""Публикатор MAX на российском сервере. Версия 1.3 (18.11.2026): видео в MAX — шаг video в scheduled-ucp и поле video в разовых командах.
+Версия 1.2 (04.11.2026): разовые команды commands-max/ (в т. ч. обложка канала set_icon), опросы @nscspr карточкой со ссылкой на Telegram.
 
 Берёт из GitHub посты, которые уже вышли в Telegram, и публикует тот же пост в канал MAX:
 - каналы n8n: sent/{id}.json, текст и картинка — из истории outbox/;
@@ -8,6 +9,8 @@
 Telegram этот скрипт не трогает: его по-прежнему публикует n8n в Нидерландах.
 
 - разовые команды: commands-max/{имя}.json — отправить с кнопками и закрепить, исправить, удалить.
+- видео (1.3): MP4/MOV/MKV/WEBM до 250 МБ из репозитория (commands-ucp-media/). MAX обрабатывает видео
+  после загрузки, поэтому отправка повторяется при attachment.not.ready с растущей паузой (video_retry_seconds).
 
 Результат: sent-max/{id}.json при успехе, failed-max/{id}-{время}.json при ошибке.
 Защита от дублей: локальная отметка в STATE_DIR ставится сразу после ответа MAX,
@@ -101,6 +104,13 @@ def original_post(file):
     raise RuntimeError('не найден текст поста outbox/' + file + ' в истории GitHub')
 
 
+def repo_file_bytes(path):
+    s, b = gh('GET', '/contents/' + urllib.parse.quote(path), raw=True)
+    if s != 200:
+        raise RuntimeError('файл %s: HTTP %s' % (path, s))
+    return b
+
+
 def repo_file_b64(path):
     s, b = gh('GET', '/contents/' + urllib.parse.quote(path), raw=True)
     if s != 200:
@@ -159,18 +169,54 @@ def upload_image(b64, mime):
     raise RuntimeError('MAX не вернул токен картинки: ' + json.dumps(u, ensure_ascii=False)[:200])
 
 
+VIDEO_EXT = {'.mp4': 'video/mp4', '.mov': 'video/quicktime', '.mkv': 'video/x-matroska', '.webm': 'video/webm'}
+
+
+def upload_video(data, filename):
+    """POST /uploads?type=video → адрес и токен; файл уходит одним multipart-запросом в поле data."""
+    ext = os.path.splitext(filename)[1].lower()
+    if ext not in VIDEO_EXT:
+        raise RuntimeError('видео %s: MAX принимает только MP4, MOV, MKV, WEBM' % filename)
+    if len(data) > 250 * 1024 * 1024:
+        raise RuntimeError('видео %s: %.0f МБ, у MAX предел 250 МБ' % (filename, len(data) / 1048576))
+    s, r = max_req('POST', '/uploads?type=video')
+    if s != 200 or not r.get('url'):
+        raise RuntimeError('MAX не выдал адрес загрузки видео: HTTP %s %s' % (s, json.dumps(r, ensure_ascii=False)[:200]))
+    boundary = uuid.uuid4().hex
+    body = (('--%s\r\nContent-Disposition: form-data; name="data"; filename="%s"\r\n'
+             'Content-Type: %s\r\n\r\n' % (boundary, os.path.basename(filename)[-200:], VIDEO_EXT[ext])).encode()
+            + data + ('\r\n--%s--\r\n' % boundary).encode())
+    s2, b2 = http('POST', r['url'], {'Authorization': MAX_TOKEN, 'Content-Type': 'multipart/form-data; boundary=' + boundary},
+                  body, timeout=CFG.get('video_upload_timeout', 600))
+    u = js(b2)
+    if s2 not in (200, 201):
+        raise RuntimeError('загрузка видео: HTTP %s %s' % (s2, json.dumps(u, ensure_ascii=False)[:200]))
+    token = r.get('token') or u.get('token')          # у видео токен приходит уже в ответе /uploads
+    if not token:
+        raise RuntimeError('MAX не вернул токен видео: ' + json.dumps(u, ensure_ascii=False)[:200])
+    return {'token': token}
+
+
+def has_video(body):
+    return any(a.get('type') == 'video' for a in body.get('attachments') or [])
+
+
 def send(chat_id, body):
-    """Повтор один раз и только при attachment.not.ready: в этом случае поста точно нет."""
+    """Повтор только при attachment.not.ready: в этом случае поста точно нет.
+    Картинка — один повтор через retry_seconds; видео обрабатывается дольше — паузы video_retry_seconds."""
     path = '/messages?chat_id=' + urllib.parse.quote(str(chat_id))
-    for attempt in (1, 2):
+    waits = CFG.get('video_retry_seconds', [10, 20, 40, 60, 90]) if has_video(body) else [CFG.get('retry_seconds', 10)]
+    attempt = 0
+    while True:
+        attempt += 1
         s, r = max_req('POST', path, body)
         if 200 <= s < 300 and r.get('message'):
             m = r['message']
             return {'ok': True, 'attempts': attempt, 'max_mid': (m.get('body') or {}).get('mid'), 'max_url': m.get('url')}
         code = r.get('code', '')
         err = 'HTTP %s: %s%s' % (s, (code + ' — ') if code else '', str(r.get('message') or r)[:300])
-        if code == 'attachment.not.ready' and attempt == 1:
-            time.sleep(CFG.get('retry_seconds', 10)); continue
+        if code == 'attachment.not.ready' and attempt <= len(waits):
+            time.sleep(waits[attempt - 1]); continue
         return {'ok': False, 'attempts': attempt, 'error': err}
 
 
@@ -249,7 +295,7 @@ def publish(pid, base, items, published_at, now, notify_link):
             error = 'Текст для MAX длиннее %s знаков (%s). Сократите или задайте max_text_html.' % (limit, len(it['text']))
     if DRY:
         for it in items:
-            log('[dry-run]', pid, '→ MAX', base['max_chat_id'], '| картинка:', 'файл' if it.get('image_b64') or it.get('image_path') else ('ссылка' if it.get('image_url') else 'нет'),
+            log('[dry-run]', pid, '→ MAX', base['max_chat_id'], '| видео:', it.get('video_path') or 'нет', '| картинка:', 'файл' if it.get('image_b64') or it.get('image_path') else ('ссылка' if it.get('image_url') else 'нет'),
                 '| знаков:', len(it['text']), '| ошибка:' if error else '', error or '')
         return
     if not error:
@@ -257,7 +303,10 @@ def publish(pid, base, items, published_at, now, notify_link):
             body = {'text': it['text'], 'format': 'html'}
             try:
                 b64 = it.get('image_b64') or (repo_file_b64(it['image_path']) if it.get('image_path') else None)
-                if b64:
+                if it.get('video_path'):
+                    body['attachments'] = [{'type': 'video', 'payload': upload_video(repo_file_bytes(it['video_path']), it['video_path'])}]
+                    time.sleep(CFG.get('after_video_upload_seconds', 10))
+                elif b64:
                     body['attachments'] = [{'type': 'image', 'payload': upload_image(b64, it.get('mime'))}]
                     time.sleep(CFG.get('after_upload_seconds', 3))
                 elif it.get('image_url'):
@@ -347,6 +396,9 @@ def process_ucp(file, now):
         if st.get('action') == 'photo':
             items.append({'text': to_max_html(st.get('max_text_html') or st.get('text_html') or ''), 'image_path': st.get('image'),
                           'mime': 'image/png' if str(st.get('image', '')).endswith('.png') else 'image/jpeg'})
+        elif st.get('action') == 'video':
+            items.append({'text': to_max_html(st.get('max_text_html') or st.get('caption') or st.get('text_html') or ''),
+                          'video_path': st.get('video'), 'buttons': st.get('max_buttons')})
         elif st.get('action') in ('message', 'text', 'send'):
             if st.get('max_skip'):
                 continue                         # текст уже ушёл подписью к фото (max_text_html)
@@ -384,7 +436,8 @@ def poll_card(st, tg_mid, tg='nscspr'):
 # ---------- разовые команды для каналов MAX ----------
 def process_command(file, now):
     """commands-max/{имя}.json — разовые действия в канале MAX: отправить (с кнопками и закреплением),
-    исправить, закрепить, удалить. Пример: {"channel": "@nscspr", "steps": [
+    исправить, закрепить, удалить. Видео (1.3): в шаге send поле "video": "commands-ucp-media/x.mp4" вместо "image".
+    Пример: {"channel": "@nscspr", "steps": [
       {"action": "send", "key": "toc", "text_html": "...", "buttons": [[{"text": "...", "url": "..."}]], "pin": true},
       {"action": "edit", "key": "toc", "text_html": "...", "buttons": [...]},
       {"action": "pin", "key": "toc"}, {"action": "delete", "key": "toc"},
@@ -412,7 +465,10 @@ def process_command(file, now):
             if len(body['text']) > CFG.get('text_limit', 4000):
                 error = 'текст длиннее %s знаков' % CFG.get('text_limit', 4000); break
             att = []
-            if st.get('image'):
+            if st.get('video'):
+                att.append({'type': 'video', 'payload': upload_video(repo_file_bytes(st['video']), st['video'])})
+                time.sleep(CFG.get('after_video_upload_seconds', 10))
+            elif st.get('image'):
                 att.append({'type': 'image', 'payload': upload_image(repo_file_b64(st['image']),
                             'image/png' if st['image'].endswith('.png') else 'image/jpeg')})
                 time.sleep(CFG.get('after_upload_seconds', 3))

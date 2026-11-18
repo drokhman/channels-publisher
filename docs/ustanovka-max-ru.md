@@ -165,3 +165,25 @@ outbox/ ──n8n (Нидерланды)──► Telegram ──► sent/{id}.j
 ## Опросы @nscspr в MAX (версия 1.1)
 
 В Bot API MAX опросов нет (вложения: image, video, audio, file, sticker, contact, inline_keyboard, location). Шаг `poll` из `scheduled-ucp-done/` уходит в MAX отдельным сообщением: «📊 Опрос», вопрос, варианты с номерами и кнопка «Ответить в Telegram» на сам опрос (`t.me/nscspr/{message_id}`). Свой текст карточки — поле `max_text_html` в шаге опроса. Разовые опросы из `commands-ucp/` в MAX по-прежнему не дублируются.
+
+## Видео в MAX (версия 1.3, 18.11.2026)
+
+MAX принимает видео MP4, MOV, MKV, WEBM до 250 МБ: `POST /uploads?type=video` выдаёт адрес и токен, файл уходит туда в поле `data`, сообщение отправляется с вложением `{"type": "video", "payload": {"token": …}}`. После загрузки MAX обрабатывает видео, поэтому при ответе `attachment.not.ready` отправка повторяется с паузами `video_retry_seconds` (по умолчанию 10, 20, 40, 60, 90 с). Пост при этом точно не вышел, дубля нет.
+
+- **Расписание @nscspr.** Шаг `{"action": "video", "video": "commands-ucp-media/x.mp4", "caption": "…", "width": 1280, "height": 720}` в `scheduled-ucp/` публикует видео в Telegram (`sendVideo`, у бота Telegram предел 50 МБ), затем публикатор повторяет его в MAX. Свой текст для MAX — `max_text_html`, кнопки под видео в MAX — `max_buttons` (как `buttons` у разовых команд).
+- **Разовые команды.** В шаге `send` поле `"video": "commands-ucp-media/x.mp4"` вместо `"image"`.
+- **Настройки** (необязательно, в `config.json`): `video_retry_seconds`, `after_video_upload_seconds` (пауза после загрузки, 10 с), `video_upload_timeout` (600 с).
+- **Проверено на имитации GitHub и MAX:** видео 11,7 МБ из расписания и из разовой команды, первый ответ «не готово» и повтор, кнопки под видео, запись `sent-max/` и `commands-max-done/`, повторный проход без дублей. Живой API MAX с видео ещё не проверялся — первая отправка и есть проверка.
+
+### Обновление сервера до 1.3 (5 минут)
+
+1. **Сервер.** `cd /opt/max-publisher` и шаг 2.3 этой инструкции (скачивает новый `max_publisher.py`, `config.json` и `.env` не трогает).
+2. **Сервер.** Посмотреть, что уйдёт, ничего не отправляя:
+   ```sh
+   systemd-run --quiet --pipe --wait -p User=maxpub -p EnvironmentFile=/opt/max-publisher/.env \
+     /usr/bin/python3 /opt/max-publisher/max_publisher.py --dry-run
+   ```
+   Строки `cmd-…` — разовые команды из `commands-max/`, которые выполнятся при ближайшем проходе таймера. Все команды, которые не нужны, уберите из `commands-max/` в GitHub до следующего прохода.
+3. Через 2–4 минуты: `journalctl -u max-publisher --since "10 min ago" --no-pager`, строка `→ send … mid…` и файл в `commands-max-done/`.
+
+Откат: шаг 2.3 с `?ref=3036f2d` (версия 1.2) в адресе файла.
