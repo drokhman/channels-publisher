@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-19-1107-kpi-rzd-glazkov",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/250",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-19-1107-kpi-rzd-glazkov.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1f2d9fda24125",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1f2d9fda24125",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-19T08:08:48.467306+00:00",
+  "published_by": "max-publisher (Россия)"
+}
