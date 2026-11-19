@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-19-1311-wisdom-koroy-logistics-margin",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/253",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-19-1311-wisdom-koroy-logistics-margin.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1f34a9a331189",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1f34a9a331189",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-19T10:11:48.467289+00:00",
+  "published_by": "max-publisher (Россия)"
+}
