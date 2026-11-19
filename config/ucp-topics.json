@@ -74,7 +74,8 @@
     {
       "key": "law",
       "name": "1️⃣2️⃣ Изменения права",
-      "icon_color": 9367192
+      "icon_color": 9367192,
+      "thread_id": 271
     }
   ],
   "rules": [
