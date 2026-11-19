@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-19-0809-cvai-63-mif-zarplata",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 208,
+  "text_message_id": 209,
+  "link": "https://t.me/chelovek_vs_ai/209",
+  "file": "2026-11-19-0809-cvai-63-mif-zarplata.json",
+  "due_at": "2026-11-19T05:09:00.000Z",
+  "published_at": "2026-11-19T05:10:15.035Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
