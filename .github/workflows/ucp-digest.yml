@@ -1,0 +1,29 @@
+name: УЦП дайджест права
+on:
+  schedule:
+    - cron: '30 7 * * *'   # 10:30 МСК: опубликованный на площадке выпуск → библиотека и анонс в канале
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ucp-digest
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Отправить выпуск
+        env:
+          UCP_BOT_TOKEN: ${{ secrets.UCP_BOT_TOKEN }}
+        run: python3 bot/ucp_digest.py
+      - name: Сохранить результат
+        if: always()
+        run: |
+          git config user.name "ucp-digest (GitHub Actions)"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A -- digest-ucp-done
+          git diff --cached --quiet || (git commit -m "УЦП: дайджест права" && git pull --rebase && git push)
