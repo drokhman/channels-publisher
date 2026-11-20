@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-20-1826-cvai-66-poslednee-slovo",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 216,
+  "text_message_id": 217,
+  "link": "https://t.me/chelovek_vs_ai/217",
+  "file": "2026-11-20-1826-cvai-66-poslednee-slovo.json",
+  "due_at": "2026-11-20T15:26:00.000Z",
+  "published_at": "2026-11-20T15:26:14.644Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
