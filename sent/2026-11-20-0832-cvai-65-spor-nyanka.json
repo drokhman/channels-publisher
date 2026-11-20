@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-20-0832-cvai-65-spor-nyanka",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 212,
+  "text_message_id": 213,
+  "link": "https://t.me/chelovek_vs_ai/213",
+  "file": "2026-11-20-0832-cvai-65-spor-nyanka.json",
+  "due_at": "2026-11-20T05:32:00.000Z",
+  "published_at": "2026-11-20T05:32:14.309Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
