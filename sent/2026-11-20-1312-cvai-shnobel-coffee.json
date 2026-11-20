@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-20-1312-cvai-shnobel-coffee",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": null,
+  "text_message_id": 215,
+  "link": "https://t.me/chelovek_vs_ai/215",
+  "file": "2026-11-20-1312-cvai-shnobel-coffee.json",
+  "due_at": "2026-11-20T10:12:00.000Z",
+  "published_at": "2026-11-20T10:12:14.197Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
