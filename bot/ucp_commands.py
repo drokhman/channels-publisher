@@ -122,7 +122,12 @@ def run(c):
         parts = [f"--{b}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode()
                  for k, v in (("chat_id", chat), ("caption", c.get("caption", "")), ("parse_mode", "HTML"),
                               ("width", str(c.get("width", 800))), ("height", str(c.get("height", 800))), ("supports_streaming", "true"))
-                              + ((("message_thread_id", str(c["thread_id"])),) if c.get("thread_id") else ())]
+                              + ((("message_thread_id", str(c["thread_id"])),) if c.get("thread_id") else ())
+                              + ((("duration", str(int(c["duration"]))),) if c.get("duration") else ())
+                              + ((("thumbnail", "attach://thumb"),) if c.get("thumb") else ())]
+        if c.get("thumb"):   # обложка JPEG до 200 КБ и 320 px; без duration и обложки Telegram показывает 0:00
+            parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"thumb\"; filename=\"thumb.jpg\"\r\nContent-Type: image/jpeg\r\n\r\n".encode()
+                         + (ROOT / c["thumb"]).read_bytes() + b"\r\n")
         parts.append(f"--{b}\r\nContent-Disposition: form-data; name=\"video\"; filename=\"{path.name}\"\r\nContent-Type: video/mp4\r\n\r\n".encode() + path.read_bytes() + b"\r\n")
         parts.append(f"--{b}--\r\n".encode())
         req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/sendVideo", data=b"".join(parts),
