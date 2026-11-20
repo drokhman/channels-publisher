@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-20-1350-bp-fmea",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/266",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-20-1350-bp-fmea.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1f89521d20a91",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1f89521d20a91",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-20T10:51:19.147262+00:00",
+  "published_by": "max-publisher (Россия)"
+}
