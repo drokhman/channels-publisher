@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-20-0825-nsr-40mt-record",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/256",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-20-0825-nsr-40mt-record.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1f76c095b000b",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1f76c095b000b",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-20T05:26:48.462300+00:00",
+  "published_by": "max-publisher (Россия)"
+}
