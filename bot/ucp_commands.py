@@ -17,7 +17,7 @@
 import json, os, pathlib, sys, time, urllib.request, urllib.error
 
 TOKEN = os.environ.get("UCP_BOT_TOKEN", "")
-ALLOWED = ["@nscspr", "-1004303710880"]  # канал и группа-библиотека «Библиотека платформы»
+ALLOWED = ["@nscspr", "-1004303710880", "@npscs_dzen"]  # канал, группа-библиотека «Библиотека платформы», мост в Дзен
 DEFAULT_CHAT = "@nscspr"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC, DONE, FAIL = ROOT / "commands-ucp", ROOT / "commands-ucp-done", ROOT / "commands-ucp-failed"
