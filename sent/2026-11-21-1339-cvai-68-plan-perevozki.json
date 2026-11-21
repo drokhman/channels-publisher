@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-21-1339-cvai-68-plan-perevozki",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 225,
+  "text_message_id": 226,
+  "link": "https://t.me/chelovek_vs_ai/226",
+  "file": "2026-11-21-1339-cvai-68-plan-perevozki.json",
+  "due_at": "2026-11-21T10:39:00.000Z",
+  "published_at": "2026-11-21T10:40:14.392Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
