@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-21-1147-pt-cyber-espionage-logistics",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/272",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-21-1147-pt-cyber-espionage-logistics.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a1fd4bda04186b",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a1fd4bda04186b",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-21T08:49:22.992480+00:00",
+  "published_by": "max-publisher (Россия)"
+}
