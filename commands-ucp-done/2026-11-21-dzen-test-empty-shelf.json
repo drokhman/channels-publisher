@@ -1,0 +1,76 @@
+{
+  "action": "photo",
+  "chat_id": "@npscs_dzen",
+  "image": "commands-ucp-media/dzen-test-empty-shelf.jpg",
+  "text_html": "Товар есть на складе, а полка пустая: где теряются продажи поставщика\n\nПокупатель не видит ваш товар, и ему всё равно, что он лежит в распределительном центре. Продажа потеряна.\n\nГде чаще всего рвётся цепочка:\n\n1. Заказ магазина. Автозаказ считает по остаткам в системе, а не на полке. Если в учёте есть «фантомный» остаток, товар не дозаказывают.\n2. Приёмка. Поставка пришла, но не оприходована вовремя — для системы товара ещё нет.\n3. Торговый зал. Товар в подсобке, а выкладку не успели сделать.\n4. Планограмма. Место на полке меньше, чем продаётся за время между поставками.\n\nЧто проверить поставщику на этой неделе: сравните отгрузки в сеть с продажами по магазинам. Где отгрузки есть, а продаж нет — там товар застрял до полки.\n\nРазбираем такие задачи каждый день в канале УЦП: https://t.me/nscspr\nПодборки по темам — в Библиотеке: https://t.me/+eeQ6vFzW6EliNTYy",
+  "result": {
+    "ok": true,
+    "result": {
+      "message_id": 2,
+      "sender_chat": {
+        "id": -1004372841928,
+        "title": "НППЦП-Дзен",
+        "username": "npscs_dzen",
+        "type": "channel"
+      },
+      "chat": {
+        "id": -1004372841928,
+        "title": "НППЦП-Дзен",
+        "username": "npscs_dzen",
+        "type": "channel"
+      },
+      "date": 1795279339,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAyEGAAMBBKRFyAADAmsByetEIHwtKKr9NuO_FAtokm_IAALQIWsbJqAISE0bF6aEVSlwAQADAgADcwADPQQ",
+          "file_unique_id": "AQAD0CFrGyagCEh4",
+          "file_size": 1449,
+          "width": 90,
+          "height": 51
+        },
+        {
+          "file_id": "AgACAgIAAyEGAAMBBKRFyAADAmsByetEIHwtKKr9NuO_FAtokm_IAALQIWsbJqAISE0bF6aEVSlwAQADAgADbQADPQQ",
+          "file_unique_id": "AQAD0CFrGyagCEhy",
+          "file_size": 19703,
+          "width": 320,
+          "height": 180
+        },
+        {
+          "file_id": "AgACAgIAAyEGAAMBBKRFyAADAmsByetEIHwtKKr9NuO_FAtokm_IAALQIWsbJqAISE0bF6aEVSlwAQADAgADeAADPQQ",
+          "file_unique_id": "AQAD0CFrGyagCEh9",
+          "file_size": 88739,
+          "width": 800,
+          "height": 450
+        },
+        {
+          "file_id": "AgACAgIAAyEGAAMBBKRFyAADAmsByetEIHwtKKr9NuO_FAtokm_IAALQIWsbJqAISE0bF6aEVSlwAQADAgADeQADPQQ",
+          "file_unique_id": "AQAD0CFrGyagCEh-",
+          "file_size": 188469,
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "file_id": "AgACAgIAAyEGAAMBBKRFyAADAmsByetEIHwtKKr9NuO_FAtokm_IAALQIWsbJqAISE0bF6aEVSlwAQADAgADdwADPQQ",
+          "file_unique_id": "AQAD0CFrGyagCEh8",
+          "file_size": 284892,
+          "width": 1672,
+          "height": 941
+        }
+      ],
+      "caption": "Товар есть на складе, а полка пустая: где теряются продажи поставщика\n\nПокупатель не видит ваш товар, и ему всё равно, что он лежит в распределительном центре. Продажа потеряна.\n\nГде чаще всего рвётся цепочка:\n\n1. Заказ магазина. Автозаказ считает по остаткам в системе, а не на полке. Если в учёте есть «фантомный» остаток, товар не дозаказывают.\n2. Приёмка. Поставка пришла, но не оприходована вовремя — для системы товара ещё нет.\n3. Торговый зал. Товар в подсобке, а выкладку не успели сделать.\n4. Планограмма. Место на полке меньше, чем продаётся за время между поставками.\n\nЧто проверить поставщику на этой неделе: сравните отгрузки в сеть с продажами по магазинам. Где отгрузки есть, а продаж нет — там товар застрял до полки.\n\nРазбираем такие задачи каждый день в канале УЦП: https://t.me/nscspr\nПодборки по темам — в Библиотеке: https://t.me/+eeQ6vFzW6EliNTYy",
+      "caption_entities": [
+        {
+          "offset": 784,
+          "length": 19,
+          "type": "url"
+        },
+        {
+          "offset": 838,
+          "length": 30,
+          "type": "url"
+        }
+      ]
+    }
+  },
+  "at": "2026-11-21T16:42:19Z"
+}
