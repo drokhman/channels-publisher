@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-22-1712-ii-pribyl-03-pilot",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/287",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-22-1712-ii-pribyl-03-pilot.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a20516cf43286b",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a20516cf43286b",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-22T21:08:24.538954+00:00",
+  "published_by": "max-publisher (Россия)"
+}
