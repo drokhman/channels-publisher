@@ -7,6 +7,16 @@ on:
     - cron: '22 8 22 11 *'   # 2026-11-22-1122-release-05128-aiedu.json · пост
     - cron: '31 9 22 11 *'   # 2026-11-22-1231-repost-transport-plan.json · пост
     - cron: '32 10 22 11 *'   # 2026-11-22-1332-fns-eaeu-import-prices.json · пост
+    - cron: '43 11 22 11 *'   # 2026-11-22-1443-ii-pribyl-01-staryi-process.json · пост
+    - cron: '46 11 22 11 *'   # 2026-11-22-1446-ii-pribyl-01-staryi-process-dzen.json · пост
+    - cron: '58 12 22 11 *'   # 2026-11-22-1558-ii-pribyl-02-dengi-v-oshibkah.json · пост
+    - cron: '1 13 22 11 *'   # 2026-11-22-1601-ii-pribyl-02-dengi-v-oshibkah-dzen.json · пост
+    - cron: '12 14 22 11 *'   # 2026-11-22-1712-ii-pribyl-03-pilot.json · пост
+    - cron: '15 14 22 11 *'   # 2026-11-22-1715-ii-pribyl-03-pilot-dzen.json · пост
+    - cron: '26 15 22 11 *'   # 2026-11-22-1826-ii-pribyl-04-speshka.json · пост
+    - cron: '29 15 22 11 *'   # 2026-11-22-1829-ii-pribyl-04-speshka-dzen.json · пост
+    - cron: '38 16 22 11 *'   # 2026-11-22-1938-ii-pribyl-05-lozhnaya-cel.json · пост
+    - cron: '41 16 22 11 *'   # 2026-11-22-1941-ii-pribyl-05-lozhnaya-cel-dzen.json · пост
   workflow_dispatch:
 permissions:
   contents: write

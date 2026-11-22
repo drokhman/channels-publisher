@@ -1,0 +1,9 @@
+{
+ "steps": [
+  {
+   "action": "photo",
+   "image": "commands-ucp-media/ii-pribyl-kratko-5.jpg",
+   "text_html": "<b>Сокращение людей ложная цель внедрения ИИ.</b>\n\nНа каждый доллар, вложенный в модель, приходится около трёх долларов на изменения в организации. Сама модель стоит примерно 15% решения (<a href=\"https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/moving%20past%20gen%20ais%20honeymoon%20phase%20seven%20hard%20truths%20for%20cios/moving-past-gen-ais-honeymoon-phase-seven-hard-truths-for-cios-to-get-from-pilot-to-scale.pdf\">McKinsey</a>).\n\nДеньги уходят в перестройку работы. Если цель только сократить людей, процесс не меняют, и эффекта нет. Сокращение бывает попутным результатом. Цель другая: оптимизация процесса.\n\nКонтроль от ИИ усложняет процесс, зато делает его надёжнее. Машина проверяет больше вариантов, человек глубже думает над решениями.\n\nПример <a href=\"https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-cfos-can-make-ai-pay-off\">McKinsey</a>: европейский банк перестроил разбор финансовых результатов вокруг примерно десяти агентов. Точность 99,5% на 2 000 с лишним показателей.\n\nВ «Дизайне БП» человек утверждает список шагов до построения схемы. Любая правка снимает утверждение.\n\nПлатформа: https://npscs.ru\n\n#ИИ #бизнеспроцессы #НППЦП"
+  }
+ ]
+}
