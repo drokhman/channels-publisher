@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-22-1122-release-05128-aiedu",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/282",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-22-1122-release-05128-aiedu.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a20259e39b3c11",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a20259e39b3c11",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-22T08:22:48.460203+00:00",
+  "published_by": "max-publisher (Россия)"
+}
