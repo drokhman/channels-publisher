@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-22-1829-cvai-70-dhl-orkestrovka",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 235,
+  "text_message_id": 236,
+  "link": "https://t.me/chelovek_vs_ai/236",
+  "file": "2026-11-22-1829-cvai-70-dhl-orkestrovka.json",
+  "due_at": "2026-11-22T15:29:00.000Z",
+  "published_at": "2026-11-22T15:30:14.888Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
