@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-22-0848-usn-sellers-2027",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/279",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-22-0848-usn-sellers-2027.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a201cda69b1e79",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a201cda69b1e79",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-22T05:49:37.682667+00:00",
+  "published_by": "max-publisher (Россия)"
+}
