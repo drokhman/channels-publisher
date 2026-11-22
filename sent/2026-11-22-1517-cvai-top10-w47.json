@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-22-1517-cvai-top10-w47",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 233,
+  "text_message_id": 234,
+  "link": "https://t.me/chelovek_vs_ai/234",
+  "file": "2026-11-22-1517-cvai-top10-w47.json",
+  "due_at": "2026-11-22T12:17:00.000Z",
+  "published_at": "2026-11-22T12:18:14.627Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
