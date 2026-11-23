@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-23-1127-wisdom-bushuev-sla",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/295",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-23-1127-wisdom-bushuev-sla.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a20787f6627fb7",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a20787f6627fb7",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-23T08:31:14.005887+00:00",
+  "published_by": "max-publisher (Россия)"
+}
