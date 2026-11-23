@@ -1,0 +1,22 @@
+{
+  "max": false,
+  "steps": [
+    {
+      "action": "photo",
+      "chat_id": "@npscs_dzen",
+      "image": "commands-ucp-media/ii-pribyl-kratko-5.jpg",
+      "text_html": "<b>Сокращение людей не цель ИИ. Цель процесс.</b>\n\nНа каждый доллар в модель приходится около трёх долларов на изменения в работе. Сама модель стоит примерно 15% решения (<a href=\"https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/moving%20past%20gen%20ais%20honeymoon%20phase%20seven%20hard%20truths%20for%20cios/moving-past-gen-ais-honeymoon-phase-seven-hard-truths-for-cios-to-get-from-pilot-to-scale.pdf\">McKinsey</a>).\n\nЗначит, деньги приносит перестройка процесса. Если цель только сократить людей, процесс остаётся старым, и эффекта нет. Сокращение бывает попутным результатом, но не целью.\n\nС ИИ контроля становится больше. Зато процесс надёжнее: машина проверяет больше вариантов, человек глубже думает над решением.\n\nПример <a href=\"https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-cfos-can-make-ai-pay-off\">McKinsey</a>: европейский банк построил разбор финансовых результатов на десятке агентов. Точность 99,5% по 2 000 с лишним показателей. Логику агентам передали люди.\n\nВ «Дизайне БП» последнее слово тоже за человеком: он утверждает шаги до схемы. Любая правка снимает утверждение.\n\nСначала процесс. Потом ИИ.\nПлатформа: https://npscs.ru/\n\nКанал УЦП: https://t.me/nscspr\n\n#ИИ #бизнеспроцессы #НППЦП"
+    }
+  ],
+  "due": "2026-11-22T19:41:00+03:00",
+  "sent_at": "2026-11-23T09:01:16.185301+03:00",
+  "late_min": 800,
+  "results": [
+    {
+      "action": "photo",
+      "ok": true,
+      "message_id": 7,
+      "description": null
+    }
+  ]
+}
