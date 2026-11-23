@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-23-1352-bp-ishikawa",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/299",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-23-1352-bp-ishikawa.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a2080ce83c7de1",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a2080ce83c7de1",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-23T10:56:26.858879+00:00",
+  "published_by": "max-publisher (Россия)"
+}
