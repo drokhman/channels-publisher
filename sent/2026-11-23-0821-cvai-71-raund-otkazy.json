@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-23-0821-cvai-71-raund-otkazy",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 237,
+  "text_message_id": 238,
+  "link": "https://t.me/chelovek_vs_ai/238",
+  "file": "2026-11-23-0821-cvai-71-raund-otkazy.json",
+  "due_at": "2026-11-23T05:21:00.000Z",
+  "published_at": "2026-11-23T05:22:14.516Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
