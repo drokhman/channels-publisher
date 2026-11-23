@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-22-1938-ii-pribyl-05-lozhnaya-cel",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/289",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-22-1938-ii-pribyl-05-lozhnaya-cel.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a20700119646f0",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a20700119646f0",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-23T06:02:48.468870+00:00",
+  "published_by": "max-publisher (Россия)"
+}
