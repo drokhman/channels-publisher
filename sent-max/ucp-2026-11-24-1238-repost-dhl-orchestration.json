@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-24-1238-repost-dhl-orchestration",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/305",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-24-1238-repost-dhl-orchestration.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a20cefdc356bc2",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a20cefdc356bc2",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-24T09:42:48.470781+00:00",
+  "published_by": "max-publisher (Россия)"
+}
