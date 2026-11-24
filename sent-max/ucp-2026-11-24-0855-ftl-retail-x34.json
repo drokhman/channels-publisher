@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-24-0855-ftl-retail-x34",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/301",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-24-0855-ftl-retail-x34.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a20c21dc7b6939",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a20c21dc7b6939",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-24T05:57:48.465285+00:00",
+  "published_by": "max-publisher (Россия)"
+}
