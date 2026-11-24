@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-24-1118-release-05134-newbie-planogram",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/304",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-24-1118-release-05134-newbie-planogram.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a20ca4b8d32270",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a20ca4b8d32270",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-24T08:20:44.652212+00:00",
+  "published_by": "max-publisher (Россия)"
+}
