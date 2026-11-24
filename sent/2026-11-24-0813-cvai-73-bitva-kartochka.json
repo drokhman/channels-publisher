@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-24-0813-cvai-73-bitva-kartochka",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 242,
+  "text_message_id": 243,
+  "link": "https://t.me/chelovek_vs_ai/243",
+  "file": "2026-11-24-0813-cvai-73-bitva-kartochka.json",
+  "due_at": "2026-11-24T05:13:00.000Z",
+  "published_at": "2026-11-24T05:14:14.199Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
