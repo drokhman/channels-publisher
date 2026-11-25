@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-25-0839-cvai-75-sud-banki",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 246,
+  "text_message_id": 247,
+  "link": "https://t.me/chelovek_vs_ai/247",
+  "file": "2026-11-25-0839-cvai-75-sud-banki.json",
+  "due_at": "2026-11-25T05:39:00.000Z",
+  "published_at": "2026-11-25T05:40:14.839Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
