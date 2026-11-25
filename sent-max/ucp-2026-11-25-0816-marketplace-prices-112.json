@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-25-0816-marketplace-prices-112",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/311",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-25-0816-marketplace-prices-112.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a21174288b774f",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a21174288b774f",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-25T06:45:48.466373+00:00",
+  "published_by": "max-publisher (Россия)"
+}
