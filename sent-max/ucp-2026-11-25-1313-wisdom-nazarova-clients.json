@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-25-1313-wisdom-nazarova-clients",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/319",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-25-1313-wisdom-nazarova-clients.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a212346e972a7a",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a212346e972a7a",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-25T10:15:48.470292+00:00",
+  "published_by": "max-publisher (Россия)"
+}
