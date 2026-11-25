@@ -2,13 +2,15 @@ name: УЦП расписание
 # Публикует посты @nscspr из scheduled-ucp/ в их время. Строки cron пишет bot/ucp_cron.py — руками не править.
 on:
   schedule:
-    - cron: '39 7 25 11 *'   # 2026-11-25-1039-retail-innov-walmart-esl.json · пост
-    - cron: '8 9 25 11 *'   # 2026-11-25-1208-repost-magnit-cpfr.json · пост
     - cron: '13 10 25 11 *'   # 2026-11-25-1313-wisdom-nazarova-clients.json · пост
+    - cron: '2 9 26 11 *'   # 2026-11-26-1202-toyota-practice-01-deshevye-pozicii.json · пост
+    - cron: '34 10 26 11 *'   # 2026-11-26-1334-ai-easy-01-protokoly.json · пост
     - cron: '37 12 26 11 *'   # 2026-11-26-1537-merch-c-01-gruppa-c.json · пост
     - cron: '43 12 27 11 *'   # 2026-11-27-1543-merch-c-02-mesto-c.json · пост
     - cron: '46 12 28 11 *'   # 2026-11-28-1546-merch-c-03-karies.json · пост
     - cron: '52 12 29 11 *'   # 2026-11-29-1552-merch-c-04-svoi-strategii.json · пост
+    - cron: '7 9 1 12 *'   # 2026-12-01-1207-toyota-practice-02-milk-run.json · пост
+    - cron: '59 8 3 12 *'   # 2026-12-03-1159-toyota-practice-03-andon-priemka.json · пост
   workflow_dispatch:
 permissions:
   contents: write

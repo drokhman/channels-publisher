@@ -8,7 +8,7 @@ TOKEN = os.environ.get("CVAI_BOT_TOKEN", "")
 ALLOWED_CHATS = {"@chelovek_vs_ai", -1004326691613, "-1004326691613"}
 ALLOWED_METHODS = {"createChatInviteLink", "editMessageReplyMarkup", "editMessageText",
                    "sendMessage", "pinChatMessage", "unpinChatMessage", "deleteMessage",
-                   "editForumTopic", "getChat", "setChatPermissions"}
+                   "editForumTopic", "getChat", "setChatPermissions", "sendPoll"}
 
 def api(method, payload):
     req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/{method}",
