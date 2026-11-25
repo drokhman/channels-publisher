@@ -1,0 +1,9 @@
+{
+ "steps": [
+  {
+   "action": "photo",
+   "image": "commands-ucp-media/img-toyota-practice-03-andon-priemka.jpg",
+   "text_html": "<b>Новичок на приёмке видит ошибку: по Toyota у него должна быть кнопка</b>\n\nЦепь поставок по Toyota, практика, №3. Короткий чек-лист.\n\nКладовщики и приёмщики — одни из самых дефицитных людей в логистике по индексу hh.ru (<a href=\"https://logirus.ru/news/transport/defitsit_kadrov_u_78_logisticheskikh_kompaniy_58_zakladyvayut_rost_zatrat_na_naym.html\">Logirus</a>). Значит, на приёмке всё больше новичков. На линии Toyota любой рабочий может дёрнуть шнур андона: сначала приходит мастер, и только если он не успел, линия встаёт (<a href=\"https://global.toyota/en/company/vision-and-philosophy/production-system/\">Toyota</a>, <a href=\"https://mag.toyota.co.uk/toyota-manufacturing-25-objects-andon-cord/\">Toyota UK</a>).\n\nПроверьте свой склад, пять «да» или «нет»:\n1️⃣ Есть ли у приёмщика один простой сигнал «проблема»: кнопка в ТСД, звонок, флажок?\n2️⃣ Знает ли он, кто ответит на сигнал и за сколько минут?\n3️⃣ Считаете ли вы сигналы за неделю?\n4️⃣ Разбираете ли три самые частые причины?\n5️⃣ Не штрафуют ли за сигнал?\n\nКаждое «нет» — место, где расхождение доедет до магазина.\n\nДанные: <a href=\"https://global.toyota/en/company/vision-and-philosophy/production-system/\">Toyota Production System</a>; hh.ru.\n\n#НППЦП #склад #логистика"
+  }
+ ]
+}
