@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-25-1823-cvai-76-zapros-ramki-agenta",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 248,
+  "text_message_id": 249,
+  "link": "https://t.me/chelovek_vs_ai/249",
+  "file": "2026-11-25-1823-cvai-76-zapros-ramki-agenta.json",
+  "due_at": "2026-11-25T15:23:00.000Z",
+  "published_at": "2026-11-25T15:24:14.795Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
