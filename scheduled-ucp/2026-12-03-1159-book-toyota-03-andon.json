@@ -1,0 +1,13 @@
+{
+ "steps": [
+  {
+   "action": "photo",
+   "image": "commands-ucp-media/img-book-toyota-03-andon.jpg",
+   "text_html": ""
+  },
+  {
+   "action": "send",
+   "text_html": "<b>На линии Toyota остановить конвейер может любой рабочий</b>\n\nСерия «Toyota: как устроено», №3.\n\nВторая опора производственной системы Toyota после «точно вовремя» — дзидока, «автоматизация с человеческим лицом». Если что-то пошло не так, оборудование останавливается само, или оператор сам останавливает линию шнуром. Загорается андон — табло, которое показывает, где проблема (<a href=\"https://global.toyota/en/company/vision-and-philosophy/production-system/\">Toyota</a>, <a href=\"https://www.toyota-europe.com/about-us/toyota-vision-and-philosophy/toyota-production-system\">Toyota Europe</a>).\n\nАндон-шнур на заводах Toyota с 1950 года. На заводе Камиго андоны поставили на все линии в 1966 году, и компания называет это завершением дзидоки (<a href=\"https://mag.toyota.co.uk/toyota-manufacturing-25-objects-andon-cord/\">Toyota UK</a>, <a href=\"https://www.toyota-global.com/company/history_of_toyota/75years/text/entering_the_automotive_business/chapter1/section4/item4.html\">Toyota, 75 лет истории</a>).\n\nВажная деталь: первый рывок шнура — это вызов мастера, а не остановка. Если мастер успевает решить проблему, линия идёт дальше. Если нет, она встаёт на границе рабочего места (<a href=\"https://en.wikipedia.org/wiki/Andon_(manufacturing)\">Wikipedia</a>).\n\n<b>Почему так</b>\nБрак, который прошёл дальше, стоит дороже минуты простоя. Человек, который видит проблему первым, должен иметь право её показать, и за это его не наказывают.\n\n<b>Почему это вопрос руководителя склада</b>\nНа складе тот же выбор каждый день. Приёмщик видит расхождение, сборщик видит пустую ячейку, водитель видит нарушенную упаковку. Если сигнала нет, проблема «доделывается как-нибудь» и всплывает у клиента: недовоз, пересорт, претензия.\n\n<b>Что сделать</b>\n1️⃣ Ввести один простой сигнал о проблеме на приёмке и сборке: кнопка в ТСД, звонок, флажок на ячейке.\n2️⃣ Назначить, кто отвечает на сигнал и за сколько минут.\n3️⃣ Считать сигналы за неделю и разбирать три самые частые причины.\n4️⃣ Не наказывать за сигнал: наказание обнуляет систему за одну смену.\n\nДанные: <a href=\"https://global.toyota/en/company/vision-and-philosophy/production-system/\">Toyota Production System, Toyota</a>; <a href=\"https://mag.toyota.co.uk/toyota-manufacturing-25-objects-andon-cord/\">Toyota UK</a>; <a href=\"https://www.toyota-global.com/company/history_of_toyota/75years/text/entering_the_automotive_business/chapter1/section4/item4.html\">75 Years of Toyota</a>.\n\n#НППЦП #склад #логистика"
+  }
+ ]
+}
