@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-26-1328-cvai-shnobel-kiss",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": null,
+  "text_message_id": 252,
+  "link": "https://t.me/chelovek_vs_ai/252",
+  "file": "2026-11-26-1328-cvai-shnobel-kiss.json",
+  "due_at": "2026-11-26T10:28:00.000Z",
+  "published_at": "2026-11-26T10:28:13.856Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
