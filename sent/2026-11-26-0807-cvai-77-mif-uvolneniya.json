@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-26-0807-cvai-77-mif-uvolneniya",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 250,
+  "text_message_id": 251,
+  "link": "https://t.me/chelovek_vs_ai/251",
+  "file": "2026-11-26-0807-cvai-77-mif-uvolneniya.json",
+  "due_at": "2026-11-26T05:07:00.000Z",
+  "published_at": "2026-11-26T05:08:14.340Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
