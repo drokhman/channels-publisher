@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-26-1024-release-05139-stellazh-roliki",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/322",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-26-1024-release-05139-stellazh-roliki.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a216bed4725f00",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a216bed4725f00",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-26T07:25:28.122762+00:00",
+  "published_by": "max-publisher (Россия)"
+}
