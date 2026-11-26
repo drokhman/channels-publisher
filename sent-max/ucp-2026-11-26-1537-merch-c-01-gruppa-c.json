@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-26-1537-merch-c-01-gruppa-c",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/328",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-26-1537-merch-c-01-gruppa-c.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a217e271052ace",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a217e271052ace",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-26T12:43:59.289413+00:00",
+  "published_by": "max-publisher (Россия)"
+}
