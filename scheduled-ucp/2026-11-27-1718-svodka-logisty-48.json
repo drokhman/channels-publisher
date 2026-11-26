@@ -1,0 +1,15 @@
+{
+ "steps": [
+  {
+   "action": "photo",
+   "image": "commands-ucp-media/img-sv27.jpg",
+   "text_html": "",
+   "max_text_html": "<b>О чём говорят логисты: декабрьские ставки и склады за МКАД</b>\n\nИтоги недели — две темы.\n\n<b>1. Ставки пойдут вверх в декабре</b>\nМодели ATI.SU прогнозируют к 31 декабря: закрытый кузов +10%, рефрижератор +13%, открытый +7%. Ноябрьское снижение сменится предновогодним подъёмом. В рефсегменте с апреля по октябрь заявок стало больше на 29%, а машин — на 4% меньше (<a href=\"https://zen.ati.su/article/2026/11/23/prognozy-ob-uhode-ip-zvuchat-davno-no-malyj-biznes-prodolzhaet-rabotat-855040/\">ATI.SU</a>, <a href=\"https://adamos.ru/tarify-na-avtoperevozki-v-rossii-stabilizirovalis-pered-dekabrskim-pikom-sprosa/\">Adamos</a>).\n\n<b>2. Light Industrial: строят меньше, свободного меньше</b>\nЗа девять месяцев сделки за МКАД — 152 тыс. м², на 40% меньше, чем год назад. Ввод — 149 тыс. м², минус 48%. Доля свободных площадей сократилась до 10% (<a href=\"https://core-xp.ru/news/core-xp-obem-vvoda-obektov-light-industrial-v-moskovskom-regione-sokratilsya-na-40/\">CORE.XP</a>, <a href=\"https://new-retail.ru/novosti/retail/obyem_novogo_stroitelstva_light_industrial_v_podmoskove_sokratilsya_pochti_vdvoe/\">New Retail</a>).\n\n<b>Что сделать</b>\n1️⃣ Регулярные декабрьские рейсы, особенно рефы, заказать и зафиксировать по цене сейчас.\n2️⃣ Если в 2027 году нужен небольшой склад под Москвой — искать заранее: нового почти не строят.\n\nДанные: ATI.SU, Adamos, CORE.XP, New Retail.\n\n#НППЦП #транспорт #склад"
+  },
+  {
+   "action": "send",
+   "text_html": "<b>О чём говорят логисты: декабрьские ставки и склады за МКАД</b>\n\nИтоги недели — две темы.\n\n<b>1. Ставки пойдут вверх в декабре</b>\nМодели ATI.SU прогнозируют к 31 декабря: закрытый кузов +10%, рефрижератор +13%, открытый +7%. Ноябрьское снижение сменится предновогодним подъёмом. В рефсегменте с апреля по октябрь заявок стало больше на 29%, а машин — на 4% меньше (<a href=\"https://zen.ati.su/article/2026/11/23/prognozy-ob-uhode-ip-zvuchat-davno-no-malyj-biznes-prodolzhaet-rabotat-855040/\">ATI.SU</a>, <a href=\"https://adamos.ru/tarify-na-avtoperevozki-v-rossii-stabilizirovalis-pered-dekabrskim-pikom-sprosa/\">Adamos</a>).\n\n<b>2. Light Industrial: строят меньше, свободного меньше</b>\nЗа девять месяцев сделки за МКАД — 152 тыс. м², на 40% меньше, чем год назад. Ввод — 149 тыс. м², минус 48%. Доля свободных площадей сократилась до 10% (<a href=\"https://core-xp.ru/news/core-xp-obem-vvoda-obektov-light-industrial-v-moskovskom-regione-sokratilsya-na-40/\">CORE.XP</a>, <a href=\"https://new-retail.ru/novosti/retail/obyem_novogo_stroitelstva_light_industrial_v_podmoskove_sokratilsya_pochti_vdvoe/\">New Retail</a>).\n\n<b>Что сделать</b>\n1️⃣ Регулярные декабрьские рейсы, особенно рефы, заказать и зафиксировать по цене сейчас.\n2️⃣ Если в 2027 году нужен небольшой склад под Москвой — искать заранее: нового почти не строят.\n\nДанные: ATI.SU, Adamos, CORE.XP, New Retail.\n\n#НППЦП #транспорт #склад",
+   "max_skip": true
+  }
+ ]
+}
