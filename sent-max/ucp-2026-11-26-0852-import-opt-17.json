@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-26-0852-import-opt-17",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/321",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-26-0852-import-opt-17.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a2166ac42b5334",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a2166ac42b5334",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-26T05:53:38.436964+00:00",
+  "published_by": "max-publisher (Россия)"
+}
