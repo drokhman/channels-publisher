@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-27-1226-ai-easy-02-sbor-materialov",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/336",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-27-1226-ai-easy-02-sbor-materialov.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a21c54a27e4b2a",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a21c54a27e4b2a",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-27T09:27:11.687879+00:00",
+  "published_by": "max-publisher (Россия)"
+}
