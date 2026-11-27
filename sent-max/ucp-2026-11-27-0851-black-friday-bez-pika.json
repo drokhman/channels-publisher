@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-27-0851-black-friday-bez-pika",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/332",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-27-0851-black-friday-bez-pika.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a21b8fa24c2aca",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a21b8fa24c2aca",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-27T05:52:01.137525+00:00",
+  "published_by": "max-publisher (Россия)"
+}
