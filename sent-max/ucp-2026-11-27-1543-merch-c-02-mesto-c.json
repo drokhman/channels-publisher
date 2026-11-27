@@ -1,0 +1,19 @@
+{
+  "id": "ucp-2026-11-27-1543-merch-c-02-mesto-c",
+  "channel": "НППЦП",
+  "tg_chat_id": "@nscspr",
+  "tg_link": "https://t.me/nscspr/338",
+  "max_chat_id": "-80763895561532",
+  "file": "scheduled-ucp-done/2026-11-27-1543-merch-c-02-mesto-c.json",
+  "max_mid": "mid.ffffb68bb0b1c2c401a21d098e384158",
+  "max_url": null,
+  "parts": [
+    {
+      "max_mid": "mid.ffffb68bb0b1c2c401a21d098e384158",
+      "max_url": null,
+      "attempts": 1
+    }
+  ],
+  "published_at": "2026-11-27T12:44:48.466511+00:00",
+  "published_by": "max-publisher (Россия)"
+}
