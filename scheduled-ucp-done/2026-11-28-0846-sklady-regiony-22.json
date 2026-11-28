@@ -1,0 +1,32 @@
+{
+  "steps": [
+    {
+      "action": "photo",
+      "image": "commands-ucp-media/img-wh28.jpg",
+      "text_html": "",
+      "max_text_html": "<b>Склады в регионах берут вдвое реже, а свободных почти не осталось</b>\n\nЗа январь–сентябрь сделок со складами в России — 2,23 млн м² против 2,87 млн годом ранее, минус 22%. Данные Bright Rich | CORFAC International (<a href=\"https://tass.ru/nedvizhimost/28237651\">ТАСС</a>, <a href=\"https://www.interfax-russia.ru/realty/news/obem-sdelok-so-skladami-v-rossii-upal-na-22-za-god-issledovanie\">Интерфакс</a>).\n\n1️⃣ В Москве спрос упал на 15%, за пределами Москвы и Петербурга — на 44% (<a href=\"https://logistics.ru/upravlenie-logistikoy-i-kompaniey-regionalnaya-logistika-skladirovanie/za-predelami-moskvy-i\">Logistics.ru</a>, <a href=\"https://new-retail.ru/novosti/retail/spros_na_sklady_v_moskve_snizilsya_na_15_v_regionakh_na_44/\">New Retail</a>).\n2️⃣ При этом на восьми ключевых региональных рынках свободно 3,4% площадей — минимум с начала года. Блоков больше 30 тыс. м² в предложении не осталось (<a href=\"https://core-xp.ru/news/core-xp-krupnye-svobodnye-skladskie-bloki-ischezli-iz-predlozheniya-na-klyuchevykh-regionalnykh-rynk/\">CORE.XP</a>, <a href=\"https://logistics.ru/upravlenie-logistikoy-i-kompaniey-regionalnaya-logistika-skladirovanie/na-vosmi-regionalnykh\">Logistics.ru</a>).\n\nСтроят меньше, чем падает спрос, поэтому «рынок арендатора» в регионах не наступил.\n\n<b>Что сделать</b>\n1️⃣ Если в 2027 году нужен региональный РЦ — начать поиск сейчас и рассматривать два-три блока поменьше вместо одного большого.\n2️⃣ Продлевая аренду, не рассчитывать на скидку из-за падения спроса: свободных площадей мало.\n\nДанные: Bright Rich | CORFAC International, CORE.XP.\n\n#НППЦП #склад #логистика"
+    },
+    {
+      "action": "send",
+      "text_html": "<b>Склады в регионах берут вдвое реже, а свободных почти не осталось</b>\n\nЗа январь–сентябрь сделок со складами в России — 2,23 млн м² против 2,87 млн годом ранее, минус 22%. Данные Bright Rich | CORFAC International (<a href=\"https://tass.ru/nedvizhimost/28237651\">ТАСС</a>, <a href=\"https://www.interfax-russia.ru/realty/news/obem-sdelok-so-skladami-v-rossii-upal-na-22-za-god-issledovanie\">Интерфакс</a>).\n\n1️⃣ В Москве спрос упал на 15%, за пределами Москвы и Петербурга — на 44% (<a href=\"https://logistics.ru/upravlenie-logistikoy-i-kompaniey-regionalnaya-logistika-skladirovanie/za-predelami-moskvy-i\">Logistics.ru</a>, <a href=\"https://new-retail.ru/novosti/retail/spros_na_sklady_v_moskve_snizilsya_na_15_v_regionakh_na_44/\">New Retail</a>).\n2️⃣ При этом на восьми ключевых региональных рынках свободно 3,4% площадей — минимум с начала года. Блоков больше 30 тыс. м² в предложении не осталось (<a href=\"https://core-xp.ru/news/core-xp-krupnye-svobodnye-skladskie-bloki-ischezli-iz-predlozheniya-na-klyuchevykh-regionalnykh-rynk/\">CORE.XP</a>, <a href=\"https://logistics.ru/upravlenie-logistikoy-i-kompaniey-regionalnaya-logistika-skladirovanie/na-vosmi-regionalnykh\">Logistics.ru</a>).\n\nСтроят меньше, чем падает спрос, поэтому «рынок арендатора» в регионах не наступил.\n\n<b>Что сделать</b>\n1️⃣ Если в 2027 году нужен региональный РЦ — начать поиск сейчас и рассматривать два-три блока поменьше вместо одного большого.\n2️⃣ Продлевая аренду, не рассчитывать на скидку из-за падения спроса: свободных площадей мало.\n\nДанные: Bright Rich | CORFAC International, CORE.XP.\n\n#НППЦП #склад #логистика",
+      "max_skip": true
+    }
+  ],
+  "due": "2026-11-28T08:46:00+03:00",
+  "sent_at": "2026-11-28T08:46:33.427728+03:00",
+  "late_min": 0,
+  "results": [
+    {
+      "action": "photo",
+      "ok": true,
+      "message_id": 341,
+      "description": null
+    },
+    {
+      "action": "send",
+      "ok": true,
+      "message_id": 342,
+      "description": null
+    }
+  ]
+}
