@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-28-0816-cvai-81-innov-walmart-polka",
+  "channel": "Человек VS ИИ",
+  "chat_id": "@chelovek_vs_ai",
+  "photo_message_id": 255,
+  "text_message_id": 256,
+  "link": "https://t.me/chelovek_vs_ai/256",
+  "file": "2026-11-28-0816-cvai-81-innov-walmart-polka.json",
+  "due_at": "2026-11-28T05:16:00.000Z",
+  "published_at": "2026-11-28T05:16:14.499Z",
+  "published_by": "n8n-server",
+  "workflow": "v3.1"
+}
